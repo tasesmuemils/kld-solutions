@@ -26,6 +26,9 @@ module.exports = {
       "4xl": ["2.25rem", "2.75rem"],
       "5xl": ["3rem", "3.5rem"],
       "6xl": ["3.75rem", "4.25rem"],
+      "7xl": ["4.5rem", "4.25rem"],
+      "8xl": ["6rem", "4.25rem"],
+      "9xl": ["3.75rem", "4.25rem"],
     },
     extend: {
       // that is animation class
