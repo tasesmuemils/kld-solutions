@@ -60,7 +60,7 @@ export default function Tabs() {
             <div className={activeTab === 2 ? "animate-fade block" : "hidden"}>
               <div className="relative aspect-w-16 aspect-h-9">
                 {" "}
-                <ReactPlayer
+                {/* <ReactPlayer
                   url="https://vimeo.com/917278056"
                   controls
                   muted
@@ -77,7 +77,7 @@ export default function Tabs() {
                       },
                     },
                   }}
-                />
+                /> */}
               </div>
             </div>
             <div className={activeTab === 3 ? "animate-fade block" : "hidden"}>

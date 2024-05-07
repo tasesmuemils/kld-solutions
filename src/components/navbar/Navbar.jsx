@@ -4,9 +4,33 @@ import Link from "next/link";
 import { useState } from "react";
 import useDarkMode from "@/utils/useDarkMode";
 
+// GSAP
+import { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [colorTheme, setTheme] = useDarkMode();
+
+  const containerNav = useRef();
+  useGSAP(
+    () => {
+      //Splits HERO text into chars
+      // const text = new SplitType(".hero-text", { types: "lines" });
+      gsap.set(".nav-item-gsap", { autoAlpha: 1 }); // prevent flash of unstayled content
+      gsap.set(".nav-item-gsap", { yPercent: 200, rotate: "10deg" }); // Sets initial state
+      gsap.to(".nav-item-gsap", {
+        yPercent: 0,
+        rotate: 0,
+        delay: 0.2,
+        stagger: 0.2,
+        duration: 0.5,
+        ease: "power4.out",
+      });
+    },
+    { scope: containerNav }
+  );
 
   const toggleMenu = () => {
     setOpen(!open);
@@ -43,29 +67,62 @@ export default function Navbar() {
         open ? "bg-primary-500/10 dark:bg-primary-400/10" : ""
       }`}
     >
-      <div className="mx-auto flex max-w-2xl items-center justify-between px-4 py-4 sm:px-6 sm:py-6 lg:max-w-7xl lg:px-8">
+      <div
+        className="navigation mx-auto flex max-w-2xl items-center justify-between px-4 py-4 sm:px-6 sm:py-6 lg:max-w-7xl lg:px-8"
+        ref={containerNav}
+      >
         {/* Brand logo */}
         <div className="flex">
           <Link
             href="/"
-            className="focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200 rounded-md focus-visible:outline focus-visible:outline-2"
+            className="hero-clip focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200 rounded-md focus-visible:outline focus-visible:outline-2"
           >
-            <span className="text-2xl">kld solutions</span>
+            <p className="nav-item-gsap invisible text-2xl">kld solutions</p>
           </Link>
         </div>
 
         {/* Actions */}
         <div className="-mr-2 flex items-center space-x-2 sm:space-x-3">
+          {/* Navigation */}
+          <nav className="divide-primary-900/10 dark:divide-primary-300/10 flex flex-row gap-16">
+            {links.map((link, index) => (
+              <Link
+                key={index}
+                // onClick={toggleMenu}
+                href={link.href}
+                className="text-primary-950 dark:text-primary-200 group inline-flex py-6 text-base font-medium tracking-tight transition focus-visible:outline-none sm:py-8"
+              >
+                <div className="group-focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200 flex flex-1 items-center justify-between rounded-xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2">
+                  <div className="hero-clip flex items-center gap-6">
+                    {/* <span className="text-xs">{link.ref}</span> */}
+                    <span className="nav-item-gsap invisible group-hover:underline">
+                      {link.name}
+                    </span>
+                  </div>
+                  {/* <svg
+                  className="text-primary-600 dark:text-primary-400 h-6 w-6 sm:h-8 sm:w-8"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z" />
+                </svg> */}
+                </div>
+              </Link>
+            ))}
+          </nav>
+
           {/* Toggle theme mode */}
           <button
             type="button"
-            className="text-primary-950 dark:text-primary-200 hover:bg-primary-500/10 dark:hover:bg-primary-400/10 ring-primary-950 inline-flex h-14 w-14 items-center justify-center rounded-full transition focus:outline-none focus-visible:ring-2"
+            className="hero-clip text-primary-950 dark:text-primary-200 hover:bg-primary-500/10 dark:hover:bg-primary-400/10 ring-primary-950 inline-flex h-14 w-14 items-center justify-center rounded-full transition focus:outline-none focus-visible:ring-2"
             onClick={() => {} /* Add function to toggle theme mode */}
           >
             <span className="sr-only">Toggle theme mode</span>
             {colorTheme == "light" ? (
               <svg
-                className="h-6 w-6"
+                className="nav-item-gsap invisible h-6 w-6"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
                 viewBox="0 0 24 24"
@@ -76,7 +133,7 @@ export default function Navbar() {
               </svg>
             ) : (
               <svg
-                className="h-6 w-6"
+                className="nav-item-gsap invisible h-6 w-6"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
                 viewBox="0 0 24 24"
@@ -89,7 +146,7 @@ export default function Navbar() {
           </button>
 
           {/* Toggle menu */}
-          <button
+          {/* <button
             type="button"
             className="text-primary-950 dark:text-primary-200 hover:bg-primary-500/10 dark:hover:bg-primary-400/10 ring-primary-950 inline-flex h-14 w-14 items-center justify-center rounded-full transition focus:outline-none focus-visible:ring-2"
             onClick={toggleMenu}
@@ -115,7 +172,7 @@ export default function Navbar() {
             >
               <path d="M12.0007 10.5865L16.9504 5.63672L18.3646 7.05093L13.4149 12.0007L18.3646 16.9504L16.9504 18.3646L12.0007 13.4149L7.05093 18.3646L5.63672 16.9504L10.5865 12.0007L5.63672 7.05093L7.05093 5.63672L12.0007 10.5865Z"></path>
             </svg>
-          </button>
+          </button> */}
         </div>
       </div>
 
