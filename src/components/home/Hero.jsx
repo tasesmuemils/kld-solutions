@@ -14,16 +14,8 @@ import SplitType from 'split-type';
 // Images
 import { ImgComparisonSlider } from '@img-comparison-slider/react';
 import Image from 'next/image';
-import Image1 from '../../../public/image_apartment.jpeg';
-import Image2 from '../../../public/image_apartment6.webp';
-import Image3 from '../../../public/image_apartment3.png';
-import Image4 from '../../../public/image_apartment4.png';
-import Image5 from '../../../public/image_apartment5.jpeg';
-import Image6 from '../../../public/image_apartment6.jpeg';
-import Image7 from '../../../public/image_podcast.jpeg';
-import Image8 from '../../../public/image_kindergarten.jpeg';
-import SliderImage1 from '../../../public/engine_img/2_00113.png';
-import SliderImage2 from '../../../public/engine_img/3_00254.png';
+import SliderImage1 from '../../../public/engine_img/1920/19_00000.png';
+import SliderImage2 from '../../../public/engine_img/1920/29_00000.png';
 
 export default function Hero() {
   // Using ref to capture Hero text container
@@ -62,8 +54,8 @@ export default function Hero() {
   );
 
   return (
-    <section className='pt-20 pb-48' ref={container}>
-      <div className='mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8'>
+    <section className=' flex justify-center py-36' ref={container}>
+      <div className='-pt-4 mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8'>
         <div className='grid grid-cols-1 sm:grid-cols-2 items-center '>
           <div className='flex flex-col items-start gap-8 sm:gap-10'>
             <div className='flex max-w-xl flex-col items-start'>
@@ -103,6 +95,7 @@ export default function Hero() {
                 className='rounded-2xl'
               />
               <Image
+                priority={true}
                 slot='second'
                 src={SliderImage2}
                 alt='first hero image'
@@ -110,52 +103,6 @@ export default function Hero() {
               />
             </ImgComparisonSlider>
           </div>
-          {/* <div className='grid grid-cols-3 h-full w-full rounded-3xl gap-4 justify-center items-center'>
-            <div className='hero-img-wrapper invisible flex flex-col gap-4'>
-              {' '}
-              <Image
-                src={Image1}
-                alt='first hero image'
-                className='rounded-2xl'
-              />
-              <Image
-                src={Image2}
-                alt='first hero image'
-                className=' rounded-2xl'
-              />
-            </div>
-            <div className='hero-img-wrapper invisible flex flex-col gap-4'>
-              {' '}
-              <Image
-                src={Image8}
-                alt='first hero image'
-                className=' rounded-2xl'
-              />
-              <Image
-                src={Image4}
-                alt='first hero image'
-                className=' rounded-2xl'
-              />
-              <Image
-                src={Image5}
-                alt='first hero image'
-                className=' rounded-2xl'
-              />
-            </div>{' '}
-            <div className='hero-img-wrapper invisible flex flex-col gap-4'>
-              {' '}
-              <Image
-                src={Image6}
-                alt='first hero image'
-                className=' rounded-2xl'
-              />
-              <Image
-                src={Image7}
-                alt='first hero image'
-                className=' rounded-2xl'
-              />
-            </div>
-          </div> */}
         </div>
       </div>
     </section>
