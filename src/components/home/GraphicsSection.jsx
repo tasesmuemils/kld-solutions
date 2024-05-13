@@ -67,129 +67,6 @@ export default function GraphicsSection() {
 
   return (
     <div ref={container}>
-      {/* <div className='py-28 sm:py-28'>
-        <section className='long-gallery mb-5 overflow-hidden'>
-          <ul className='long-gallery-wrapper flex flex-row'>
-            <li className='px-1 flex-shrink-0'>
-              <Image
-                src={Image1}
-                alt='engine image1'
-                className='lg-img rounded-2xl'
-                width={562}
-                // height={1000}
-              />
-            </li>
-            <li className='px-1 flex-shrink-0'>
-              <Image
-                src={Image2}
-                alt='engine image2'
-                className='lg-img rounded-2xl'
-                width={562}
-                // height={1000}
-              />
-            </li>
-            <li className='px-1 flex-shrink-0'>
-              <Image
-                src={Image3}
-                alt='engine image3'
-                className='lg-img rounded-2xl'
-                width={562}
-                // height={1000}
-              />
-            </li>
-            <li className='px-1 flex-shrink-0'>
-              <Image
-                src={Image4}
-                alt='engine image4'
-                className='lg-img rounded-2xl'
-                width={562}
-                // height={1000}
-              />
-            </li>
-          </ul>
-        </section>
-        <section className='long-gallery mb-5 overflow-hidden'>
-          <ul className='long-gallery-wrapper flex flex-row'>
-            <li className='px-1 flex-shrink-0'>
-              <Image
-                src={Image5}
-                alt='engine image1'
-                className='lg-img rounded-2xl'
-                width={562}
-                // height={1000}
-              />
-            </li>
-            <li className='px-1 flex-shrink-0'>
-              <Image
-                src={Image6}
-                alt='engine image2'
-                className='lg-img rounded-2xl'
-                width={562}
-                // height={1000}
-              />
-            </li>
-            <li className='px-1 flex-shrink-0'>
-              <Image
-                src={Image7}
-                alt='engine image3'
-                className='lg-img rounded-2xl'
-                width={562}
-                // height={1000}
-              />
-            </li>
-            <li className='px-1 flex-shrink-0'>
-              <Image
-                src={Image8}
-                alt='engine image4'
-                className='lg-img rounded-2xl'
-                width={562}
-                // height={1000}
-              />
-            </li>
-          </ul>
-        </section>
-        <section className='long-gallery mb-5 overflow-hidden'>
-          <ul className='long-gallery-wrapper flex flex-row'>
-            <li className='px-1 flex-shrink-0'>
-              <Image
-                src={Image1}
-                alt='engine image1'
-                className='lg-img rounded-2xl'
-                width={562}
-                // height={1000}
-              />
-            </li>
-            <li className='px-1 flex-shrink-0'>
-              <Image
-                src={Image2}
-                alt='engine image2'
-                className='lg-img rounded-2xl'
-                width={562}
-                // height={1000}
-              />
-            </li>
-            <li className='px-1 flex-shrink-0'>
-              <Image
-                src={Image3}
-                alt='engine image3'
-                className='lg-img rounded-2xl'
-                width={562}
-                // height={1000}
-              />
-            </li>
-            <li className='px-1 flex-shrink-0'>
-              <Image
-                src={Image4}
-                alt='engine image4'
-                className='lg-img rounded-2xl'
-                width={562}
-                // height={1000}
-              />
-            </li>
-          </ul>
-        </section>
-      </div> */}
-
       <section className='py-28 sm:py-28 overflow-hidden'>
         <div className='wrapper mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8'>
           <div className='relative grid grid-cols-2'>
@@ -204,6 +81,8 @@ export default function GraphicsSection() {
                     src={Image1}
                     alt='first hero image'
                     className='h-full max-w-full rounded-lg object-cover object-center'
+                    width={192}
+                    height={416}
                   />
                 </div>
                 <div
@@ -215,6 +94,8 @@ export default function GraphicsSection() {
                     src={Image3}
                     alt='first hero image'
                     className='max-w-full rounded-lg object-cover object-center h-full'
+                    width={400}
+                    height={200}
                   />
                 </div>
                 <div className='image_item from_left_image row-start-3 row-end-4'>
@@ -223,6 +104,8 @@ export default function GraphicsSection() {
                     src={Image2}
                     alt='first hero image'
                     className='h-full max-w-full rounded-lg object-cover object-center'
+                    width={192}
+                    height={100}
                   />
                 </div>
                 <div className='image_item from_right_image row-start-2 row-end-4 col-start-2 col-end-4'>
@@ -231,6 +114,8 @@ export default function GraphicsSection() {
                     src={Image4}
                     alt='first hero image'
                     className='h-full max-w-full rounded-lg object-cover object-center'
+                    width={400}
+                    height={316}
                   />
                 </div>
               </div>

@@ -143,13 +143,31 @@ export default function PortfolioSectionTwo() {
             <div className='right-pin-section'>
               <div className='rp-wrapper-3 relative w-full flex justify-center items-center h-[33vh]'>
                 <div className='rp-card rp-card-1-3 absolute w-full flex justify-center items-center -top-14 left-16'>
-                  <Image className='rounded-lg' src={Image1} alt='pin image' />
+                  <Image
+                    className='rounded-lg'
+                    src={Image1}
+                    alt='pin image'
+                    width={608}
+                    height={342}
+                  />
                 </div>
                 <div className='rp-card rp-card-2-3 absolute w-full flex justify-center items-center -top-6 left-6'>
-                  <Image className='rounded-lg' src={Image2} alt='pin image' />
+                  <Image
+                    className='rounded-lg'
+                    src={Image2}
+                    alt='pin image'
+                    width={608}
+                    height={342}
+                  />
                 </div>
                 <div className='rp-card rp-card-3-3 absolute w-full flex justify-center items-center top-0 -left-4'>
-                  <Image className='rounded-lg' src={Image3} alt='pin image' />
+                  <Image
+                    className='rounded-lg'
+                    src={Image3}
+                    alt='pin image'
+                    width={608}
+                    height={342}
+                  />
                 </div>
               </div>
             </div>

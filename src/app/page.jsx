@@ -16,15 +16,15 @@ export default function Home() {
     <div>
       <Hero />
       <GraphicsSection />
-      <PortfolioSection />
+      <LongGallery />
+      {/* <PortfolioSection />
       <PortfolioSectionTwo />
-      <PortfolioSectionThree />
+      <PortfolioSectionThree /> */}
       <ModalVideo />
       {/* <Tabs /> */}
       {/* <VideoTabs /> */}
       {/* <Services /> */}
       <About />
-      <LongGallery />
       <Cta />
     </div>
   );
