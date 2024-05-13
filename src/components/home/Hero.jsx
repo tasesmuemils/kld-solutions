@@ -61,21 +61,6 @@ export default function Hero() {
             <div className='flex max-w-xl flex-col items-start'>
               {' '}
               <h1 className='hero-text hero-clip invisible text-7xl font-medium tracking-tight leading-tight'>
-                {/* <TypeAnimation
-                  sequence={[
-                    // Same substring at the start will only be typed out once, initially
-                    "Tavs sapnis",
-                    1000, // wait 1s before replacing "Mice" with "Hamsters"
-                    "Mūsu realitāte",
-                    1000,
-                    "kld solutions",
-                    2000,
-                  ]}
-                  wrapper="span"
-                  speed={50}
-                  // style={{ fontSize: "2em", display: "inline-block" }}
-                  repeat={Infinity}
-                /> */}
                 Tavs sapnis
               </h1>
               <h1 className='hero-text hero-clip invisible text-7xl font-medium tracking-tight leading-tight'>
@@ -93,13 +78,16 @@ export default function Hero() {
                 src={SliderImage1}
                 alt='first hero image'
                 className='rounded-2xl'
+                width={608}
+                height={342}
               />
               <Image
-                priority={true}
                 slot='second'
                 src={SliderImage2}
                 alt='first hero image'
                 className='rounded-2xl'
+                width={608}
+                height={342}
               />
             </ImgComparisonSlider>
           </div>

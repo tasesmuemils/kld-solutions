@@ -118,10 +118,10 @@ export default function ModalVideo({
               <Image
                 className='rounded-3xl shadow-2xl transition-shadow duration-300 ease-in-out'
                 src={Image1}
-                // width={thumbWidth}
-                // height={thumbHeight}
                 priority
                 alt={'TEST'}
+                width={1206}
+                height={684}
               />
               {/* Play icon */}
               <svg
