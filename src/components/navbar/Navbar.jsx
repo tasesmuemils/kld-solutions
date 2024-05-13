@@ -64,11 +64,13 @@ export default function Navbar() {
   return (
     <header
       className={`transition ${
-        open ? 'bg-primary-500/10 dark:bg-primary-400/10' : ''
+        open
+          ? 'bg-primary-500/10 dark:bg-primary-400/10 sticky top-0 z-50 dark:backdrop-blur-lg'
+          : 'sticky top-0 z-50 backdrop-blur-lg'
       }`}
     >
       <div
-        className='navigation mx-auto flex max-w-2xl items-center justify-between px-4 py-4 sm:px-6 sm:py-6 lg:max-w-7xl lg:px-8'
+        className='navigation mx-auto flex max-w-2xl items-center justify-between px-4 sm:px-6 lg:max-w-7xl lg:px-8 '
         ref={containerNav}
       >
         {/* Brand logo */}

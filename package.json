@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.0",
+    "@headlessui/react": "^2.0.3",
     "@img-comparison-slider/react": "^8.0.2",
     "@u-wave/react-vimeo": "^0.9.10",
     "aos": "^2.3.4",
