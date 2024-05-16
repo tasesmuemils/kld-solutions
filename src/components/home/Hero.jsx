@@ -81,8 +81,8 @@ export default function Hero() {
                 src={SliderImage1}
                 alt='first hero image'
                 className='rounded-2xl'
-                // width={608}
-                // height={342}
+                width={608}
+                height={342}
                 priority={true}
               />
               <Image
@@ -90,8 +90,8 @@ export default function Hero() {
                 src={SliderImage2}
                 alt='first hero image'
                 className='rounded-2xl'
-                // width={608}
-                // height={342}
+                width={608}
+                height={342}
                 priority={true}
               />
             </ImgComparisonSlider>

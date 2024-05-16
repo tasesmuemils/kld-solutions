@@ -81,6 +81,8 @@ export default function GraphicsSection() {
                     src={Image1}
                     alt='first hero image'
                     className='h-full max-w-full rounded-lg object-cover object-center'
+                    width={192}
+                    height={416}
                   />
                 </div>
                 <div
@@ -92,6 +94,8 @@ export default function GraphicsSection() {
                     src={Image3}
                     alt='first hero image'
                     className='max-w-full rounded-lg object-cover object-center h-full'
+                    width={400}
+                    height={200}
                   />
                 </div>
                 <div className='image_item from_left_image row-start-3 row-end-4'>
@@ -100,6 +104,8 @@ export default function GraphicsSection() {
                     src={Image2}
                     alt='first hero image'
                     className='h-full max-w-full rounded-lg object-cover object-center'
+                    width={192}
+                    height={100}
                   />
                 </div>
                 <div className='image_item from_right_image row-start-2 row-end-4 col-start-2 col-end-4'>
@@ -108,6 +114,8 @@ export default function GraphicsSection() {
                     src={Image4}
                     alt='first hero image'
                     className='h-full max-w-full rounded-lg object-cover object-center'
+                    width={400}
+                    height={316}
                   />
                 </div>
               </div>
