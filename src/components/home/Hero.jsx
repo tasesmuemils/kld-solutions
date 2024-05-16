@@ -13,9 +13,12 @@ import SplitType from 'split-type';
 
 // Images
 import { ImgComparisonSlider } from '@img-comparison-slider/react';
+import ReactCompareImage from 'react-compare-image';
 import Image from 'next/image';
-import SliderImage1 from '../../../public/engine_img/1920/19_00000.png';
-import SliderImage2 from '../../../public/engine_img/1920/29_00000.png';
+// import SliderImage1 from '../../../public/engine_img/1920/19_00000.png';
+// import SliderImage2 from '../../../public/engine_img/1920/29_00000.png';
+import SliderImage1 from '../../../public/engine_img/640/613_00000.png';
+import SliderImage2 from '../../../public/engine_img/640/634_00000.png';
 
 export default function Hero() {
   // Using ref to capture Hero text container
@@ -54,8 +57,8 @@ export default function Hero() {
   );
 
   return (
-    <section className=' flex justify-center py-36' ref={container}>
-      <div className='-pt-4 mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8'>
+    <section className='h-screen flex items-center' ref={container}>
+      <div className='mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8'>
         <div className='grid grid-cols-1 sm:grid-cols-2 items-center '>
           <div className='flex flex-col items-start gap-8 sm:gap-10'>
             <div className='flex max-w-xl flex-col items-start'>
@@ -78,16 +81,18 @@ export default function Hero() {
                 src={SliderImage1}
                 alt='first hero image'
                 className='rounded-2xl'
-                width={608}
-                height={342}
+                // width={608}
+                // height={342}
+                priority={true}
               />
               <Image
                 slot='second'
                 src={SliderImage2}
                 alt='first hero image'
                 className='rounded-2xl'
-                width={608}
-                height={342}
+                // width={608}
+                // height={342}
+                priority={true}
               />
             </ImgComparisonSlider>
           </div>

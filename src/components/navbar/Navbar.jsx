@@ -23,6 +23,7 @@ export default function Navbar() {
       gsap.to('.nav-item-gsap', {
         yPercent: 0,
         rotate: 0,
+
         delay: 0.2,
         stagger: 0.2,
         duration: 0.5,
@@ -37,11 +38,6 @@ export default function Navbar() {
   };
 
   const links = [
-    // {
-    //   ref: "01",
-    //   name: "Uz Sākumu",
-    //   href: "/",
-    // },
     {
       ref: '01',
       name: 'Par Mums',
@@ -59,14 +55,12 @@ export default function Navbar() {
     },
   ];
 
-  // bg-primary-50 dark:bg-primary-950
-
   return (
     <header
       className={`transition ${
         open
-          ? 'bg-primary-500/10 dark:bg-primary-400/10 sticky top-0 z-50 dark:backdrop-blur-lg'
-          : 'sticky top-0 z-50 backdrop-blur-lg'
+          ? 'bg-primary-500/10 dark:bg-primary-400/10 fixed w-full top-0 z-50 dark:backdrop-blur-lg'
+          : 'fixed w-full top-0 z-50 backdrop-blur-lg'
       }`}
     >
       <div
@@ -85,31 +79,19 @@ export default function Navbar() {
 
         {/* Actions */}
         <div className='-mr-2 flex items-center space-x-2 sm:space-x-3'>
-          {/* Navigation */}
           <nav className='divide-primary-900/10 dark:divide-primary-300/10 flex flex-row gap-16'>
             {links.map((link, index) => (
               <Link
                 key={index}
-                // onClick={toggleMenu}
                 href={link.href}
                 className='text-primary-950 dark:text-primary-200 group inline-flex py-6 text-base font-medium tracking-tight transition focus-visible:outline-none sm:py-8'
               >
                 <div className='group-focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200 flex flex-1 items-center justify-between rounded-xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2'>
                   <div className='hero-clip flex items-center gap-6'>
-                    {/* <span className="text-xs">{link.ref}</span> */}
                     <span className='nav-item-gsap invisible group-hover:underline'>
                       {link.name}
                     </span>
                   </div>
-                  {/* <svg
-                  className="text-primary-600 dark:text-primary-400 h-6 w-6 sm:h-8 sm:w-8"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z" />
-                </svg> */}
                 </div>
               </Link>
             ))}
@@ -119,7 +101,7 @@ export default function Navbar() {
           <button
             type='button'
             className='hero-clip text-primary-950 dark:text-primary-200 hover:bg-primary-500/10 dark:hover:bg-primary-400/10 ring-primary-950 inline-flex h-14 w-14 items-center justify-center rounded-full transition focus:outline-none focus-visible:ring-2'
-            onClick={() => {} /* Add function to toggle theme mode */}
+            onClick={() => {}}
           >
             <span className='sr-only'>Toggle theme mode</span>
             {colorTheme == 'light' ? (
@@ -179,7 +161,7 @@ export default function Navbar() {
       </div>
 
       {/* Menu content */}
-      <div
+      {/* <div
         className='mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8'
         id='website-menu'
         style={{ display: open ? 'block' : 'none' }}
@@ -191,7 +173,6 @@ export default function Navbar() {
             </p>
           </div>
 
-          {/* Navigation */}
           <nav className='divide-primary-900/10 dark:divide-primary-300/10 flex flex-col gap-1 divide-y'>
             {links.map((link, index) => (
               <Link
@@ -219,7 +200,7 @@ export default function Navbar() {
             ))}
           </nav>
         </div>
-      </div>
+      </div> */}
     </header>
   );
 }
