@@ -44,50 +44,102 @@ export default function ModalVideo({
 
   useGSAP(
     () => {
-      const text = new SplitType('.video-text', { types: 'lines' });
-      gsap.set('.video-text', { autoAlpha: 1 }); // prevent flash of unstayled content
-      gsap.set(text.lines, { opacity: 0, yPercent: 150, rotate: '10deg' }); // Sets initial state
-      gsap.to(text.lines, {
-        yPercent: 0,
-        rotate: 0,
-        opacity: 1,
-        stagger: 0.05,
-        duration: 0.5,
-        ease: 'power4.out',
+      let mm = gsap.matchMedia();
 
-        scrollTrigger: {
-          trigger: '.video-wrapper',
-          start: '-40%',
-          //   toggleActions: "play none reverse none",
-          // end: '-20%',
-          // scrub: true,
-          // pin: true,
-          //   markers: true,
-        },
+      mm.add('(min-width: 1024px)', () => {
+        const text = new SplitType('.video-text', { types: 'lines' });
+        gsap.set('.video-text', { autoAlpha: 1 }); // prevent flash of unstayled content
+        gsap.set(text.lines, { opacity: 0, yPercent: 150, rotate: '10deg' }); // Sets initial state
+        gsap.to(text.lines, {
+          yPercent: 0,
+          rotate: 0,
+          opacity: 1,
+          stagger: 0.05,
+          duration: 0.5,
+          ease: 'power4.out',
+
+          scrollTrigger: {
+            trigger: '.video-wrapper',
+            start: '-70%',
+            //   toggleActions: "play none reverse none",
+            // end: '-20%',
+            // scrub: true,
+            // pin: true,
+            //   markers: true,
+          },
+        });
+
+        // VideoImages container
+        gsap.set('.video-img-wrapper', {
+          autoAlpha: 1,
+        });
+
+        gsap.from('.video-img-wrapper', {
+          translateY: '10%',
+          opacity: 0,
+          // stagger: {
+          //   amount: 0.2,
+          // },
+          delay: 0.2,
+          duration: 0.6,
+          scrollTrigger: {
+            trigger: '.video-wrapper',
+            start: '-80%',
+            //   toggleActions: "play none reverse none",
+            // end: '-20%',
+            // scrub: true,
+            // pin: true,
+            //   markers: true,
+          },
+        });
       });
 
-      // VideoImages container
-      gsap.set('.video-img-wrapper', {
-        autoAlpha: 1,
-      });
+      mm.add('(max-width: 1023px)', () => {
+        const text = new SplitType('.video-text', { types: 'lines' });
+        gsap.set('.video-text', { autoAlpha: 1 }); // prevent flash of unstayled content
+        gsap.set(text.lines, { opacity: 0, yPercent: 150, rotate: '10deg' }); // Sets initial state
+        gsap.to(text.lines, {
+          yPercent: 0,
+          rotate: 0,
+          opacity: 1,
+          stagger: 0.05,
+          duration: 0.5,
+          ease: 'power4.out',
 
-      gsap.from('.video-img-wrapper', {
-        translateY: '10%',
-        opacity: 0,
-        // stagger: {
-        //   amount: 0.2,
-        // },
-        delay: 0.2,
-        duration: 0.6,
-        scrollTrigger: {
-          trigger: '.video-wrapper',
-          start: '-40%',
-          //   toggleActions: "play none reverse none",
-          // end: '-20%',
-          // scrub: true,
-          // pin: true,
-          //   markers: true,
-        },
+          scrollTrigger: {
+            trigger: '.video-wrapper',
+            start: '-100%',
+            //   toggleActions: "play none reverse none",
+            // end: '-20%',
+            // scrub: true,
+            // pin: true,
+            //   markers: true,
+          },
+        });
+
+        // VideoImages container
+        gsap.set('.video-img-wrapper', {
+          autoAlpha: 1,
+        });
+
+        gsap.from('.video-img-wrapper', {
+          translateY: '10%',
+          opacity: 0,
+          // stagger: {
+          //   amount: 0.2,
+          // },
+          delay: 0.2,
+          duration: 0.6,
+          scrollTrigger: {
+            trigger: '.video-wrapper',
+            start: '-100%',
+            //   toggleActions: "play none reverse none",
+            // end: '-20%',
+            // scrub: true,
+            // pin: true,
+            //   markers: true,
+          },
+        });
       });
     },
 
@@ -97,11 +149,11 @@ export default function ModalVideo({
   return (
     <div ref={container}>
       {' '}
-      <section className='video-wrapper py-32 sm:py-32 overflow-hidden'>
-        <div className=' mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8'>
+      <section className='py-24 sm:py-28 overflow-hidden'>
+        <div className='video-wrapper mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8'>
           <div className=' flex justify-center pb-5'>
             {' '}
-            <h1 className='video-text hero-clip invisible text-4xl font-light'>
+            <h1 className='video-text hero-clip invisible text-3xl font-medium tracking-tight sm:text-4xl'>
               VIDEO PREZENTĀCIJAS
             </h1>
           </div>

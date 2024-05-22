@@ -47,15 +47,15 @@ export default function LongGallery() {
 
   return (
     <div ref={container}>
-      <div className='py-28 sm:py-28'>
+      <div className='py-28 lg:py-28'>
         <section className='long-gallery mb-5 overflow-hidden'>
           <ul className='long-gallery-wrapper flex flex-row'>
             <li className='px-1 flex-shrink-0'>
               <Image
                 src={Image1}
                 alt='engine image1'
-                className='lg-img rounded-2xl'
-                width={400}
+                className='lg-img rounded-2xl w-[250px] lg:w-[400px]'
+                // width={400}
                 // height={1000}
               />
             </li>
@@ -63,8 +63,8 @@ export default function LongGallery() {
               <Image
                 src={Image2}
                 alt='engine image2'
-                className='lg-img rounded-2xl'
-                width={400}
+                className='lg-img rounded-2xl w-[250px] lg:w-[400px]'
+                // width={400}
                 // height={1000}
               />
             </li>
@@ -72,8 +72,8 @@ export default function LongGallery() {
               <Image
                 src={Image3}
                 alt='engine image3'
-                className='lg-img rounded-2xl'
-                width={400}
+                className='lg-img rounded-2xl w-[250px] lg:w-[400px]'
+                // width={400}
                 // height={1000}
               />
             </li>
@@ -81,8 +81,8 @@ export default function LongGallery() {
               <Image
                 src={Image4}
                 alt='engine image4'
-                className='lg-img rounded-2xl'
-                width={400}
+                className='lg-img rounded-2xl w-[250px] lg:w-[400px]'
+                // width={400}
                 // height={1000}
               />
             </li>
@@ -90,8 +90,8 @@ export default function LongGallery() {
               <Image
                 src={Image1}
                 alt='engine image1'
-                className='lg-img rounded-2xl'
-                width={400}
+                className='lg-img rounded-2xl w-[250px] lg:w-[400px]'
+                // width={400}
                 // height={1000}
               />
             </li>
@@ -99,8 +99,8 @@ export default function LongGallery() {
               <Image
                 src={Image2}
                 alt='engine image2'
-                className='lg-img rounded-2xl'
-                width={400}
+                className='lg-img rounded-2xl w-[250px] lg:w-[400px]'
+                // width={400}
                 // height={1000}
               />
             </li>
@@ -108,8 +108,8 @@ export default function LongGallery() {
               <Image
                 src={Image3}
                 alt='engine image3'
-                className='lg-img rounded-2xl'
-                width={400}
+                className='lg-img rounded-2xl w-[250px] lg:w-[400px]'
+                // width={400}
                 // height={1000}
               />
             </li>
@@ -117,8 +117,8 @@ export default function LongGallery() {
               <Image
                 src={Image4}
                 alt='engine image4'
-                className='lg-img rounded-2xl'
-                width={400}
+                className='lg-img rounded-2xl w-[250px] lg:w-[400px]'
+                // width={400}
                 // height={1000}
               />
             </li>
@@ -130,8 +130,8 @@ export default function LongGallery() {
               <Image
                 src={Image5}
                 alt='engine image1'
-                className='lg-img rounded-2xl'
-                width={400}
+                className='lg-img rounded-2xl w-[250px] lg:w-[400px]'
+                // width={400}
                 // height={1000}
               />
             </li>
@@ -139,8 +139,8 @@ export default function LongGallery() {
               <Image
                 src={Image6}
                 alt='engine image2'
-                className='lg-img rounded-2xl'
-                width={400}
+                className='lg-img rounded-2xl w-[250px] lg:w-[400px]'
+                // width={400}
                 // height={1000}
               />
             </li>
@@ -148,8 +148,8 @@ export default function LongGallery() {
               <Image
                 src={Image1}
                 alt='engine image3'
-                className='lg-img rounded-2xl'
-                width={400}
+                className='lg-img rounded-2xl w-[250px] lg:w-[400px]'
+                // width={400}
                 // height={1000}
               />
             </li>
@@ -157,8 +157,8 @@ export default function LongGallery() {
               <Image
                 src={Image2}
                 alt='engine image4'
-                className='lg-img rounded-2xl'
-                width={400}
+                className='lg-img rounded-2xl w-[250px] lg:w-[400px]'
+                // width={400}
                 // height={1000}
               />
             </li>
@@ -166,8 +166,8 @@ export default function LongGallery() {
               <Image
                 src={Image5}
                 alt='engine image1'
-                className='lg-img rounded-2xl'
-                width={400}
+                className='lg-img rounded-2xl w-[250px] lg:w-[400px]'
+                // width={400}
                 // height={1000}
               />
             </li>
@@ -175,8 +175,8 @@ export default function LongGallery() {
               <Image
                 src={Image6}
                 alt='engine image2'
-                className='lg-img rounded-2xl'
-                width={400}
+                className='lg-img rounded-2xl w-[250px] lg:w-[400px]'
+                // width={400}
                 // height={1000}
               />
             </li>
@@ -184,8 +184,8 @@ export default function LongGallery() {
               <Image
                 src={Image1}
                 alt='engine image3'
-                className='lg-img rounded-2xl'
-                width={400}
+                className='lg-img rounded-2xl w-[250px] lg:w-[400px]'
+                // width={400}
                 // height={1000}
               />
             </li>
@@ -193,8 +193,8 @@ export default function LongGallery() {
               <Image
                 src={Image2}
                 alt='engine image4'
-                className='lg-img rounded-2xl'
-                width={400}
+                className='lg-img rounded-2xl w-[250px] lg:w-[400px]'
+                // width={400}
                 // height={1000}
               />
             </li>
@@ -206,8 +206,8 @@ export default function LongGallery() {
               <Image
                 src={Image1}
                 alt='engine image1'
-                className='lg-img rounded-2xl'
-                width={400}
+                className='lg-img rounded-2xl w-[250px] lg:w-[400px]'
+                // width={400}
                 // height={1000}
               />
             </li>
@@ -215,8 +215,8 @@ export default function LongGallery() {
               <Image
                 src={Image2}
                 alt='engine image2'
-                className='lg-img rounded-2xl'
-                width={400}
+                className='lg-img rounded-2xl w-[250px] lg:w-[400px]'
+                // width={400}
                 // height={1000}
               />
             </li>
@@ -224,8 +224,8 @@ export default function LongGallery() {
               <Image
                 src={Image3}
                 alt='engine image3'
-                className='lg-img rounded-2xl'
-                width={400}
+                className='lg-img rounded-2xl w-[250px] lg:w-[400px]'
+                // width={400}
                 // height={1000}
               />
             </li>
@@ -233,8 +233,8 @@ export default function LongGallery() {
               <Image
                 src={Image4}
                 alt='engine image4'
-                className='lg-img rounded-2xl'
-                width={400}
+                className='lg-img rounded-2xl w-[250px] lg:w-[400px]'
+                // width={400}
                 // height={1000}
               />
             </li>
@@ -242,8 +242,8 @@ export default function LongGallery() {
               <Image
                 src={Image1}
                 alt='engine image1'
-                className='lg-img rounded-2xl'
-                width={400}
+                className='lg-img rounded-2xl w-[250px] lg:w-[400px]'
+                // width={400}
                 // height={1000}
               />
             </li>
@@ -251,7 +251,7 @@ export default function LongGallery() {
               <Image
                 src={Image2}
                 alt='engine image2'
-                className='lg-img rounded-2xl'
+                className='lg-img rounded-2xl w-[250px] lg:w-[400px]'
                 width={400}
                 // height={1000}
               />
@@ -260,8 +260,8 @@ export default function LongGallery() {
               <Image
                 src={Image3}
                 alt='engine image3'
-                className='lg-img rounded-2xl'
-                width={400}
+                className='lg-img rounded-2xl w-[250px] lg:w-[400px]'
+                // width={400}
                 // height={1000}
               />
             </li>
@@ -269,8 +269,8 @@ export default function LongGallery() {
               <Image
                 src={Image4}
                 alt='engine image4'
-                className='lg-img rounded-2xl'
-                width={400}
+                className='lg-img rounded-2xl w-[250px] lg:w-[400px]'
+                // width={400}
                 // height={1000}
               />
             </li>

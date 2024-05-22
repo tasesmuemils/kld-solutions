@@ -57,11 +57,12 @@ export default function Navbar() {
 
   return (
     <header
-      className={`transition ${
-        open
-          ? 'bg-primary-500/10 dark:bg-primary-400/10 fixed w-full top-0 z-50 dark:backdrop-blur-lg'
-          : 'fixed w-full top-0 z-50 backdrop-blur-lg'
-      }`}
+      // className={`transition ${
+      //   open
+      //     ? 'bg-primary-500/10 dark:bg-primary-400/10 fixed w-full top-0 z-50 backdrop-blur-lg dark:backdrop-blur-lg'
+      //     : 'fixed w-full top-0 z-50 backdrop-blur-lg'
+      // }`}
+      className='fixed w-full top-0 z-50 backdrop-blur-2xl'
     >
       <div
         className='navigation mx-auto flex max-w-2xl items-center justify-between px-4 sm:px-6 lg:max-w-7xl lg:px-8 '
@@ -71,20 +72,22 @@ export default function Navbar() {
         <div className='flex'>
           <Link
             href='/'
-            className='hero-clip focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200 rounded-md focus-visible:outline focus-visible:outline-2'
+            className='py-4 lg:py-6 hero-clip focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200 rounded-md focus-visible:outline focus-visible:outline-2'
           >
-            <p className='nav-item-gsap invisible text-2xl'>kld solutions</p>
+            <p className='nav-item-gsap invisible text-xl lg:text-2xl'>
+              kld solutions
+            </p>
           </Link>
         </div>
 
         {/* Actions */}
         <div className='-mr-2 flex items-center space-x-2 sm:space-x-3'>
-          <nav className='divide-primary-900/10 dark:divide-primary-300/10 flex flex-row gap-16'>
+          <nav className='hidden lg:flex flex-row gap-16 divide-primary-900/10 dark:divide-primary-300/10 '>
             {links.map((link, index) => (
               <Link
                 key={index}
                 href={link.href}
-                className='text-primary-950 dark:text-primary-200 group inline-flex py-6 text-base font-medium tracking-tight transition focus-visible:outline-none sm:py-8'
+                className='py-6 text-primary-950 dark:text-primary-200 group inline-flex  text-base font-medium tracking-tight transition focus-visible:outline-none '
               >
                 <div className='group-focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200 flex flex-1 items-center justify-between rounded-xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2'>
                   <div className='hero-clip flex items-center gap-6'>
@@ -130,43 +133,43 @@ export default function Navbar() {
           </button>
 
           {/* Toggle menu */}
-          {/* <button
-            type="button"
-            className="text-primary-950 dark:text-primary-200 hover:bg-primary-500/10 dark:hover:bg-primary-400/10 ring-primary-950 inline-flex h-14 w-14 items-center justify-center rounded-full transition focus:outline-none focus-visible:ring-2"
+          <button
+            type='button'
+            className='inline-flex lg:hidden h-14 w-14 items-center justify-center rounded-full text-primary-950 dark:text-primary-200 hover:bg-primary-500/10 dark:hover:bg-primary-400/10 ring-primary-950  transition focus:outline-none focus-visible:ring-2'
             onClick={toggleMenu}
-            aria-controls="website-menu"
+            aria-controls='website-menu'
             aria-expanded={open.toString()}
           >
-            <span className="sr-only">Toggle menu</span>
+            <span className='sr-only'>Toggle menu</span>
             <svg
-              className={`h-8 w-8 ${!open ? "block" : "hidden"}`}
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-              aria-hidden="true"
+              className={`h-8 w-8 ${!open ? 'block' : 'hidden'}`}
+              xmlns='http://www.w3.org/2000/svg'
+              fill='currentColor'
+              viewBox='0 0 24 24'
+              aria-hidden='true'
             >
-              <path d="M19 8H5V10H19V8ZM19 14H5V16H19V14Z"></path>
+              <path d='M19 8H5V10H19V8ZM19 14H5V16H19V14Z'></path>
             </svg>
             <svg
-              className={`h-8 w-8 ${open ? "block" : "hidden"}`}
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-              aria-hidden="true"
+              className={`h-8 w-8 ${open ? 'block' : 'hidden'}`}
+              xmlns='http://www.w3.org/2000/svg'
+              fill='currentColor'
+              viewBox='0 0 24 24'
+              aria-hidden='true'
             >
-              <path d="M12.0007 10.5865L16.9504 5.63672L18.3646 7.05093L13.4149 12.0007L18.3646 16.9504L16.9504 18.3646L12.0007 13.4149L7.05093 18.3646L5.63672 16.9504L10.5865 12.0007L5.63672 7.05093L7.05093 5.63672L12.0007 10.5865Z"></path>
+              <path d='M12.0007 10.5865L16.9504 5.63672L18.3646 7.05093L13.4149 12.0007L18.3646 16.9504L16.9504 18.3646L12.0007 13.4149L7.05093 18.3646L5.63672 16.9504L10.5865 12.0007L5.63672 7.05093L7.05093 5.63672L12.0007 10.5865Z'></path>
             </svg>
-          </button> */}
+          </button>
         </div>
       </div>
 
-      {/* Menu content */}
-      {/* <div
+      {/* Toggle Menu content */}
+      <div
         className='mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8'
         id='website-menu'
         style={{ display: open ? 'block' : 'none' }}
       >
-        <div className='grid grid-cols-1 gap-16 pb-24 pt-6 lg:grid-cols-2 lg:pt-12'>
+        <div className='h-screen grid grid-cols-1 gap-16 pb-24 pt-6 lg:grid-cols-2 lg:pt-12'>
           <div className='bg-primary-500/10 dark:bg-primary-400/10 hidden items-center justify-center rounded-3xl px-6 py-8 lg:flex'>
             <p className='text-primary-950/70 dark:text-primary-200/70 max-w-sm text-xl italic leading-loose'>
               Viss ir izstrādāts. Dažas lietas ir labi izstrādātas
@@ -200,7 +203,7 @@ export default function Navbar() {
             ))}
           </nav>
         </div>
-      </div> */}
+      </div>
     </header>
   );
 }

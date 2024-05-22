@@ -67,10 +67,10 @@ export default function GraphicsSection() {
 
   return (
     <div ref={container}>
-      <section className='py-28 sm:py-28 overflow-hidden'>
+      <section className='pb-28 lg:py-28 overflow-hidden'>
         <div className='wrapper mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8'>
-          <div className='relative grid grid-cols-2'>
-            <div className='intro-images'>
+          <div className='relative grid grid-cols-1 lg:grid-cols-2'>
+            <div className='intro-images order-last lg:order-none'>
               <div className='grid grid-cols-3 grid-rows-[200px_200px_100px]  gap-4'>
                 <div
                   className='image_item from_left_image row-start-1 row-end-3'
@@ -120,7 +120,7 @@ export default function GraphicsSection() {
                 </div>
               </div>
             </div>
-            <div className='intro-text-wrapper p-20'>
+            <div className='intro-text-wrapper px-0 pb-20 lg:p-20'>
               <div className='pb-5'>
                 {' '}
                 <h3 className='intro-text hero-clip invisible text-3xl'>
