@@ -1,15 +1,3 @@
-// 'use client';
-
-// export default function VideoWrap() {
-//   return (
-//     <section className='py-28 sm:py-28 overflow-hidden'>
-//       <div className=' mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8'>
-//         VIDEO
-//       </div>
-//     </section>
-//   );
-// }
-
 'use client';
 
 import { useState, useRef } from 'react';
@@ -20,7 +8,7 @@ import {
   TransitionChild,
 } from '@headlessui/react';
 import Image from 'next/image';
-import Image1 from '../../../../public/engine_img/1920/39_00000.png';
+
 import LazyYoutube from '@/components/home/video/LazyYoutube';
 
 import gsap from 'gsap';
@@ -29,15 +17,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SplitType from 'split-type';
 gsap.registerPlugin(ScrollTrigger);
 
-export default function ModalVideo({
-  thumb,
-  thumbWidth,
-  thumbHeight,
-  thumbAlt,
-  video,
-  videoWidth,
-  videoHeight,
-}) {
+export default function ModalVideo({ thumb, title, videoId }) {
   const [modalOpen, setModalOpen] = useState(false);
 
   const container = useRef();
@@ -47,8 +27,10 @@ export default function ModalVideo({
       let mm = gsap.matchMedia();
 
       mm.add('(min-width: 1024px)', () => {
-        const text = new SplitType('.video-text', { types: 'lines' });
-        gsap.set('.video-text', { autoAlpha: 1 }); // prevent flash of unstayled content
+        const text = new SplitType(`.video-text-${videoId}`, {
+          types: 'lines',
+        });
+        gsap.set(`.video-text-${videoId}`, { autoAlpha: 1 }); // prevent flash of unstayled content
         gsap.set(text.lines, { opacity: 0, yPercent: 150, rotate: '10deg' }); // Sets initial state
         gsap.to(text.lines, {
           yPercent: 0,
@@ -59,7 +41,7 @@ export default function ModalVideo({
           ease: 'power4.out',
 
           scrollTrigger: {
-            trigger: '.video-wrapper',
+            trigger: `.video-wrapper-${videoId}`,
             start: '-70%',
             //   toggleActions: "play none reverse none",
             // end: '-20%',
@@ -83,7 +65,7 @@ export default function ModalVideo({
           delay: 0.2,
           duration: 0.6,
           scrollTrigger: {
-            trigger: '.video-wrapper',
+            trigger: `.video-wrapper-${videoId}`,
             start: '-80%',
             //   toggleActions: "play none reverse none",
             // end: '-20%',
@@ -95,8 +77,10 @@ export default function ModalVideo({
       });
 
       mm.add('(max-width: 1023px)', () => {
-        const text = new SplitType('.video-text', { types: 'lines' });
-        gsap.set('.video-text', { autoAlpha: 1 }); // prevent flash of unstayled content
+        const text = new SplitType(`.video-text-${videoId}`, {
+          types: 'lines',
+        });
+        gsap.set(`.video-text-${videoId}`, { autoAlpha: 1 }); // prevent flash of unstayled content
         gsap.set(text.lines, { opacity: 0, yPercent: 150, rotate: '10deg' }); // Sets initial state
         gsap.to(text.lines, {
           yPercent: 0,
@@ -107,7 +91,7 @@ export default function ModalVideo({
           ease: 'power4.out',
 
           scrollTrigger: {
-            trigger: '.video-wrapper',
+            trigger: `.video-wrapper-${videoId}`,
             start: '-100%',
             //   toggleActions: "play none reverse none",
             // end: '-20%',
@@ -131,7 +115,7 @@ export default function ModalVideo({
           delay: 0.2,
           duration: 0.6,
           scrollTrigger: {
-            trigger: '.video-wrapper',
+            trigger: `.video-wrapper-${videoId}`,
             start: '-100%',
             //   toggleActions: "play none reverse none",
             // end: '-20%',
@@ -150,11 +134,15 @@ export default function ModalVideo({
     <div ref={container}>
       {' '}
       <section className='py-24 sm:py-28 overflow-hidden'>
-        <div className='video-wrapper mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8'>
+        <div
+          className={`video-wrapper-${videoId} mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8`}
+        >
           <div className=' flex justify-center pb-5'>
             {' '}
-            <h1 className='video-text hero-clip invisible text-3xl font-medium tracking-tight sm:text-4xl'>
-              VIDEO PREZENTĀCIJAS
+            <h1
+              className={`video-text-${videoId} hero-clip invisible text-3xl font-medium tracking-tight sm:text-4xl`}
+            >
+              {title}
             </h1>
           </div>
 
@@ -169,7 +157,7 @@ export default function ModalVideo({
             >
               <Image
                 className='rounded-3xl shadow-2xl transition-shadow duration-300 ease-in-out'
-                src={Image1}
+                src={thumb}
                 alt={'Video component background image'}
                 // width={1206}
                 // height={684}
@@ -219,7 +207,7 @@ export default function ModalVideo({
                 >
                   <div className='w-full flex items-center'>
                     <DialogPanel className='w-full h-full rounded-3xl shadow-2xl aspect-video bg-primary-900/80 overflow-hidden'>
-                      <LazyYoutube videoId='uPAMgn5UVhM' width='600px' />
+                      <LazyYoutube videoId={videoId} width='600px' />
                     </DialogPanel>
                   </div>
                 </TransitionChild>

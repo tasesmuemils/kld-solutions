@@ -50,6 +50,11 @@ export default function Navbar() {
     },
     {
       ref: '03',
+      name: 'Video',
+      href: '/video',
+    },
+    {
+      ref: '04',
       name: 'Sazinies ar Mums',
       href: '/contact',
     },

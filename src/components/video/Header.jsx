@@ -33,13 +33,14 @@ export default function Header() {
             <div className='flex flex-col items-start gap-8 sm:gap-10'>
               <div className='flex max-w-3xl flex-col items-start gap-4 sm:gap-6'>
                 <h1 className='video-header-text invisible text-4xl font-medium tracking-tight sm:text-5xl lg:text-6xl'>
-                  Mēs atdzīvinām nekustamo īpašumu un produktus
+                  Iespaidīgas video prezentācijas jūsu īpašumam
                 </h1>
                 <p className='video-header-text invisible text-primary-950/70 dark:text-primary-200/70 text-lg sm:text-xl'>
-                  Ietekmīgām ēkām piemīt šarms un raksturs. Mēs tveram jūsu
-                  būvprojekta auru fotoreālistiskajos attēlos un animācijās.
-                  Mūsu vizualizācijas apvieno tehnisko pilnību ar autentisku
-                  unikalitāti, kas piešķir nekustamajam īpašumam tā personību
+                  Mūsu video prezentācijas pārvērš jūsu nekustamā īpašuma
+                  projektu aizraujošā stāstā. Ar izcilām animācijām un
+                  reālistisku attēlojumu mēs iedvešam dzīvību katrā detaļā.
+                  Ļaujiet jūsu ēkai izcelties ar mūsu profesionāli veidotajiem
+                  video, kas atspoguļo tās unikālo raksturu un pievilcību.
                 </p>
               </div>
             </div>
