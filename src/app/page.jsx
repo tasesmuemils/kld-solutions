@@ -11,6 +11,9 @@ import PortfolioSectionThree from '@/components/home/PortfolioSectionThree';
 import ModalVideo from '@/components/home/video/ModalVideo';
 import LongGallery from '@/components/home/LongGallery';
 
+// Images
+import Image1 from '../../public/engine_img/1920/39_00000.png';
+
 export default function Home() {
   return (
     <div>
@@ -20,7 +23,11 @@ export default function Home() {
       {/* <PortfolioSection />
       <PortfolioSectionTwo />
       <PortfolioSectionThree /> */}
-      <ModalVideo />
+      <ModalVideo
+        title='VIDEO PREZENTĀCIJAS'
+        videoId='zy4HvTcb1pw'
+        thumb={Image1}
+      />
       {/* <Tabs /> */}
       {/* <VideoTabs /> */}
       {/* <Services /> */}
