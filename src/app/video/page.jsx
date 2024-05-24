@@ -1,4 +1,4 @@
-import Header from '@/components/Video/Header';
+import Header from '@/components/video/Header';
 import Tabs from '@/components/services/Tabs';
 import VideoTabs from '@/components/services/VideoTabs';
 import ModalVideo from '@/components/home/video/ModalVideo';
