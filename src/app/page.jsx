@@ -24,7 +24,7 @@ export default function Home() {
       <PortfolioSectionTwo />
       <PortfolioSectionThree /> */}
       <ModalVideo
-        title='VIDEO PREZENTĀCIJAS'
+        title='Video Prezentācijas'
         videoId='zy4HvTcb1pw'
         thumb={Image1}
       />

@@ -76,7 +76,7 @@ export default function ModalVideo({ thumb, title, videoId }) {
         });
       });
 
-      mm.add('(max-width: 1023px)', () => {
+      mm.add('(min-width: 768px)', () => {
         const text = new SplitType(`.video-text-${videoId}`, {
           types: 'lines',
         });
@@ -125,6 +125,56 @@ export default function ModalVideo({ thumb, title, videoId }) {
           },
         });
       });
+
+      mm.add('(max-width: 767px)', () => {
+        const text = new SplitType(`.video-text-${videoId}`, {
+          types: 'lines',
+        });
+        gsap.set(`.video-text-${videoId}`, { autoAlpha: 1 }); // prevent flash of unstayled content
+        gsap.set(text.lines, { opacity: 0, yPercent: 150, rotate: '10deg' }); // Sets initial state
+        gsap.to(text.lines, {
+          yPercent: 0,
+          rotate: 0,
+          opacity: 1,
+          stagger: 0.05,
+          duration: 0.5,
+          ease: 'power4.out',
+
+          scrollTrigger: {
+            trigger: `.video-wrapper-${videoId}`,
+            start: '-250%',
+            //   toggleActions: "play none reverse none",
+            // end: '-20%',
+            // scrub: true,
+            // pin: true,
+            //   markers: true,
+          },
+        });
+
+        // VideoImages container
+        gsap.set('.video-img-wrapper', {
+          autoAlpha: 1,
+        });
+
+        gsap.from('.video-img-wrapper', {
+          translateY: '10%',
+          opacity: 0,
+          // stagger: {
+          //   amount: 0.2,
+          // },
+          delay: 0.2,
+          duration: 0.6,
+          scrollTrigger: {
+            trigger: `.video-wrapper-${videoId}`,
+            start: '-200%',
+            //   toggleActions: "play none reverse none",
+            // end: '-20%',
+            // scrub: true,
+            // pin: true,
+            //   markers: true,
+          },
+        });
+      });
     },
 
     { scope: container }
@@ -133,30 +183,30 @@ export default function ModalVideo({ thumb, title, videoId }) {
   return (
     <div ref={container}>
       {' '}
-      <section className='py-24 sm:py-28 overflow-hidden'>
+      <section className='py-10 sm:py-28 overflow-hidden'>
         <div
           className={`video-wrapper-${videoId} mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8`}
         >
           <div className=' flex justify-center pb-5'>
             {' '}
-            <h1
+            <h2
               className={`video-text-${videoId} hero-clip invisible text-3xl font-medium tracking-tight sm:text-4xl`}
             >
               {title}
-            </h1>
+            </h2>
           </div>
 
           <div className='invisible video-img-wrapper'>
             {' '}
             <button
-              className=' relative flex justify-center items-center focus:outline-none focus-visible:ring focus-visible:ring-indigo-300 rounded-3xl group'
+              className=' relative flex justify-center items-center focus:outline-none focus-visible:ring focus-visible:ring-indigo-300 rounded-lg group'
               onClick={() => {
                 setModalOpen(true);
               }}
               aria-label='Watch the video'
             >
               <Image
-                className='rounded-3xl shadow-2xl transition-shadow duration-300 ease-in-out'
+                className='rounded-lg shadow-2xl transition-shadow duration-300 ease-in-out'
                 src={thumb}
                 alt={'Video component background image'}
                 // width={1206}
@@ -207,7 +257,7 @@ export default function ModalVideo({ thumb, title, videoId }) {
                 >
                   <div className='w-full flex items-center'>
                     <DialogPanel className='w-full h-full rounded-3xl shadow-2xl aspect-video bg-primary-900/80 overflow-hidden'>
-                      <LazyYoutube videoId={videoId} width='600px' />
+                      <LazyYoutube videoId={videoId} width='100%' />
                     </DialogPanel>
                   </div>
                 </TransitionChild>

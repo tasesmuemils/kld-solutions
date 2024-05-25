@@ -21,44 +21,90 @@ export default function GraphicsSection() {
 
   useGSAP(
     () => {
-      //Splits text into chars
-      const text = new SplitType('.intro-text', { types: 'lines' });
-      gsap.set('.intro-text', { autoAlpha: 1 }); // prevent flash of unstayled content
-      gsap.set(text.lines, { opacity: 0, yPercent: 150, rotate: '10deg' }); // Sets initial state
-      gsap.to(text.lines, {
-        yPercent: 0,
-        rotate: 0,
-        opacity: 1,
-        stagger: 0.05,
-        duration: 0.5,
-        ease: 'power4.out',
+      let mm = gsap.matchMedia();
+      mm.add('(min-width: 768px)', () => {
+        //Splits text into chars
+        const text = new SplitType('.intro-text', { types: 'lines' });
+        gsap.set('.intro-text', { autoAlpha: 1 }); // prevent flash of unstayled content
+        gsap.set(text.lines, { opacity: 0, yPercent: 150, rotate: '10deg' }); // Sets initial state
+        gsap.to(text.lines, {
+          yPercent: 0,
+          rotate: 0,
+          opacity: 1,
+          stagger: 0.05,
+          duration: 0.5,
+          ease: 'power4.out',
 
-        scrollTrigger: {
-          trigger: '.wrapper',
-          start: '-70%',
-          //   toggleActions: "play none reverse none",
-          // end: '-20%',
-          // scrub: true,
-          // pin: true,
-        },
-      });
-
-      // // Images with random widths
-      gsap.set('.image_item', { translateX: 0 }); // Sets initial state
-      let leftImages = gsap.utils.toArray('.image_item');
-      leftImages.forEach((element, i) => {
-        gsap.from(element, {
-          translateX: element.classList.contains('from_left_image')
-            ? -element.offsetWidth
-            : element.offsetWidth,
-          duration: 1,
           scrollTrigger: {
             trigger: '.wrapper',
+            start: '-70%',
             //   toggleActions: "play none reverse none",
-            end: '-20%',
-            scrub: true,
+            // end: '-20%',
+            // scrub: true,
             // pin: true,
           },
+        });
+
+        // // Images with random widths
+        gsap.set('.image_item', { translateX: 0 }); // Sets initial state
+        let leftImages = gsap.utils.toArray('.image_item');
+        leftImages.forEach((element, i) => {
+          gsap.from(element, {
+            translateX: element.classList.contains('from_left_image')
+              ? -element.offsetWidth
+              : element.offsetWidth,
+            duration: 1,
+            scrollTrigger: {
+              trigger: '.wrapper',
+              //   toggleActions: "play none reverse none",
+              end: '-20%',
+              scrub: true,
+              // pin: true,
+            },
+          });
+        });
+      });
+
+      mm.add('(max-width: 767px)', () => {
+        //Splits text into chars
+        const text = new SplitType('.intro-text', { types: 'lines' });
+        gsap.set('.intro-text', { autoAlpha: 1 }); // prevent flash of unstayled content
+        gsap.set(text.lines, { opacity: 0, yPercent: 150, rotate: '10deg' }); // Sets initial state
+        gsap.to(text.lines, {
+          yPercent: 0,
+          rotate: 0,
+          opacity: 1,
+          stagger: 0.05,
+          duration: 0.5,
+          ease: 'power4.out',
+
+          scrollTrigger: {
+            trigger: '.wrapper',
+            start: '-40%',
+            //   toggleActions: "play none reverse none",
+            // end: '-20%',
+            // scrub: true,
+            // pin: true,
+          },
+        });
+
+        // // Images with random widths
+        gsap.set('.image_item', { translateX: 0 }); // Sets initial state
+        let leftImages = gsap.utils.toArray('.image_item');
+        leftImages.forEach((element, i) => {
+          gsap.from(element, {
+            translateX: element.classList.contains('from_left_image')
+              ? -element.offsetWidth
+              : element.offsetWidth,
+            duration: 1,
+            scrollTrigger: {
+              trigger: '.wrapper',
+              //   toggleActions: "play none reverse none",
+              end: '45%',
+              scrub: true,
+              // pin: true,
+            },
+          });
         });
       });
     },
@@ -67,7 +113,7 @@ export default function GraphicsSection() {
 
   return (
     <div ref={container}>
-      <section className='pb-28 lg:py-28 overflow-hidden'>
+      <section className='py-5 sm:py-28 lg:py-28 overflow-hidden'>
         <div className='wrapper mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8'>
           <div className='relative grid grid-cols-1 lg:grid-cols-2'>
             <div className='intro-images order-last lg:order-none'>
@@ -126,17 +172,17 @@ export default function GraphicsSection() {
                 <h3 className='intro-text hero-clip invisible text-3xl'>
                   Vizualizācija ir tavas idejas nākotnes apdrošināšana
                 </h3>
-                <p className='intro-text hero-clip'>
+                <p className='intro-text hero-clip invisible'>
                   Novērs iespējamās neprecizitātes, problēmas un pārsteigumus,
                   kas var rasties projekta realizācijas laikā!
                 </p>
               </div>
               <div>
                 {' '}
-                <h3 className='intro-text hero-clip text-3xl'>
+                <h3 className='intro-text hero-clip text-3xl invisible'>
                   Ietaupi laiku un finanses
                 </h3>
-                <p className='intro-text hero-clip'>
+                <p className='intro-text hero-clip invisible'>
                   No grīdas seguma līdz mīļākajam kafijas galdiņam
                 </p>
               </div>

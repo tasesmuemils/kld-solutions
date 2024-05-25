@@ -24,9 +24,9 @@ export default function Navbar() {
         yPercent: 0,
         rotate: 0,
 
-        delay: 0.2,
-        stagger: 0.2,
-        duration: 0.5,
+        delay: 0.1,
+        stagger: 0.13,
+        duration: 0.4,
         ease: 'power4.out',
       });
     },
@@ -140,14 +140,16 @@ export default function Navbar() {
           {/* Toggle menu */}
           <button
             type='button'
-            className='inline-flex lg:hidden h-14 w-14 items-center justify-center rounded-full text-primary-950 dark:text-primary-200 hover:bg-primary-500/10 dark:hover:bg-primary-400/10 ring-primary-950  transition focus:outline-none focus-visible:ring-2'
+            className='hero-clip inline-flex lg:hidden h-14 w-14 items-center justify-center rounded-full text-primary-950 dark:text-primary-200 hover:bg-primary-500/10 dark:hover:bg-primary-400/10 ring-primary-950  transition focus:outline-none focus-visible:ring-2'
             onClick={toggleMenu}
             aria-controls='website-menu'
             aria-expanded={open.toString()}
           >
             <span className='sr-only'>Toggle menu</span>
             <svg
-              className={`h-8 w-8 ${!open ? 'block' : 'hidden'}`}
+              className={`nav-item-gsap invisible h-8 w-8 ${
+                !open ? 'block' : 'hidden'
+              }`}
               xmlns='http://www.w3.org/2000/svg'
               fill='currentColor'
               viewBox='0 0 24 24'
@@ -156,7 +158,9 @@ export default function Navbar() {
               <path d='M19 8H5V10H19V8ZM19 14H5V16H19V14Z'></path>
             </svg>
             <svg
-              className={`h-8 w-8 ${open ? 'block' : 'hidden'}`}
+              className={`nav-item-gsap invisible h-8 w-8 ${
+                open ? 'block' : 'hidden'
+              }`}
               xmlns='http://www.w3.org/2000/svg'
               fill='currentColor'
               viewBox='0 0 24 24'
