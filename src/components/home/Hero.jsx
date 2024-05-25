@@ -64,24 +64,24 @@ export default function Hero() {
           <div className='flex flex-col pb-16 lg:pb-0 items-center lg:items-start gap-8 sm:gap-10'>
             <div className='flex max-w-xl flex-col items-center lg:items-start'>
               {' '}
-              <h1 className='hero-text hero-clip invisible pb-3 text-5xl lg:text-7xl font-medium tracking-tight leading-tight'>
+              <h1 className='hero-text hero-clip invisible pb-0 lg:pb-3 text-5xl sm:text-6xl lg:text-7xl font-medium tracking-tight leading-tight'>
                 Tavs sapnis
               </h1>
-              <h1 className='hero-text hero-clip invisible pb-6 text-5xl lg:text-7xl  font-medium tracking-tight leading-tight'>
+              <h1 className='hero-text hero-clip invisible pb-6 text-5xl sm:text-6xl lg:text-7xl  font-medium tracking-tight leading-tight'>
                 Mūsu realitāte
               </h1>
-              <p className='hero-text hero-clip invisible pb-6 text-primary-950/70 dark:text-primary-200/70 text-lg sm:text-xl leading-tight'>
+              <p className='hero-text hero-clip invisible pb-6 text-primary-950/70 dark:text-primary-200/70 text-2xl lg:text-xl  leading-tight'>
                 Vizualizēsim Tavas idejas
               </p>
             </div>
           </div>
-          <div className='hero-img-wrapper grid h-full w-full rounded-3xl  justify-center items-center invisible'>
-            <ImgComparisonSlider className='rounded-2xl'>
+          <div className='hero-img-wrapper grid h-full w-full justify-center items-center invisible'>
+            <ImgComparisonSlider className='rounded-lg'>
               <Image
                 slot='first'
                 src={SliderImage1}
                 alt='first hero image'
-                className='rounded-2xl'
+                // className='rounded-none'
                 // width={608}
                 // height={342}
                 priority={true}
@@ -90,7 +90,7 @@ export default function Hero() {
                 slot='second'
                 src={SliderImage2}
                 alt='first hero image'
-                className='rounded-2xl'
+                // className='rounded'
                 // width={608}
                 // height={342}
                 priority={true}
