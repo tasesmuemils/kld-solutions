@@ -126,7 +126,7 @@ export default function GraphicsSection() {
                   <Image
                     src={Image1}
                     alt='first hero image'
-                    className='h-full max-w-full rounded-lg object-cover object-center'
+                    className='h-full max-w-full rounded-lg object-cover object-center shadow-md'
                     width={192}
                     height={416}
                   />
@@ -139,7 +139,7 @@ export default function GraphicsSection() {
                   <Image
                     src={Image3}
                     alt='first hero image'
-                    className='max-w-full rounded-lg object-cover object-center h-full'
+                    className='max-w-full rounded-lg object-cover object-center h-full shadow-md'
                     width={400}
                     height={200}
                   />
@@ -149,7 +149,7 @@ export default function GraphicsSection() {
                   <Image
                     src={Image2}
                     alt='first hero image'
-                    className='h-full max-w-full rounded-lg object-cover object-center'
+                    className='h-full max-w-full rounded-lg object-cover object-center shadow-md'
                     width={192}
                     height={100}
                   />
@@ -159,7 +159,7 @@ export default function GraphicsSection() {
                   <Image
                     src={Image4}
                     alt='first hero image'
-                    className='h-full max-w-full rounded-lg object-cover object-center'
+                    className='h-full max-w-full rounded-lg object-cover object-center shadow-md'
                     width={400}
                     height={316}
                   />

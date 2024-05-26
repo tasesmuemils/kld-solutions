@@ -27,7 +27,7 @@ const LazyYoutube = ({ videoId, width }) => {
         <iframe
           //   width='100%'
           //   height='100%'
-          className='w-full aspect-video  h-[300px] sm:h-[450px] md:h-[400px] lg:h-[450px] xl:h-[600px]'
+          className='w-full aspect-video  h-[200px] sm:h-[450px] md:h-[400px] lg:h-[450px] xl:h-[600px]'
           src={`https://www.youtube.com/embed/${videoId}`}
           title='YouTube video player'
           //   frameBorder="0"

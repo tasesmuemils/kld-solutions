@@ -63,7 +63,7 @@ export default function About() {
         });
       });
 
-      mm.add('(min-width: 768px)', () => {
+      mm.add('(min-width: 768px) and (max-width: 1023px)', () => {
         const text = new SplitType('.about-text', { types: 'lines' });
         gsap.set('.about-text', { autoAlpha: 1 }); // prevent flash of unstayled content
         gsap.set(text.lines, { opacity: 0, yPercent: 150, rotate: '10deg' }); // Sets initial state
