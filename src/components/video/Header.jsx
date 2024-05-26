@@ -27,7 +27,7 @@ export default function Header() {
   );
   return (
     <div ref={container}>
-      <section className='py-28 sm:py-28'>
+      <section className='py-28 sm:py-32'>
         <div className='mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8'>
           <div className='flex flex-col gap-16'>
             <div className='flex flex-col items-start gap-8 sm:gap-10'>

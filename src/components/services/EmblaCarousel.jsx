@@ -101,7 +101,7 @@ const EmblaCarousel = (props) => {
           </p>
         </div>{' '}
         <div className='embla max-w-4xl mx-auto'>
-          <div className='embla__viewport rounded-3xl' ref={emblaRef}>
+          <div className='embla__viewport rounded-lg' ref={emblaRef}>
             <div className='embla__container'>
               {slides.map((index) => (
                 <div className='embla__slide' key={index}>

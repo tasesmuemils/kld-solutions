@@ -13,7 +13,7 @@ module.exports = {
       primary: colors.slate,
     },
     fontFamily: {
-      sans: ['Poppins', 'sans-serif'],
+      sans: ['Lexend'],
     },
     fontSize: {
       xs: ['0.75rem', '1rem'],

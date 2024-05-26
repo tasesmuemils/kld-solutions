@@ -76,7 +76,7 @@ export default function ModalVideo({ thumb, title, videoId }) {
         });
       });
 
-      mm.add('(min-width: 768px)', () => {
+      mm.add('(min-width: 768px) and (max-width: 1023px)', () => {
         const text = new SplitType(`.video-text-${videoId}`, {
           types: 'lines',
         });
@@ -206,7 +206,7 @@ export default function ModalVideo({ thumb, title, videoId }) {
               aria-label='Watch the video'
             >
               <Image
-                className='rounded-lg shadow-2xl transition-shadow duration-300 ease-in-out'
+                className='rounded-lg shadow-xl lg:shadow-2xl transition-shadow duration-300 ease-in-out'
                 src={thumb}
                 alt={'Video component background image'}
                 // width={1206}

@@ -1,9 +1,8 @@
 import Header from '@/components/services/Header';
-import Tabs from '@/components/services/Tabs';
-import VideoTabs from '@/components/services/VideoTabs';
 import EmblaCarousel from '@/components/services/EmblaCarousel';
 import '../../components/services/css/embla.css';
 import '../../components/services/css/base.css';
+import BeforeAfter from '@/components/services/BeforeAfter';
 
 // Images
 // Outside
@@ -45,7 +44,7 @@ export default function Services() {
     <div>
       <Header />
       <EmblaCarousel
-        title='Āriene'
+        title='Eksterjers'
         description='Fotoreālistiski ārējie attēli, kas izceļ jūsu ēkas arhitektūras skaistumu'
         imagesArr={imagesOutside}
         slides={SLIDES}
@@ -58,8 +57,10 @@ export default function Services() {
         slides={SLIDES}
         options={OPTIONS}
       />
-      {/* <Tabs />
-      <VideoTabs /> */}
+      <BeforeAfter
+        title='Pirms un Pēc'
+        description='Pārliecinošas salīdzināšanas, kas parāda jūsu īpašuma pārveidi no sākuma līdz beigām'
+      />
     </div>
   );
 }

@@ -30,7 +30,7 @@ export default function Cta() {
 
           scrollTrigger: {
             trigger: '.cta-wrapper',
-            start: '-30%',
+            start: '-50%',
             //   toggleActions: "play none reverse none",
             // end: '-20%',
             // scrub: true,
@@ -54,7 +54,7 @@ export default function Cta() {
           duration: 0.3,
           scrollTrigger: {
             trigger: '.cta-wrapper',
-            start: '-30%',
+            start: '-50%',
             //   toggleActions: "play none reverse none",
             // end: '-20%',
             // scrub: true,
@@ -64,7 +64,7 @@ export default function Cta() {
         });
       });
 
-      mm.add('(min-width: 768px)', () => {
+      mm.add('(min-width: 768px) and (max-width: 1023px)', () => {
         const text = new SplitType('.cta-text', { types: 'lines' });
         gsap.set('.cta-text', { autoAlpha: 1 }); // prevent flash of unstayled content
         gsap.set(text.lines, { opacity: 0, yPercent: 150, rotate: '10deg' }); // Sets initial state
