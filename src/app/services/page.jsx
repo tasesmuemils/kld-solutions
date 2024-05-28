@@ -1,7 +1,6 @@
 import Header from '@/components/services/Header';
 import EmblaCarousel from '@/components/services/EmblaCarousel';
 import '../../components/services/css/embla.css';
-import '../../components/services/css/base.css';
 import BeforeAfter from '@/components/services/BeforeAfter';
 
 // Images
