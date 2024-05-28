@@ -8,6 +8,7 @@ import {
   usePrevNextButtons,
 } from './EmblaCarouselArrowButtons';
 import { DotButton, useDotButton } from './EmblaCarouselDotButton';
+import { motion } from 'framer-motion';
 
 const TWEEN_FACTOR_BASE = 0.2;
 
@@ -16,6 +17,7 @@ const EmblaCarousel = (props) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
   const tweenFactor = useRef(0);
   const tweenNodes = useRef([]);
+  const scrollRef = useRef(null);
 
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
     useDotButton(emblaApi);
@@ -91,16 +93,30 @@ const EmblaCarousel = (props) => {
 
   return (
     <section className='py-28 sm:py-28'>
-      <div className='flex flex-col gap-10 mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8'>
-        <div className='flex flex-col justify-center text-center gap-1'>
+      <div
+        ref={scrollRef}
+        className='flex flex-col gap-10 mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8'
+      >
+        <motion.div
+          initial={{ opacity: 0, translateY: '20%' }}
+          whileInView={{ opacity: 1, translateY: '0%' }}
+          viewport={{ once: true, margin: '-20%' }}
+          className='flex flex-col justify-center text-center gap-1'
+        >
           <h2 className='text-3xl font-medium tracking-tight sm:text-4xl'>
             {title}
           </h2>
           <p className=' text-primary-950/70 dark:text-primary-200/70  text-lg sm:text-xl'>
             {description}
           </p>
-        </div>{' '}
-        <div className='embla max-w-4xl mx-auto'>
+        </motion.div>{' '}
+        <motion.div
+          initial={{ opacity: 0, translateY: '20%' }}
+          whileInView={{ opacity: 1, translateY: '0%' }}
+          viewport={{ once: true, margin: '-20%' }}
+          transition={{ delay: 0.1, duration: 0.3 }}
+          className='embla max-w-4xl mx-auto'
+        >
           <div className='embla__viewport rounded-lg' ref={emblaRef}>
             <div className='embla__container'>
               {slides.map((index) => (
@@ -114,11 +130,6 @@ const EmblaCarousel = (props) => {
                         height={360}
                         alt='Your alt text'
                       />
-                      {/* <img
-                        className='embla__slide__img embla__parallax__img'
-                        src={`https://picsum.photos/600/350?v=${index}`}
-                        alt='Your alt text'
-                      /> */}
                     </div>
                   </div>
                 </div>
@@ -126,8 +137,8 @@ const EmblaCarousel = (props) => {
             </div>
           </div>
 
-          <div className='embla__controls'>
-            <div className='embla__buttons'>
+          <div className='embla__controls mt-4 sm:mt-7 flex sm:grid justify-center sm:justify-between  '>
+            <div className='embla__buttons hidden sm:grid'>
               <PrevButton
                 onClick={onPrevButtonClick}
                 disabled={prevBtnDisabled}
@@ -152,7 +163,7 @@ const EmblaCarousel = (props) => {
               ))}
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
