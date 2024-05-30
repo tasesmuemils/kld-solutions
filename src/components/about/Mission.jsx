@@ -29,6 +29,7 @@ const imagesInside = [
 ];
 
 export default function Mission() {
+  console.log('TEST');
   const container = useRef();
 
   useGSAP(
