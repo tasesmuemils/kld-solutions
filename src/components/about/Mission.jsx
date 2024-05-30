@@ -29,7 +29,6 @@ const imagesVertical = [
 ];
 
 export default function Mission() {
-  console.log('TEST');
   const container = useRef();
 
   useGSAP(
@@ -208,7 +207,7 @@ export default function Mission() {
       {' '}
       <section className=' py-0 lg:py-20'>
         <div className='mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8'>
-          <div className='about-mission-wrapper grid gap-24 lg:grid-cols-2 lg:gap-24'>
+          <div className='about-mission-wrapper grid justify-center gap-24 lg:grid-cols-2 lg:gap-24'>
             <AboutEmblaCarousel
               imagesArr={imagesVertical}
               slides={SLIDES}
@@ -225,12 +224,12 @@ export default function Mission() {
                 </h2>
                 <div className='space-y-6'>
                   <p className='about-mission-text hero-clip invisible text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg'>
-                    Mēs vēlamies efektīvi veikt būvniecības darbus, samazinot
-                    izmaksas un optimizējot laika izmantošanu. Ar 3D
-                    vizualizācijas palīdzību mēs varam precīzi plānot gan
-                    iekštelpu, gan ārtelpu iekārtojumu, ņemot vērā klienta
-                    individuālās vēlmes un prasības. Tas nodrošina ne tikai
-                    augstu kvalitāti, bet arī efektīvu resursu izmantošanu
+                    Mēs vēlamies, lai mūsu klienti vizualizējot savus projektus
+                    samazina būvniecības izmaksas un ietaupa laiku būvniecības
+                    procesā. Ar 3D vizualizācijas palīdzību mēs varam precīzi
+                    plānot gan iekštelpu, gan ārtelpu iekārtojumu, ņemot vērā
+                    klienta individuālās vēlmes un prasības. Tas nodrošina ne
+                    tikai augstu kvalitāti, bet arī efektīvu resursu izmantošanu
                     būvniecības procesā.
                   </p>
                   <p className='about-mission-text hero-clip invisible text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg'>
