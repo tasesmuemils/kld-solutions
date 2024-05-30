@@ -8,6 +8,7 @@ const AboutEmblaCarousel = (props) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [
     Autoplay({ delay: 2000 }),
   ]);
+
   // const [isPlaying, setIsPlaying] = useState(false);
 
   //   const {
