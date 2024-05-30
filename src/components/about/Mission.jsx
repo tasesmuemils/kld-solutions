@@ -13,8 +13,8 @@ import SplitType from 'split-type';
 import VImage1 from '../../../public/engine_img/vertical/v1_00000.png';
 import VImage2 from '../../../public/engine_img/vertical/v2_00000.png';
 import VImage3 from '../../../public/engine_img/vertical/v3_00000.png';
-import VImage4 from '../../../public/engine_img/vertical/v5_00000.png';
-import VImage5 from '../../../public/engine_img/vertical/v6_00000.png';
+import VImage4 from '../../../public/engine_img/vertical/v5V_00000.png';
+import VImage5 from '../../../public/engine_img/vertical/v6V_00000.png';
 
 const OPTIONS = { dragFree: true, loop: true };
 const SLIDE_COUNT = 5;
