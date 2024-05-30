@@ -10,22 +10,22 @@ gsap.registerPlugin(ScrollTrigger);
 import SplitType from 'split-type';
 
 // Outside
-import Inside1 from '../../../public/engine_img/vertical/v1_00000.png';
-import Inside2 from '../../../public/engine_img/vertical/v2_00000.png';
-import Inside3 from '../../../public/engine_img/vertical/v3_00000.png';
-import Inside4 from '../../../public/engine_img/vertical/v5_00000.png';
-import Inside5 from '../../../public/engine_img/vertical/v6_00000.png';
+import VImage1 from '../../../public/engine_img/vertical/v1_00000.png';
+import VImage2 from '../../../public/engine_img/vertical/v2_00000.png';
+import VImage3 from '../../../public/engine_img/vertical/v3_00000.png';
+import VImage4 from '../../../public/engine_img/vertical/v5_00000.png';
+import VImage5 from '../../../public/engine_img/vertical/v6_00000.png';
 
 const OPTIONS = { dragFree: true, loop: true };
 const SLIDE_COUNT = 5;
 const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
-const imagesInside = [
-  Inside1.src,
-  Inside2.src,
-  Inside3.src,
-  Inside4.src,
-  Inside5.src,
+const imagesVertical = [
+  VImage1.src,
+  VImage2.src,
+  VImage3.src,
+  VImage4.src,
+  VImage5.src,
 ];
 
 export default function Mission() {
@@ -210,7 +210,7 @@ export default function Mission() {
         <div className='mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8'>
           <div className='about-mission-wrapper grid gap-24 lg:grid-cols-2 lg:gap-24'>
             <AboutEmblaCarousel
-              imagesArr={imagesInside}
+              imagesArr={imagesVertical}
               slides={SLIDES}
               options={OPTIONS}
             />
