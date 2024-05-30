@@ -30,7 +30,7 @@ export default function Cta() {
 
           scrollTrigger: {
             trigger: '.cta-wrapper',
-            start: '-50%',
+            start: '-100%',
             //   toggleActions: "play none reverse none",
             // end: '-20%',
             // scrub: true,
@@ -54,7 +54,7 @@ export default function Cta() {
           duration: 0.3,
           scrollTrigger: {
             trigger: '.cta-wrapper',
-            start: '-50%',
+            start: '-100%',
             //   toggleActions: "play none reverse none",
             // end: '-20%',
             // scrub: true,
@@ -172,7 +172,7 @@ export default function Cta() {
           <div className='bg-primary-500/10 dark:bg-primary-400/10 flex flex-col items-center gap-8 rounded-lg px-5 py-16 sm:gap-10'>
             <div className='flex flex-col gap-4 sm:gap-6'>
               <h2 className='cta-text hero-clip invisible text-3xl font-medium tracking-tight sm:text-4xl'>
-                Izveidojam kaut ko foršu kopā
+                Piesakies bezmaksas konsultācijai
               </h2>
               <p className='cta-text hero-clip invisible text-primary-950/70 dark:text-primary-200/70 mx-auto max-w-2xl text-lg'>
                 Apraksti savu unikālo ideju un mēs sniegsim tev atbildi

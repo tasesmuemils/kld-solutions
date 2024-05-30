@@ -176,11 +176,12 @@ export default function About() {
               className='flex flex-col items-start gap-8 sm:gap-10 lg:col-start-2 lg:col-end-4'
             >
               <p className='about-text hero-clip invisible text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg'>
-                Iedomājieties digitālo gleznu, kas atdzimst, kad video piedzīvo
-                radošu metamorfozi, bagātinoties ar rūpīgo pēcapstrādes burvību.
-                Šajā sarežģītajā pikseļu un kadru dejas rituālā neapstrādāta
-                filma pārvēršas vizuālā simfonijā, izmantojot māksliniecisku
-                apstrādi un grafisko dizaina elementu iedegšanu.
+                Mēs vēlamies efektīvi veikt būvniecības darbus, samazinot
+                izmaksas un optimizējot laika izmantošanu. Ar 3D vizualizācijas
+                palīdzību mēs varam precīzi plānot gan iekštelpu, gan ārtelpu
+                iekārtojumu, ņemot vērā klienta individuālās vēlmes un prasības.
+                Tas nodrošina ne tikai augstu kvalitāti, bet arī efektīvu
+                resursu izmantošanu būvniecības procesā.
               </p>
               <a
                 href='/about'
