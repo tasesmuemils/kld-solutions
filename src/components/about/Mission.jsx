@@ -16,7 +16,7 @@ import VImage3 from '../../../public/engine_img/vertical/v3_00000.png';
 import VImage4 from '../../../public/engine_img/vertical/V5V_00000.png';
 import VImage5 from '../../../public/engine_img/vertical/V6V_00000.png';
 
-const OPTIONS = { dragFree: true, loop: true };
+const OPTIONS = { watchDrag: false, dragFree: true, loop: true };
 const SLIDE_COUNT = 5;
 const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
