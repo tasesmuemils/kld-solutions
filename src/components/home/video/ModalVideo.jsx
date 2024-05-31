@@ -245,7 +245,7 @@ export default function ModalVideo({ thumb, title, videoId }) {
               leaveFrom='opacity-100'
               leaveTo='opacity-0'
             >
-              <div className='fixed w-full z-50 inset-0 flex items-center justify-center p-4 bg-primary-900/80 '>
+              <div className='fixed w-full z-50 inset-0 flex items-center justify-center bg-primary-900/80 '>
                 <TransitionChild
                   as={DialogPanel}
                   enter='ease-out duration-300'

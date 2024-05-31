@@ -12,7 +12,7 @@ import ModalVideo from '@/components/home/video/ModalVideo';
 import LongGallery from '@/components/home/LongGallery';
 
 // Images
-import Image1 from '../../public/engine_img/1920/39_00000.png';
+import Image1 from '../../public/engine_img/1920/99_00000.png';
 
 export default function Home() {
   return (
@@ -25,7 +25,7 @@ export default function Home() {
       <PortfolioSectionThree /> */}
       <ModalVideo
         title='Video Prezentācijas'
-        videoId='zy4HvTcb1pw'
+        videoId='sF5KncuB-rU'
         thumb={Image1}
       />
       {/* <Tabs /> */}
