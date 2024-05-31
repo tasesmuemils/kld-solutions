@@ -207,18 +207,20 @@ export default function Mission() {
       {' '}
       <section className=' py-0 lg:py-20'>
         <div className='mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8'>
-          <div className='about-mission-wrapper grid justify-center gap-24 lg:grid-cols-2 lg:gap-24'>
-            <AboutEmblaCarousel
-              imagesArr={imagesVertical}
-              slides={SLIDES}
-              options={OPTIONS}
-            />
+          <div className='about-mission-wrapper grid items-start gap-24 lg:grid-cols-2 lg:gap-24'>
+            <div className='flex flex-col lg:gap-24'>
+              <div className=''></div>
+              <div className=''>
+                {' '}
+                <AboutEmblaCarousel
+                  imagesArr={imagesVertical}
+                  slides={SLIDES}
+                  options={OPTIONS}
+                />
+              </div>
+            </div>
             <div className='flex flex-col gap-10'>
-              <div
-                className='space-y-8 sm:space-y-12'
-                data-aos='fade-up'
-                data-aos-delay='200'
-              >
+              <div className='space-y-8 sm:space-y-12'>
                 <h2 className='about-mission-text hero-clip invisible text-3xl font-medium tracking-tight sm:text-4xl'>
                   Mūsu Misija
                 </h2>

@@ -176,12 +176,13 @@ export default function About() {
               className='flex flex-col items-start gap-8 sm:gap-10 lg:col-start-2 lg:col-end-4'
             >
               <p className='about-text hero-clip invisible text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg'>
-                Mēs vēlamies efektīvi veikt būvniecības darbus, samazinot
-                izmaksas un optimizējot laika izmantošanu. Ar 3D vizualizācijas
-                palīdzību mēs varam precīzi plānot gan iekštelpu, gan ārtelpu
-                iekārtojumu, ņemot vērā klienta individuālās vēlmes un prasības.
-                Tas nodrošina ne tikai augstu kvalitāti, bet arī efektīvu
-                resursu izmantošanu būvniecības procesā.
+                Mēs vēlamies, lai mūsu klienti vizualizējot savus projektus
+                samazina būvniecības izmaksas un ietaupa laiku būvniecības
+                procesā. Ar 3D vizualizācijas palīdzību mēs varam precīzi plānot
+                gan iekštelpu, gan ārtelpu iekārtojumu, ņemot vērā klienta
+                individuālās vēlmes un prasības. Tas nodrošina ne tikai augstu
+                kvalitāti, bet arī efektīvu resursu izmantošanu būvniecības
+                procesā.
               </p>
               <a
                 href='/about'
