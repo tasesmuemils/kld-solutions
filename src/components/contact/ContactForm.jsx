@@ -140,6 +140,7 @@ export default function ContactForm() {
                 <div className='flex h-full flex-row'>
                   <a
                     target='_blank'
+                    aria-label='KLD Solutions Youtube Page'
                     href='https://www.youtube.com/@kld_solutions'
                     className='flex flex-row items-center gap-12 hover:underline text-primary-600 dark:text-primary-400 hover:text-primary-900 dark:hover:text-primary-300'
                   >
@@ -150,6 +151,7 @@ export default function ContactForm() {
                 <div className='flex h-full flex-row'>
                   <a
                     target='_blank'
+                    aria-label='KLD Solutions Instagram Page'
                     href='https://www.instagram.com/kld.solutions/'
                     className='flex flex-row items-center gap-12 hover:underline text-primary-600 dark:text-primary-400 hover:text-primary-900 dark:hover:text-primary-300'
                   >

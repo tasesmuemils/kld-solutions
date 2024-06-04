@@ -27,10 +27,18 @@ export default function Footer() {
         <div className='flex flex-col gap-3'>
           {' '}
           <div className='flex flex-row sm:justify-center gap-3'>
-            <a target='_blank' href='https://www.youtube.com/@kld_solutions'>
+            <a
+              aria-label='KLD Solutions Youtube Page'
+              target='_blank'
+              href='https://www.youtube.com/@kld_solutions'
+            >
               <FaYoutube className='text-3xl' />
             </a>
-            <a target='_blank' href='https://www.instagram.com/kld.solutions/'>
+            <a
+              aria-label='KLD Solutions Instagram Page'
+              target='_blank'
+              href='https://www.instagram.com/kld.solutions/'
+            >
               <FaInstagram className='text-3xl' />
             </a>
           </div>

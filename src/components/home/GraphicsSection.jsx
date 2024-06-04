@@ -169,9 +169,9 @@ export default function GraphicsSection() {
             <div className='intro-text-wrapper px-0 pb-20 lg:p-20'>
               <div className='pb-5'>
                 {' '}
-                <h3 className='intro-text hero-clip invisible text-3xl'>
+                <h2 className='intro-text hero-clip invisible text-3xl'>
                   Vizualizācija ir tavas idejas nākotnes apdrošināšana
-                </h3>
+                </h2>
                 <p className='intro-text hero-clip invisible'>
                   Novērs iespējamās neprecizitātes, problēmas un pārsteigumus,
                   kas var rasties projekta realizācijas laikā!
@@ -179,9 +179,9 @@ export default function GraphicsSection() {
               </div>
               <div>
                 {' '}
-                <h3 className='intro-text hero-clip text-3xl invisible'>
+                <h2 className='intro-text hero-clip text-3xl invisible'>
                   Ietaupi laiku un finanses
-                </h3>
+                </h2>
                 <p className='intro-text hero-clip invisible'>
                   No grīdas seguma līdz mīļākajam kafijas galdiņam
                 </p>
