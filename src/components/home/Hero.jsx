@@ -61,13 +61,13 @@ export default function Hero() {
     <section className='h-screen flex items-center' ref={container}>
       <div className='mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8'>
         <div className='grid grid-cols-1 lg:grid-cols-2 items-center '>
-          <div className='flex flex-col pb-16 lg:pb-0 items-center lg:items-start gap-8 sm:gap-10'>
+          <div className='flex flex-col pb-8 lg:pb-0 items-center lg:items-start gap-8 sm:gap-10'>
             <div className='flex max-w-xl flex-col items-center lg:items-start'>
               {' '}
               <h1 className='hero-text hero-clip invisible pb-0 text-primary-900/90 dark:text-primary-200 lg:pb-3 text-5xl sm:text-6xl lg:text-7xl font-medium tracking-tight leading-tight'>
                 Tavs sapnis
               </h1>
-              <h1 className='hero-text hero-clip invisible pb-6 text-primary-900/90 dark:text-primary-200 lg:pb-2 text-5xl sm:text-6xl lg:text-7xl  font-medium tracking-tight leading-tight'>
+              <h1 className='hero-text hero-clip invisible pb-2 text-primary-900/90 dark:text-primary-200 lg:pb-2 text-5xl sm:text-6xl lg:text-7xl  font-medium tracking-tight leading-tight'>
                 Mūsu realitāte
               </h1>
               <p className='hero-text hero-clip invisible pb-6 text-primary-950/70 dark:text-primary-200/70 text-2xl lg:text-2xl  leading-tight text-center lg:text-right w-full'>
@@ -82,8 +82,8 @@ export default function Hero() {
                 src={SliderImage1}
                 alt='first hero image'
                 // className='rounded-none'
-                // width={608}
-                // height={342}
+                width={608}
+                height={342}
                 priority={true}
               />
               <Image
@@ -91,8 +91,8 @@ export default function Hero() {
                 src={SliderImage2}
                 alt='first hero image'
                 // className='rounded'
-                // width={608}
-                // height={342}
+                width={608}
+                height={342}
                 priority={true}
               />
             </ImgComparisonSlider>

@@ -38,6 +38,10 @@ const imagesInside = [
   Inside5.src,
 ];
 
+export const metadata = {
+  title: 'Vizualizācijas',
+};
+
 export default function Services() {
   return (
     <div>

@@ -12,6 +12,10 @@ const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
 const imagesDigital = [Digital1.src, Digital2.src, Digital1.src, Digital2.src];
 
+export const metadata = {
+  title: 'Digitālais Mārketings',
+};
+
 export default function Digital() {
   return (
     <div>
