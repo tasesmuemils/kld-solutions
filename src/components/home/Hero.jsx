@@ -15,8 +15,8 @@ import SplitType from 'split-type';
 import { ImgComparisonSlider } from '@img-comparison-slider/react';
 
 import Image from 'next/image';
-import SliderImage1 from '../../../public/engine_img/1920/19_00000.png';
-import SliderImage2 from '../../../public/engine_img/1920/29_00000.png';
+import SliderImage1 from '../../../public/engine_img/before_after/608_before.png';
+import SliderImage2 from '../../../public/engine_img/before_after/608_after.png';
 // import SliderImage1 from '../../../public/engine_img/640/613_00000.png';
 // import SliderImage2 from '../../../public/engine_img/640/634_00000.png';
 

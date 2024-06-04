@@ -48,6 +48,7 @@ export default function Services() {
         imagesArr={imagesOutside}
         slides={SLIDES}
         options={OPTIONS}
+        maxWidth='max-w-4xl'
       />
       <EmblaCarousel
         title='Interjers'
@@ -55,10 +56,11 @@ export default function Services() {
         imagesArr={imagesInside}
         slides={SLIDES}
         options={OPTIONS}
+        maxWidth='max-w-4xl'
       />
       <BeforeAfter
-        title='Pirms un Pēc'
-        description='Pārliecinošas salīdzināšanas, kas parāda jūsu īpašuma pārveidi no sākuma līdz beigām'
+        title='Modelēšana un vizuālizācija'
+        description='Salīdzini izskatu pirms un pēc tekstūru  pievienošanas izstrādātājam projektam'
       />
     </div>
   );

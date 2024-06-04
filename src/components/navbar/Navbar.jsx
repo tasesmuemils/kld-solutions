@@ -55,6 +55,11 @@ export default function Navbar() {
     },
     {
       ref: '04',
+      name: 'Digitālais Mārketings',
+      href: '/digital',
+    },
+    {
+      ref: '05',
       name: 'Sazinies ar Mums',
       href: '/contact',
     },

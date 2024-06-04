@@ -73,22 +73,22 @@ export default function ContactForm() {
             <div className='flex flex-col gap-24'>
               <div className='flex flex-col gap-4 sm:gap-6'>
                 <h2 className='contact-text hero-clip invisible text-3xl font-medium tracking-tight sm:text-4xl'>
-                  Strādāsim kopā
+                  Piesakies konsultācijai
                 </h2>
                 <p className='contact-text hero-clip invisible text-primary-950/70 dark:text-primary-200/70 max-w-lg text-lg sm:text-xl'>
-                  Mēs vēlētos uzzināt vairāk par tevi un ko tu vēlies izstrādāt
+                  Pastāsti par savu ideju
                 </p>
               </div>
 
               <div className='contact-info-wrapper invisible hidden lg:w-2/3 xl:w-full lg:grid gap-5 xl:grid-cols-2 bg-primary-500/10 dark:bg-primary-400/10 rounded-lg px-6 py-8'>
                 <div className='flex h-full flex-row  gap-12'>
                   <FaPhoneAlt className='h-6 w-6 text-primary-600 dark:text-primary-400' />
-                  <p className='text-base font-medium'>+1 (555) 123-4567</p>
+                  <p className='text-base font-medium'>+371 22439644</p>
                 </div>
                 <div className='flex h-full flex-row  gap-12'>
                   <FaMapMarkerAlt className='h-6 w-6 text-primary-600 dark:text-primary-400' />
                   <div className='text-base font-medium'>
-                    <p>Riga, Latvia</p>
+                    <p>Rīga, Latvija</p>
                   </div>
                 </div>
                 <div className='flex h-full flex-row gap-12'>
