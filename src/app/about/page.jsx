@@ -3,6 +3,10 @@ import Mission from '@/components/about/Mission';
 import Team from '@/components/about/Team';
 import '../../components/about/css/embla.css';
 
+export const metadata = {
+  title: 'Par Mums',
+};
+
 export default function About() {
   return (
     <div>

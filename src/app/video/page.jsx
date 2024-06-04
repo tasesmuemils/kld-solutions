@@ -6,6 +6,10 @@ import Image1 from '../../../public/engine_img/1920/19_00000.png';
 import Image2 from '../../../public/engine_img/1920/99_00000.png';
 import Image3 from '../../../public/engine_img/1920/179_00000.png';
 
+export const metadata = {
+  title: 'Video',
+};
+
 export default function Services() {
   return (
     <div>
