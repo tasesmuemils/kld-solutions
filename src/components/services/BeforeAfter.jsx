@@ -4,8 +4,8 @@ import { ImgComparisonSlider } from '@img-comparison-slider/react';
 import { motion } from 'framer-motion';
 
 // Images
-import SliderImage1 from '../../../public/engine_img/1920/19_00000.png';
-import SliderImage2 from '../../../public/engine_img/1920/29_00000.png';
+import SliderImage1 from '../../../public/engine_img/before_after/896_before.png';
+import SliderImage2 from '../../../public/engine_img/before_after/896_after.png';
 
 export default function BeforeAfter({ title, description }) {
   return (

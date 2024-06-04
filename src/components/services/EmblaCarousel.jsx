@@ -13,7 +13,7 @@ import { motion } from 'framer-motion';
 const TWEEN_FACTOR_BASE = 0.2;
 
 const EmblaCarousel = (props) => {
-  const { title, description, imagesArr, slides, options } = props;
+  const { title, description, imagesArr, slides, options, maxWidth } = props;
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
   const tweenFactor = useRef(0);
   const tweenNodes = useRef([]);
@@ -115,7 +115,7 @@ const EmblaCarousel = (props) => {
           whileInView={{ opacity: 1, translateY: '0%' }}
           viewport={{ once: true, margin: '-20%' }}
           transition={{ delay: 0.1, duration: 0.3 }}
-          className='embla max-w-4xl mx-auto'
+          className={`embla ${maxWidth} mx-auto`}
         >
           <div className='embla__viewport rounded-lg' ref={emblaRef}>
             <div className='embla__container'>
