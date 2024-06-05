@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { toast } from 'react-hot-toast';
+import emailjs from '@emailjs/browser';
 
 import { FaYoutube } from 'react-icons/fa';
 import { FaInstagram } from 'react-icons/fa';
@@ -31,29 +32,32 @@ export default function ContactForm() {
       return false;
     }
 
-    await fetch('/api/send', {
-      method: 'POST',
-      body: JSON.stringify({ name, email, text }),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        setLoading(false);
-        if ('id' in data.data) {
+    const obj = { name: name, email: email, message: text };
+
+    emailjs
+      .send(
+        process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID,
+        obj,
+        process.env.NEXT_PUBLIC_EMAILJS_KEY
+      )
+      .then(
+        (response) => {
+          // console.log('SUCCESS!', response.status, response.text);
+          setLoading(false);
           toast.success(
             'E-pasts nosūtīts! KLD Solutions drīz ar jums sazināsies!'
           );
           setName('');
           setEmail('');
           setText('');
-        } else {
-          alert('Apologies! Please try again.');
+        },
+        (error) => {
+          // console.log('FAILED...', error);
+          setLoading(false);
+          toast.error('Ooops! Notika kļūda!');
         }
-      })
-      .catch((err) => {
-        setLoading(false);
-        alert('Ooops! unfortunately some error has occurred.');
-      });
-    return true;
+      );
   };
 
   // Using ref to capture Hero text container
@@ -133,10 +137,10 @@ export default function ContactForm() {
                     <p>Rīga, Latvija</p>
                   </div>
                 </div>
-                <div className='flex h-full flex-row gap-12'>
+                {/* <div className='flex h-full flex-row gap-12'>
                   <FaEnvelope className='h-6 w-6 text-primary-600 dark:text-primary-400' />
                   <p className='text-base font-medium'>info@kldsolutions.lv</p>
-                </div>
+                </div> */}
                 <div className='flex h-full flex-row'>
                   <a
                     target='_blank'
@@ -222,12 +226,12 @@ export default function ContactForm() {
                   <button
                     disabled
                     type='button'
-                    class='bg-primary-600 dark:bg-primary-400 hover:bg-primary-700 dark:hover:bg-primary-300 focus-visible:outline-primary-600 dark:focus-visible:outline-primary-400 dark:text-primary-950 inline-flex items-center justify-center rounded-full border border-transparent px-5 py-3 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2'
+                    className='bg-primary-600 dark:bg-primary-400 hover:bg-primary-700 dark:hover:bg-primary-300 focus-visible:outline-primary-600 dark:focus-visible:outline-primary-400 dark:text-primary-950 inline-flex items-center justify-center rounded-full border border-transparent px-5 py-3 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2'
                   >
                     <svg
                       aria-hidden='true'
                       role='status'
-                      class='inline w-4 h-4 me-3 text-white animate-spin'
+                      className='inline w-4 h-4 me-3 text-white animate-spin'
                       viewBox='0 0 100 101'
                       fill='none'
                       xmlns='http://www.w3.org/2000/svg'
