@@ -85,6 +85,7 @@ export default function Hero() {
                 width={608}
                 height={342}
                 priority={true}
+                sizes='(min-width: 1380px) 608px, (min-width: 1040px) calc(37.5vw + 98px), (min-width: 680px) 608px, calc(94.44vw - 15px)'
               />
               <Image
                 slot='second'
@@ -94,6 +95,7 @@ export default function Hero() {
                 width={608}
                 height={342}
                 priority={true}
+                sizes='(min-width: 1380px) 608px, (min-width: 1040px) calc(37.5vw + 98px), (min-width: 680px) 608px, calc(94.44vw - 15px)'
               />
             </ImgComparisonSlider>
           </div>

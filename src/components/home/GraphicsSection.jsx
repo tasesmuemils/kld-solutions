@@ -129,6 +129,7 @@ export default function GraphicsSection() {
                     className='h-full max-w-full rounded-lg object-cover object-center shadow-md'
                     width={192}
                     height={416}
+                    sizes='(min-width: 1360px) 192px, (min-width: 1040px) calc(13.33vw + 13px), (min-width: 680px) 192px, calc(31.39vw - 15px)'
                   />
                 </div>
                 <div
@@ -142,6 +143,7 @@ export default function GraphicsSection() {
                     className='max-w-full rounded-lg object-cover object-center h-full shadow-md'
                     width={400}
                     height={200}
+                    sizes='(min-width: 1360px) 400px, (min-width: 1040px) calc(26.67vw + 43px), (min-width: 680px) 400px, calc(63.06vw - 16px)'
                   />
                 </div>
                 <div className='image_item from_left_image row-start-3 row-end-4'>
@@ -152,6 +154,7 @@ export default function GraphicsSection() {
                     className='h-full max-w-full rounded-lg object-cover object-center shadow-md'
                     width={192}
                     height={100}
+                    sizes='(min-width: 1360px) 192px, (min-width: 1040px) calc(13.33vw + 13px), (min-width: 680px) 192px, calc(31.39vw - 15px)'
                   />
                 </div>
                 <div className='image_item from_right_image row-start-2 row-end-4 col-start-2 col-end-4'>
@@ -162,6 +165,7 @@ export default function GraphicsSection() {
                     className='h-full max-w-full rounded-lg object-cover object-center shadow-md'
                     width={400}
                     height={316}
+                    sizes='(min-width: 1360px) 400px, (min-width: 1040px) calc(26.67vw + 43px), (min-width: 680px) 400px, calc(63.06vw - 16px)'
                   />
                 </div>
               </div>
