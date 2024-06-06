@@ -209,8 +209,9 @@ export default function ModalVideo({ thumb, title, videoId }) {
                 className='rounded-lg shadow-xl lg:shadow-2xl transition-shadow duration-300 ease-in-out'
                 src={thumb}
                 alt={'Video component background image'}
-                // width={1206}
-                // height={684}
+                width={1206}
+                height={684}
+                sizes='(min-width: 1360px) 1206px, (min-width: 1040px) calc(76.67vw + 179px), (min-width: 700px) 624px, 93.68vw'
                 // loading='lazy'
               />
               {/* Play icon */}
