@@ -187,9 +187,7 @@ const LongGalleryImage = ({ ImageSource, ImageAlt }) => {
       <Image
         src={ImageSource}
         alt={ImageAlt}
-        className='lg-img rounded-lg'
-        width={400}
-        height={225}
+        className='lg-img rounded-lg w-[200px] lg:w-[400px]'
         sizes='(min-width: 1040px) 400px, 250px'
       />
     </li>
