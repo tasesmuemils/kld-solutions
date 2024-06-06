@@ -2,10 +2,10 @@
 
 // Images
 import Image from 'next/image';
-import Image1 from '../../../public/engine_img/vertical/V7_00000.png';
-import Image2 from '../../../public/engine_img/640/619_00000.png';
-import Image3 from '../../../public/engine_img/640/621_00000.png';
-import Image4 from '../../../public/engine_img/1920/223_00000.png';
+import Image1 from '../../../public/engine_img/random_size/192x416.png';
+import Image2 from '../../../public/engine_img/random_size/192x100.png';
+import Image3 from '../../../public/engine_img/random_size/400x200.png';
+import Image4 from '../../../public/engine_img/random_size/400x316.png';
 
 import { useRef } from 'react';
 import gsap from 'gsap';
