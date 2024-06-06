@@ -6,7 +6,7 @@ import ModalVideo from '@/components/home/video/ModalVideo';
 import LongGallery from '@/components/home/LongGallery';
 
 // Images
-import Image1 from '../../public/engine_img/1920/99_00000.png';
+import Image1 from '../../public/engine_img/video_thumb/barn.png';
 
 export default function Home() {
   return (
