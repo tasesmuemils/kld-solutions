@@ -128,7 +128,8 @@ const EmblaCarousel = (props) => {
                         src={imagesArr[index]}
                         width={640}
                         height={360}
-                        alt='Your alt text'
+                        alt='Embla carousel images'
+                        sizes='(min-width: 1040px) 714px, (min-width: 660px) 468px, calc(95.29vw - 18px)'
                       />
                     </div>
                   </div>
@@ -156,7 +157,7 @@ const EmblaCarousel = (props) => {
                   onClick={() => onDotButtonClick(index)}
                   className={`embla__dot after:shadow-[inset_0_0_0_0.2rem] after:shadow-primary-300 after:dark:shadow-[inset_0_0_0_0.2rem] after:dark:shadow-primary-500 after:content-['']`.concat(
                     index === selectedIndex
-                      ? ' embla__dot--selected after:shadow-[inset_0_0_0_0.2rem] after:shadow-primary-600 after:dark:shadow-[inset_0_0_0_0.2rem] after:dark:shadow-primary-300'
+                      ? ' embla__dot--selected after:shadow-[inset_0_0_0_0.2rem] after:shadow-primary-600 after:dark:shadow-[inset_0_0_0_0.2rem] after:dark:shadow-primary-200'
                       : ''
                   )}
                 />

@@ -37,19 +37,21 @@ export default function BeforeAfter({ title, description }) {
               <Image
                 slot='first'
                 src={SliderImage1}
-                alt='first hero image'
+                alt='first before after image'
                 // className='rounded-none'
                 // width={608}
                 // height={342}
+                sizes='(min-width: 1040px) 896px, (min-width: 700px) 624px, 93.68vw'
                 priority={true}
               />
               <Image
                 slot='second'
                 src={SliderImage2}
-                alt='first hero image'
+                alt='first before after image'
                 // className='rounded'
                 // width={608}
                 // height={342}
+                sizes='(min-width: 1040px) 896px, (min-width: 700px) 624px, 93.68vw'
                 priority={true}
               />
             </ImgComparisonSlider>

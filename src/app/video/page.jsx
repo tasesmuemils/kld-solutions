@@ -14,9 +14,21 @@ export default function Services() {
   return (
     <div>
       <Header />
-      <ModalVideo title='NOSAUKUMS' videoId='uPAMgn5UVhM' thumb={Image1} />
-      <ModalVideo title='NOSAUKUMS 2' videoId='sF5KncuB-rU' thumb={Image2} />
-      <ModalVideo title='NOSAUKUMS 3' videoId='zy4HvTcb1pw' thumb={Image3} />
+      <ModalVideo
+        title='Vizualizācija - Dzīvojamā ēka'
+        videoId='uPAMgn5UVhM'
+        thumb={Image1}
+      />
+      <ModalVideo
+        title='Vizualizácija - Koka saimniecības ēka'
+        videoId='sF5KncuB-rU'
+        thumb={Image2}
+      />
+      <ModalVideo
+        title='Vizualizācija - Vannas istaba'
+        videoId='zy4HvTcb1pw'
+        thumb={Image3}
+      />
     </div>
   );
 }

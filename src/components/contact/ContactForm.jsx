@@ -263,7 +263,7 @@ export default function ContactForm() {
             <div className='contact-info-wrapper invisible grid lg:w-2/3 xl:w-full lg:hidden gap-5 xl:grid-cols-2 bg-primary-500/10 dark:bg-primary-400/10 rounded-lg px-6 py-8'>
               <div className='flex h-full flex-row  gap-12'>
                 <FaPhoneAlt className='h-6 w-6 text-primary-600 dark:text-primary-400' />
-                <p className='text-base font-medium'>+1 (555) 123-4567</p>
+                <p className='text-base font-medium'>+371 22439644</p>
               </div>
               <div className='flex h-full flex-row  gap-12'>
                 <FaMapMarkerAlt className='h-6 w-6 text-primary-600 dark:text-primary-400' />
@@ -271,10 +271,10 @@ export default function ContactForm() {
                   <p>Riga, Latvia</p>
                 </div>
               </div>
-              <div className='flex h-full flex-row gap-12'>
+              {/* <div className='flex h-full flex-row gap-12'>
                 <FaEnvelope className='h-6 w-6 text-primary-600 dark:text-primary-400' />
                 <p className='text-base font-medium'>info@kldsolutions.lv</p>
-              </div>
+              </div> */}
               <div className='flex h-full flex-row'>
                 <a
                   target='_blank'

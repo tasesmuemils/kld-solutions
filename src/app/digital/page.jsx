@@ -5,12 +5,13 @@ import '../../components/services/css/embla.css';
 // // Images
 import Digital1 from '../../../public/engine_img/digital/digital_1.png';
 import Digital2 from '../../../public/engine_img/digital/digital_2.png';
+import Digital3 from '../../../public/engine_img/digital/digital_3.png';
 
 const OPTIONS = { dragFree: true, loop: true };
-const SLIDE_COUNT = 4;
+const SLIDE_COUNT = 3;
 const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
-const imagesDigital = [Digital1.src, Digital2.src, Digital1.src, Digital2.src];
+const imagesDigital = [Digital1.src, Digital2.src, Digital3.src];
 
 export const metadata = {
   title: 'Digitālais Mārketings',

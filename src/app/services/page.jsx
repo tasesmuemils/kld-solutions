@@ -11,12 +11,12 @@ import Outside3 from '../../../public/engine_img/640/615_00000.png';
 import Outside4 from '../../../public/engine_img/640/619_00000.png';
 import Outside5 from '../../../public/engine_img/640/634_00000.png';
 
-// Outside
-import Inside1 from '../../../public/engine_img/640/612_00000.png';
+// Inside
+import Inside1 from '../../../public/engine_img/long_gallery/13_00000.png';
 import Inside2 from '../../../public/engine_img/640/621_00000.png';
-import Inside3 from '../../../public/engine_img/640/623_00000.png';
-import Inside4 from '../../../public/engine_img/640/624_00000.png';
-import Inside5 from '../../../public/engine_img/640/625_00000.png';
+import Inside3 from '../../../public/engine_img/long_gallery/12_00000.png';
+import Inside4 from '../../../public/engine_img/long_gallery/11_00000.png';
+import Inside5 from '../../../public/engine_img/long_gallery/24_00000.png';
 
 const OPTIONS = { dragFree: true, loop: true };
 const SLIDE_COUNT = 5;
