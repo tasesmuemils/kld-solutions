@@ -155,17 +155,12 @@ const EmblaCarousel = (props) => {
                 <DotButton
                   key={index}
                   onClick={() => onDotButtonClick(index)}
-                  className={`embla__dot after:shadow-[inset_0_0_0_0.2rem] after:shadow-primary-${
-                    index === selectedIndex ? '600' : '300'
-                  } after:dark:shadow-[inset_0_0_0_0.2rem] after:dark:shadow-primary-${
-                    index === selectedIndex ? '300' : '500'
-                  } after:content-['']`}
+                  className={`embla__dot after:content-[''] after:shadow-[inset_0_0_0_0.2rem] after:shadow-primary-300 after:dark:shadow-primary-500`.concat(
+                    index === selectedIndex
+                      ? '  after:shadow-primary-600 after:dark:shadow-primary-50'
+                      : ''
+                  )}
                 />
-                // .concat(
-                //   index === selectedIndex
-                //     ? ' after:dark:shadow-primary-200 embla__dot--selected after:shadow-[inset_0_0_0_0.2rem] after:shadow-primary-600 after:dark:shadow-[inset_0_0_0_0.2rem] '
-                //     : ''
-                // )
               ))}
             </div>
           </div>
