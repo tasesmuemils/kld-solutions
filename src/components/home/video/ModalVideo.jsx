@@ -211,6 +211,7 @@ export default function ModalVideo({ thumb, title, videoId }) {
                 alt={'Video component background image'}
                 width={1206}
                 height={684}
+                style={{ width: 1206, height: 684 }}
                 sizes='(min-width: 1360px) 1206px, (min-width: 1040px) calc(76.67vw + 179px), (min-width: 700px) 624px, 93.68vw'
                 // loading='lazy'
               />

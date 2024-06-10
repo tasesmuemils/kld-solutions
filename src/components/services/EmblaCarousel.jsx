@@ -13,7 +13,8 @@ import { motion } from 'framer-motion';
 const TWEEN_FACTOR_BASE = 0.2;
 
 const EmblaCarousel = (props) => {
-  const { title, description, imagesArr, slides, options, maxWidth } = props;
+  const { title, description, imagesArr, slides, options, maxWidth, sizes } =
+    props;
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
   const tweenFactor = useRef(0);
   const tweenNodes = useRef([]);
@@ -129,7 +130,7 @@ const EmblaCarousel = (props) => {
                         width={640}
                         height={360}
                         alt='Embla carousel images'
-                        sizes='(min-width: 1040px) 714px, (min-width: 660px) 468px, calc(95.29vw - 18px)'
+                        sizes={sizes}
                       />
                     </div>
                   </div>
@@ -155,11 +156,18 @@ const EmblaCarousel = (props) => {
                 <DotButton
                   key={index}
                   onClick={() => onDotButtonClick(index)}
-                  className={`embla__dot after:content-[''] after:shadow-[inset_0_0_0_0.2rem] after:shadow-primary-300 after:dark:shadow-primary-500`.concat(
-                    index === selectedIndex
-                      ? '  after:shadow-primary-600 after:dark:shadow-primary-50'
-                      : ''
-                  )}
+                  className={
+                    `embla__dot after:shadow-[inset_0_0_0_0.2rem]  `.concat(
+                      index === selectedIndex
+                        ? ' after:shadow-primary-600'
+                        : ' after:shadow-primary-300'
+                    ) +
+                    `${
+                      index === selectedIndex
+                        ? ' dark:after:shadow-primary-200'
+                        : ' dark:after:shadow-primary-500'
+                    }`
+                  }
                 />
               ))}
             </div>

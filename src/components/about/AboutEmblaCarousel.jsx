@@ -64,6 +64,7 @@ const AboutEmblaCarousel = (props) => {
                 src={imagesArr[index]}
                 width={300}
                 height={600}
+                style={{ width: 300, height: 600 }}
                 alt='Vertical Image About'
                 sizes='(min-width: 380px) 300px, calc(80vw + 12px)'
               />

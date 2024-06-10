@@ -23,11 +23,6 @@ import Image18 from '../../../public/engine_img/long_gallery/21_00000.png';
 import Image19 from '../../../public/engine_img/long_gallery/22_00000.png';
 import Image20 from '../../../public/engine_img/long_gallery/23_00000.png';
 import Image21 from '../../../public/engine_img/long_gallery/24_00000.png';
-// import Image2 from '../../../public/engine_img/640/612_00000.png';
-// import Image3 from '../../../public/engine_img/640/613_00000.png';
-// import Image4 from '../../../public/engine_img/640/614_00000.png';
-// import Image5 from '../../../public/engine_img/640/627_00000.png';
-// import Image6 from '../../../public/engine_img/640/615_00000.png';
 
 import { useRef } from 'react';
 import gsap from 'gsap';
