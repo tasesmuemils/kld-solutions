@@ -53,6 +53,7 @@ export default function Services() {
         slides={SLIDES}
         options={OPTIONS}
         maxWidth='max-w-4xl'
+        sizes='(min-width: 1040px) 714px, (min-width: 660px) 468px, calc(95.29vw - 18px)'
       />
       <EmblaCarousel
         title='Interjers'
@@ -61,6 +62,7 @@ export default function Services() {
         slides={SLIDES}
         options={OPTIONS}
         maxWidth='max-w-4xl'
+        sizes='(min-width: 1040px) 714px, (min-width: 660px) 468px, calc(95.29vw - 18px)'
       />
       <BeforeAfter
         title='Modelēšana un vizuālizācija'
