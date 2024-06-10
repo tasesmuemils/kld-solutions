@@ -20,7 +20,7 @@ export default function Services() {
         thumb={Image1}
       />
       <ModalVideo
-        title='Vizualizácija - Koka saimniecības ēka'
+        title='Vizualizācija - Koka saimniecības ēka'
         videoId='sF5KncuB-rU'
         thumb={Image2}
       />

@@ -167,7 +167,7 @@ export default function Navbar() {
               <path d='M19 8H5V10H19V8ZM19 14H5V16H19V14Z'></path>
             </svg>
             <svg
-              className={`nav-item-gsap invisible h-8 w-8 ${
+              className={`nav-item-gsap md:invisible h-8 w-8 ${
                 open ? 'block' : 'hidden'
               }`}
               xmlns='http://www.w3.org/2000/svg'
