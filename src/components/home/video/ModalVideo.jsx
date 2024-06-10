@@ -190,7 +190,7 @@ export default function ModalVideo({ thumb, title, videoId }) {
           <div className=' flex justify-center pb-5'>
             {' '}
             <h2
-              className={`video-text-${videoId} hero-clip invisible text-3xl font-medium tracking-tight sm:text-4xl`}
+              className={`video-text-${videoId} hero-clip invisible text-3xl text-center font-medium tracking-tight sm:text-4xl`}
             >
               {title}
             </h2>
