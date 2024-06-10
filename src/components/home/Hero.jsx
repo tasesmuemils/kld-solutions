@@ -24,32 +24,36 @@ export default function Hero() {
 
   useGSAP(
     () => {
-      //Splits HERO text into chars
-      const text = new SplitType('.hero-text', { types: 'lines' });
-      gsap.set('.hero-text', { autoAlpha: 1 }); // prevent flash of unstayled content
-      gsap.set(text.lines, { opacity: 0, yPercent: 150, rotate: '10deg' }); // Sets initial state
-      gsap.to(text.lines, {
-        yPercent: 0,
-        opacity: 1,
-        rotate: 0,
-        stagger: 0.2,
-        duration: 1,
-        ease: 'power4.out',
-      });
+      let mm = gsap.matchMedia();
 
-      // Hero Images container
-      gsap.set('.hero-img-wrapper', {
-        autoAlpha: 1,
-      });
+      mm.add('(min-width: 768px)', () => {
+        //Splits HERO text into chars
+        const text = new SplitType('.hero-text', { types: 'lines' });
+        gsap.set('.hero-text', { autoAlpha: 1 }); // prevent flash of unstayled content
+        gsap.set(text.lines, { opacity: 0, yPercent: 150, rotate: '10deg' }); // Sets initial state
+        gsap.to(text.lines, {
+          yPercent: 0,
+          opacity: 1,
+          rotate: 0,
+          stagger: 0.2,
+          duration: 1,
+          ease: 'power4.out',
+        });
 
-      gsap.from('.hero-img-wrapper', {
-        translateX: '10%',
-        opacity: 0,
-        // stagger: {
-        //   amount: 0.2,
-        // },
-        delay: 0.2,
-        duration: 0.6,
+        // Hero Images container
+        gsap.set('.hero-img-wrapper', {
+          autoAlpha: 1,
+        });
+
+        gsap.from('.hero-img-wrapper', {
+          translateX: '10%',
+          opacity: 0,
+          // stagger: {
+          //   amount: 0.2,
+          // },
+          delay: 0.2,
+          duration: 0.6,
+        });
       });
     },
     { scope: container }
@@ -62,18 +66,18 @@ export default function Hero() {
           <div className='flex flex-col pb-8 lg:pb-0 items-center lg:items-start gap-8 sm:gap-10'>
             <div className='flex max-w-xl flex-col items-center lg:items-start'>
               {' '}
-              <h1 className='hero-text hero-clip invisible pb-0 text-primary-900/90 dark:text-primary-200 lg:pb-3 text-5xl sm:text-6xl lg:text-7xl font-medium tracking-tight leading-tight'>
+              <h1 className='hero-text hero-clip md:invisible pb-0 text-primary-900/90 dark:text-primary-200 lg:pb-3 text-5xl sm:text-6xl lg:text-7xl font-medium tracking-tight leading-tight'>
                 Tavs sapnis
               </h1>
-              <h1 className='hero-text hero-clip invisible pb-2 text-primary-900/90 dark:text-primary-200 lg:pb-2 text-5xl sm:text-6xl lg:text-7xl  font-medium tracking-tight leading-tight'>
+              <h1 className='hero-text hero-clip md:invisible pb-2 text-primary-900/90 dark:text-primary-200 lg:pb-2 text-5xl sm:text-6xl lg:text-7xl  font-medium tracking-tight leading-tight'>
                 Mūsu realitāte
               </h1>
-              <p className='hero-text hero-clip invisible pb-6 text-primary-950/70 dark:text-primary-200/70 text-2xl lg:text-2xl  leading-tight text-center lg:text-right w-full'>
+              <p className='hero-text hero-clip md:invisible pb-6 text-primary-950/70 dark:text-primary-200/70 text-2xl lg:text-2xl  leading-tight text-center lg:text-right w-full'>
                 Vizualizēsim Tavas idejas
               </p>
             </div>
           </div>
-          <div className='hero-img-wrapper grid h-full w-full justify-center items-center invisible'>
+          <div className='hero-img-wrapper grid h-full w-full justify-center items-center md:invisible'>
             <ImgComparisonSlider className='rounded-lg'>
               <Image
                 slot='first'
@@ -82,7 +86,8 @@ export default function Hero() {
                 // className='rounded-none'
                 width={608}
                 height={342}
-                priority={true}
+                priority
+                quality={60}
                 sizes='(min-width: 1380px) 608px, (min-width: 1040px) calc(37.5vw + 98px), (min-width: 680px) 608px, calc(94.44vw - 15px)'
               />
               <Image
@@ -92,7 +97,8 @@ export default function Hero() {
                 // className='rounded'
                 width={608}
                 height={342}
-                priority={true}
+                priority
+                quality={60}
                 sizes='(min-width: 1380px) 608px, (min-width: 1040px) calc(37.5vw + 98px), (min-width: 680px) 608px, calc(94.44vw - 15px)'
               />
             </ImgComparisonSlider>

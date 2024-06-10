@@ -16,19 +16,23 @@ export default function Navbar() {
   const containerNav = useRef();
   useGSAP(
     () => {
+      let mm = gsap.matchMedia();
+
+      mm.add('(min-width: 768px)', () => {
+        gsap.set('.nav-item-gsap', { autoAlpha: 1 }); // prevent flash of unstayled content
+        gsap.set('.nav-item-gsap', { yPercent: 200, rotate: '10deg' }); // Sets initial state
+        gsap.to('.nav-item-gsap', {
+          yPercent: 0,
+          rotate: 0,
+
+          delay: 0.1,
+          stagger: 0.13,
+          duration: 0.4,
+          ease: 'power4.out',
+        });
+      });
       //Splits HERO text into chars
       // const text = new SplitType(".hero-text", { types: "lines" });
-      gsap.set('.nav-item-gsap', { autoAlpha: 1 }); // prevent flash of unstayled content
-      gsap.set('.nav-item-gsap', { yPercent: 200, rotate: '10deg' }); // Sets initial state
-      gsap.to('.nav-item-gsap', {
-        yPercent: 0,
-        rotate: 0,
-
-        delay: 0.1,
-        stagger: 0.13,
-        duration: 0.4,
-        ease: 'power4.out',
-      });
     },
     { scope: containerNav }
   );
@@ -84,7 +88,7 @@ export default function Navbar() {
             href='/'
             className='py-4 lg:py-6 hero-clip focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200 rounded-md focus-visible:outline focus-visible:outline-2'
           >
-            <p className='nav-item-gsap invisible text-xl lg:text-2xl'>
+            <p className='nav-item-gsap md:invisible text-xl lg:text-2xl'>
               kld solutions
             </p>
           </Link>
@@ -101,7 +105,7 @@ export default function Navbar() {
               >
                 <div className='group-focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200 flex flex-1 items-center justify-between rounded-xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2'>
                   <div className='hero-clip flex items-center gap-6'>
-                    <span className='nav-item-gsap invisible group-hover:underline'>
+                    <span className='nav-item-gsap md:invisible group-hover:underline'>
                       {link.name}
                     </span>
                   </div>
@@ -119,7 +123,7 @@ export default function Navbar() {
             <span className='sr-only'>Toggle theme mode</span>
             {colorTheme == 'light' ? (
               <svg
-                className='nav-item-gsap invisible h-6 w-6'
+                className='nav-item-gsap md:invisible h-6 w-6'
                 xmlns='http://www.w3.org/2000/svg'
                 fill='currentColor'
                 viewBox='0 0 24 24'
@@ -130,7 +134,7 @@ export default function Navbar() {
               </svg>
             ) : (
               <svg
-                className='nav-item-gsap invisible h-6 w-6'
+                className='nav-item-gsap md:invisible h-6 w-6'
                 xmlns='http://www.w3.org/2000/svg'
                 fill='currentColor'
                 viewBox='0 0 24 24'
@@ -152,7 +156,7 @@ export default function Navbar() {
           >
             <span className='sr-only'>Toggle menu</span>
             <svg
-              className={`nav-item-gsap invisible h-8 w-8 ${
+              className={`nav-item-gsap md:invisible h-8 w-8 ${
                 !open ? 'block' : 'hidden'
               }`}
               xmlns='http://www.w3.org/2000/svg'
