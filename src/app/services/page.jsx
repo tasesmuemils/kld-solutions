@@ -5,18 +5,18 @@ import BeforeAfter from '@/components/services/BeforeAfter';
 
 // Images
 // Outside
-import Outside1 from '../../../public/engine_img/640/611_00000.png';
+import Outside1 from '../../../public/engine_img/ex_inter/Ex_1.png';
 import Outside2 from '../../../public/engine_img/640/613_00000.png';
 import Outside3 from '../../../public/engine_img/640/615_00000.png';
 import Outside4 from '../../../public/engine_img/640/619_00000.png';
-import Outside5 from '../../../public/engine_img/640/634_00000.png';
+import Outside5 from '../../../public/engine_img/ex_inter/Ex_2.png';
 
 // Inside
-import Inside1 from '../../../public/engine_img/long_gallery/13_00000.png';
+import Inside1 from '../../../public/engine_img/ex_inter/In_1.png';
 import Inside2 from '../../../public/engine_img/640/621_00000.png';
 import Inside3 from '../../../public/engine_img/long_gallery/12_00000.png';
-import Inside4 from '../../../public/engine_img/long_gallery/11_00000.png';
-import Inside5 from '../../../public/engine_img/long_gallery/24_00000.png';
+import Inside4 from '../../../public/engine_img/ex_inter/In_2.png';
+import Inside5 from '../../../public/engine_img/ex_inter/In_3.png';
 
 const OPTIONS = { dragFree: true, loop: true };
 const SLIDE_COUNT = 5;
