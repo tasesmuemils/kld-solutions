@@ -6,6 +6,8 @@ import { Toaster } from 'react-hot-toast';
 
 import Navbar from '@/components/navbar/Navbar';
 import Footer from '@/components/footer/Footer';
+import { Suspense } from 'react';
+
 const lexend = Lexend({
   subsets: ['latin'],
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
@@ -32,9 +34,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang='lv'>
-      <GoogleAnalytics
-        GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_MEASUREMENT_ID}
-      />
+      <Suspense>
+        {' '}
+        <GoogleAnalytics
+          GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_MEASUREMENT_ID}
+        />
+      </Suspense>
+
       <body
         className={` ${lexend.className} class="bg-primary-50 text-primary-950 dark:bg-primary-950 dark:text-primary-200 antialiased transition`}
       >
