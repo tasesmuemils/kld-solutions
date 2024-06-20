@@ -13,10 +13,13 @@ export default async function sitemap() {
       url: `${process.env.NEXT_PUBLIC_BASE_URL}/video`,
     },
     {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/dogital`,
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/digital`,
     },
     {
       url: `${process.env.NEXT_PUBLIC_BASE_URL}/contact`,
+    },
+    {
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/cookies`,
     },
   ];
 }

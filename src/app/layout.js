@@ -1,3 +1,5 @@
+import GoogleAnalytics from '@/components/GoogleAnalytics';
+import CookieBanner from '@/components/CookieBanner';
 import { Lexend } from 'next/font/google';
 import './globals.css';
 import { Toaster } from 'react-hot-toast';
@@ -15,8 +17,10 @@ export const metadata = {
     default: 'KLD Solutions',
     template: '%s - KLD Solutions',
   },
-  keywords: 'kld, kldsolutions, 3D vizualizācijas',
-  description: 'Tavs Sapnis - Mūsu Realitāte. Vizualizēsim Tavas idejas',
+  keywords:
+    'kld, kldsolutions, 3D vizualizācijas, 3D vizualizācija, būvniecības plānošana, interjera dizains, ārtelpu iekārtojums, digitālais mārketings, video prezentācijas, vizualizācijas pakalpojumi, KLD Solutions',
+  description:
+    'Tavs Sapnis - Mūsu Realitāte. KLD Solutions piedāvā 3D vizualizācijas un video prezentācijas pakalpojumus, kas palīdz klientiem efektīvi plānot un samazināt būvniecības izmaksas. Piedāvājam arī konsultācijas un digitālā mārketinga risinājumus.',
   twitter: {
     card: 'summary_large_image',
   },
@@ -28,12 +32,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang='lv'>
+      <GoogleAnalytics
+        GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_MEASUREMENT_ID}
+      />
       <body
         className={` ${lexend.className} class="bg-primary-50 text-primary-950 dark:bg-primary-950 dark:text-primary-200 antialiased transition`}
       >
         <Navbar />
         <Toaster position='top-center' toastOptions={{ duration: 4000 }} />
         {children}
+        <CookieBanner />
         <Footer />
       </body>
     </html>
