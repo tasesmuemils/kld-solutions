@@ -29,12 +29,8 @@ export default function CookieBanner() {
 
   useEffect(() => {
     const storedCookieConsent = getLocalStorage('cookie_consent', null);
-    console.log('Stored concent', storedCookieConsent);
 
-    // console.log(cookieConsent);
     setCookieConsent(storedCookieConsent);
-    // console.log(cookieConsent)
-    // setCookieConsent(storedCookieConsent);
   }, []);
 
   useEffect(() => {
@@ -46,7 +42,6 @@ export default function CookieBanner() {
       });
     }
 
-    console.log('Setting local', cookieConsent);
     if (cookieConsent !== null) {
       setLocalStorage('cookie_consent', cookieConsent);
     }
