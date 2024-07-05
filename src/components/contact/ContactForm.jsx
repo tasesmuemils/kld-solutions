@@ -137,10 +137,10 @@ export default function ContactForm() {
                     <p>Rīga, Latvija</p>
                   </div>
                 </div>
-                {/* <div className='flex h-full flex-row gap-12'>
+                <div className='flex h-full flex-row gap-12'>
                   <FaEnvelope className='h-6 w-6 text-primary-600 dark:text-primary-400' />
                   <p className='text-base font-medium'>info@kldsolutions.lv</p>
-                </div> */}
+                </div>
                 <div className='flex h-full flex-row'>
                   <a
                     target='_blank'
