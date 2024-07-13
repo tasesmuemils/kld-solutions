@@ -8,7 +8,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SplitType from 'split-type';
 gsap.registerPlugin(ScrollTrigger);
 
-export default function About() {
+export default function About({ title, p, btn }) {
   const container = useRef();
 
   useGSAP(
@@ -169,26 +169,20 @@ export default function About() {
         <div className=' mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8'>
           <div className='grid gap-12 lg:grid-cols-3 lg:gap-8'>
             <h2 className='about-text hero-clip invisible text-3xl font-medium tracking-tight sm:text-4xl'>
-              Par Mums
+              {title}
             </h2>
             <div
               data-aos-delay='200'
               className='flex flex-col items-start gap-8 sm:gap-10 lg:col-start-2 lg:col-end-4'
             >
               <p className='about-text hero-clip invisible text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg'>
-                Mēs vēlamies, lai mūsu klienti vizualizējot savus projektus
-                samazina būvniecības izmaksas un ietaupa laiku būvniecības
-                procesā. Ar 3D vizualizācijas palīdzību mēs varam precīzi plānot
-                gan iekštelpu, gan ārtelpu iekārtojumu, ņemot vērā klienta
-                individuālās vēlmes un prasības. Tas nodrošina ne tikai augstu
-                kvalitāti, bet arī efektīvu resursu izmantošanu būvniecības
-                procesā.
+                {p}
               </p>
               <a
                 href='/about'
                 className='about-btn invisible opacity-0 bg-primary-600 dark:bg-primary-400 hover:bg-primary-700 dark:hover:bg-primary-300 focus-visible:outline-primary-600 dark:focus-visible:outline-primary-400 dark:text-primary-950 inline-flex items-center justify-center rounded-lg border border-transparent px-5 py-3 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 '
               >
-                Lasi vairāk šeit
+                {btn}
               </a>
             </div>
           </div>

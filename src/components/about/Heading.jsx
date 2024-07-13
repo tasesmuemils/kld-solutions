@@ -7,7 +7,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 import SplitType from 'split-type';
 
-export default function Heading() {
+export default function Heading({ title, subTitle }) {
   const container = useRef();
 
   useGSAP(
@@ -38,14 +38,14 @@ export default function Heading() {
               className='about-hero-text hero-clip invisible text-4xl font-medium tracking-tight sm:text-5xl lg:text-6xl'
               data-aos='fade-down'
             >
-              Par Mums
+              {title}
             </h1>
             <p
               className='about-hero-text hero-clip invisible text-primary-950/70 dark:text-primary-200/70 mx-auto max-w-xl text-lg sm:text-xl'
               data-aos='fade-down'
               data-aos-delay='100'
             >
-              Vizualizēsim Tavas Idejas
+              {subTitle}
             </p>
           </div>
         </div>

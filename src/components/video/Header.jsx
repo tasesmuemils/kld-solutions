@@ -4,7 +4,7 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import SplitType from 'split-type';
 
-export default function Header() {
+export default function Header({ title, p }) {
   // Using ref to capture Hero text container
   const container = useRef();
 
@@ -33,14 +33,10 @@ export default function Header() {
             <div className='flex flex-col items-start gap-8 sm:gap-10'>
               <div className='flex max-w-3xl flex-col items-start gap-4 sm:gap-6'>
                 <h1 className='video-header-text invisible text-4xl font-medium tracking-tight sm:text-5xl lg:text-6xl'>
-                  Iespaidīgas video prezentācijas jūsu īpašumam
+                  {title}
                 </h1>
                 <p className='video-header-text invisible text-primary-950/70 dark:text-primary-200/70 text-lg sm:text-xl'>
-                  Mūsu video prezentācijas pārvērš jūsu nekustamā īpašuma
-                  projektu aizraujošā stāstā. Ar izcilām animācijām un
-                  reālistisku attēlojumu mēs iedvešam dzīvību katrā detaļā.
-                  Ļaujiet jūsu ēkai izcelties ar mūsu profesionāli veidotajiem
-                  video, kas atspoguļo tās unikālo raksturu un pievilcību.
+                  {p}
                 </p>
               </div>
             </div>

@@ -14,7 +14,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SplitType from 'split-type';
 gsap.registerPlugin(ScrollTrigger);
 
-export default function GraphicsSection() {
+export default function GraphicsSection({ titleOne, titleTwo, pOne, pTwo }) {
   // Using ref to capture container
   const container = useRef();
   const imageRef = useRef();
@@ -174,21 +174,16 @@ export default function GraphicsSection() {
               <div className='pb-5'>
                 {' '}
                 <h2 className='intro-text hero-clip invisible text-3xl'>
-                  Vizualizācija ir tavas idejas nākotnes apdrošināšana
+                  {titleOne}
                 </h2>
-                <p className='intro-text hero-clip invisible'>
-                  Novērs iespējamās neprecizitātes, problēmas un pārsteigumus,
-                  kas var rasties projekta realizācijas laikā!
-                </p>
+                <p className='intro-text hero-clip invisible'>{pOne}</p>
               </div>
               <div>
                 {' '}
                 <h2 className='intro-text hero-clip text-3xl invisible'>
-                  Ietaupi laiku un finanses
+                  {titleTwo}
                 </h2>
-                <p className='intro-text hero-clip invisible'>
-                  No grīdas seguma līdz mīļākajam kafijas galdiņam
-                </p>
+                <p className='intro-text hero-clip invisible'>{pTwo}</p>
               </div>
             </div>
           </div>

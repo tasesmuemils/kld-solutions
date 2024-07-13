@@ -16,7 +16,15 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 import SplitType from 'split-type';
 
-export default function ContactForm() {
+export default function ContactForm({
+  title,
+  subtitle,
+  nameText,
+  emailText,
+  messageText,
+  btn,
+  btnLoad,
+}) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [text, setText] = useState('');
@@ -119,10 +127,10 @@ export default function ContactForm() {
             <div className='flex flex-col gap-24'>
               <div className='flex flex-col gap-4 sm:gap-6'>
                 <h2 className='contact-text hero-clip invisible text-3xl font-medium tracking-tight sm:text-4xl'>
-                  Piesakies konsultācijai
+                  {title}
                 </h2>
                 <p className='contact-text hero-clip invisible text-primary-950/70 dark:text-primary-200/70 max-w-lg text-lg sm:text-xl'>
-                  Pastāsti par savu ideju
+                  {subtitle}
                 </p>
               </div>
 
@@ -174,7 +182,7 @@ export default function ContactForm() {
               {/* <!-- Full name input --> */}
               <div>
                 <label htmlFor='full-name' className='sr-only'>
-                  Vārds Uzvārds
+                  {nameText}
                 </label>
                 <input
                   type='text'
@@ -182,7 +190,7 @@ export default function ContactForm() {
                   id='full-name'
                   autoComplete='name'
                   className='hover:ring-primary-600 focus:ring-primary-600 dark:hover:ring-primary-400 dark:focus:ring-primary-400 bg-primary-50 dark:bg-primary-950 ring-primary-900/40 dark:ring-primary-200/40 placeholder:text-primary-950/60 dark:placeholder:text-primary-200/60 block w-full appearance-none rounded-md border-0 px-4 py-4 text-base ring-1 transition focus:outline-none focus:ring-2'
-                  placeholder='Vārds Uzvārds'
+                  placeholder={nameText}
                   onChange={(e) => setName(e.target.value)}
                   value={name}
                 />
@@ -191,7 +199,7 @@ export default function ContactForm() {
               {/* <!-- Email input --> */}
               <div>
                 <label htmlFor='email' className='sr-only'>
-                  E-pasts
+                  {emailText}
                 </label>
                 <input
                   type='email'
@@ -199,7 +207,7 @@ export default function ContactForm() {
                   id='email'
                   autoComplete='email'
                   className='hover:ring-primary-600 focus:ring-primary-600 dark:hover:ring-primary-400 dark:focus:ring-primary-400 bg-primary-50 dark:bg-primary-950 ring-primary-900/40 dark:ring-primary-200/40 placeholder:text-primary-950/60 dark:placeholder:text-primary-200/60 block w-full appearance-none rounded-md border-0 px-4 py-4 text-base ring-1 transition focus:outline-none focus:ring-2'
-                  placeholder='E-pasts'
+                  placeholder={emailText}
                   onChange={(e) => setEmail(e.target.value)}
                   value={email}
                 />
@@ -208,14 +216,14 @@ export default function ContactForm() {
               {/* <!-- Message textarea --> */}
               <div>
                 <label htmlFor='message' className='sr-only'>
-                  Tava Ziņa
+                  {messageText}
                 </label>
                 <textarea
                   name='message'
                   id='message'
                   rows='3'
                   className='hover:ring-primary-600 focus:ring-primary-600 dark:hover:ring-primary-400 dark:focus:ring-primary-400 bg-primary-50 dark:bg-primary-950 ring-primary-900/40 dark:ring-primary-200/40 placeholder:text-primary-950/60 dark:placeholder:text-primary-200/60 block w-full appearance-none rounded-md border-0 px-4 py-4 text-base ring-1 transition focus:outline-none focus:ring-2'
-                  placeholder='Tava Ziņa'
+                  placeholder={messageText}
                   onChange={(e) => setText(e.target.value)}
                   value={text}
                 ></textarea>
@@ -245,7 +253,7 @@ export default function ContactForm() {
                         fill='currentColor'
                       />
                     </svg>
-                    Sūta Ziņu...
+                    {btnLoad}
                   </button>
                 ) : (
                   <button
@@ -253,7 +261,7 @@ export default function ContactForm() {
                     type='submit'
                     id='submit-btn'
                   >
-                    Nosūtīt
+                    {btn}
                   </button>
                 )}
               </div>
@@ -271,10 +279,10 @@ export default function ContactForm() {
                   <p>Riga, Latvia</p>
                 </div>
               </div>
-              {/* <div className='flex h-full flex-row gap-12'>
+              <div className='flex h-full flex-row gap-12'>
                 <FaEnvelope className='h-6 w-6 text-primary-600 dark:text-primary-400' />
                 <p className='text-base font-medium'>info@kldsolutions.lv</p>
-              </div> */}
+              </div>
               <div className='flex h-full flex-row'>
                 <a
                   target='_blank'
