@@ -1,0 +1,142 @@
+{
+  "Nav": {
+    "About": "Par Mums",
+    "Visualizations": "Vizualizācijas",
+    "Video": "Video",
+    "Digital": "Digitālais Mārketings",
+    "Contact": "Sazinies ar Mums"
+  },
+  "Home": {
+    "Hero": {
+      "titleOne": "Tavs sapnis",
+      "titleTwo": "Mūsu realitāte",
+      "Subtitle": "Vizualizēsim Tavas idejas"
+    },
+    "GraphicsSection": {
+      "TitleOne": "Vizualizācija ir tavas idejas nākotnes apdrošināšana",
+      "pOne": "Novērs iespējamās neprecizitātes, problēmas un pārsteigumus, kas var rasties projekta realizācijas laikā!",
+      "TitleTwo": "Ietaupi laiku un finanses ar efektīvu interjera dizainu",
+      "pTwo": "Pirms pirkuma vai uzstādīšanas pārliecinies, vai izvēlētais grīdas segums un mīļākais kafijas galdiņš labi iederēsies tavā mājoklī, izveidojot 3D vizualizāciju. Tu vari precīzi novērtēt to izskatu, krāsu un proporcijas telpā, radot savu mājokļa iekārtojumu"
+    },
+    "Video": {
+      "Title": "Video Prezentācijas"
+    },
+    "About": {
+      "Title": "Par Mums",
+      "P": "Mēs vēlamies, lai mūsu klienti vizualizējot savus projektus samazina būvniecības izmaksas un ietaupa laiku būvniecības procesā. Ar 3D vizualizācijas palīdzību mēs varam precīzi plānot gan iekštelpu, gan ārtelpu iekārtojumu, ņemot vērā klienta individuālās vēlmes un prasības. Tas nodrošina ne tikai augstu kvalitāti, bet arī efektīvu resursu izmantošanu būvniecības procesā",
+      "Btn": "Lasi vairāk šeit"
+    },
+    "Cta": {
+      "Title": "Piesakies bezmaksas konsultācijai",
+      "Subtitle": "Apraksti savu unikālo ideju un mēs sniegsim tev atbildi",
+      "Btn": "Sazinies ar Mums"
+    }
+  },
+  "About": {
+    "Heading": {
+      "Title": "Par Mums",
+      "Subtitle": "Vizualizēsim Tavas Idejas"
+    },
+    "P": {
+      "Title": "Mūsu Misija",
+      "POne": "Mēs vēlamies, lai mūsu klienti vizualizējot savus projektus samazina būvniecības izmaksas un ietaupa laiku būvniecības procesā. Ar 3D vizualizācijas palīdzību mēs varam precīzi plānot gan iekštelpu, gan ārtelpu iekārtojumu, ņemot vērā klienta individuālās vēlmes un prasības. Tas nodrošina ne tikai augstu kvalitāti, bet arī efektīvu resursu izmantošanu būvniecības procesā",
+      "PTwo": "Mūsu pieeja iekļauj arī risku novēršanu. Mēs uzmanīgi izvērtējam potenciālos riskus un veicam pasākumus to novēršanai, nodrošinot projektam stabilitāti un ilgtspējību. Ar 3D vizualizācijas palīdzību mēs spējam identificēt potenciālās problēmas jau agrīnā stadijā un atrast risinājumus, kas palīdzēs novērst iespējamos riskus, nodrošinot veiksmīgu un bez problēmām noritējošu projekta gaitu",
+      "PThree": "Mainīgā arhitektūra un nekustamo īpašumu attīstība pieprasa svaigu pieeju, un mēs vienmēr esam modri. Mums patīk izpētīt jaunākās tehnoloģijas un tehnikas, pastāvīgi paplašinot digitālās pasaules robežas"
+    },
+    "Stats": {
+      "Title": "Pieredze",
+      "Years": "Gadi",
+      "Projects": "Projekti"
+    },
+    "Team": {
+      "Title": "Komanda",
+      "Elvis": "Video un video grafikas izstrāde",
+      "Emils": "Web izstrāde"
+    }
+  },
+  "Services": {
+    "Header": {
+      "Title": "Mēs atdzīvinām nekustamo īpašumu un produktus",
+      "P": "Ietekmīgām ēkām piemīt šarms un raksturs. Mēs tveram jūsu būvprojekta auru fotoreālistiskajos attēlos un animācijās. Mūsu vizualizācijas apvieno tehnisko pilnību ar autentisku unikalitāti, kas piešķir nekustamajam īpašumam tā personību"
+    },
+    "Ex": {
+      "Title": "Eksterjers",
+      "Subtitle": "Fotoreālistiski ārējie attēli, kas izceļ jūsu ēkas arhitektūras skaistumu"
+    },
+    "Int": {
+      "Title": "Interjers",
+      "Subtitle": "Dzīvi interjera attēli, kas rada aicinošu un stilīgu telpu atmosfēru"
+    },
+    "Mod": {
+      "Title": "Modelēšana un vizuālizācija",
+      "Subtitle": "Salīdzini izskatu pirms un pēc tekstūru pievienošanas izstrādātājam projektam"
+    }
+  },
+  "Video": {
+    "Header": {
+      "Title": "Iespaidīgas video prezentācijas jūsu īpašumam",
+      "P": "Mūsu video prezentācijas pārvērš jūsu nekustamā īpašuma projektu aizraujošā stāstā. Ar izcilām animācijām un reālistisku attēlojumu mēs iedvešam dzīvību katrā detaļā. Ļaujiet jūsu ēkai izcelties ar mūsu profesionāli veidotajiem video, kas atspoguļo tās unikālo raksturu un pievilcību"
+    },
+    "Titles": {
+      "T1": "Vizualizācija - Dzīvojamā ēka",
+      "T2": "Vizualizācija - Koka saimniecības ēka",
+      "T3": "Vizualizācija - Vannas istaba"
+    }
+  },
+  "Digital": {
+    "Header": {
+      "Title": "Satura stratēģija sociālajos medijos",
+      "P": "Mēs palīdzēsim uzlabot uzņēmuma redzamību un atpazīstamību sociālajos medijos, izstrādājot pielāgotu satura stratēģiju, kas piesaista un iesaista jūsu mērķauditoriju. Regulāra, kvalitatīva un interesanta satura publicēšana, kā arī aktīva iesaistīšanās ar sekotājiem veicinās jūsu zīmola tēlu un palielinās sekotāju skaitu. Turklāt, izmantojot mērķtiecīgas reklāmas kampaņas un sadarbību ar ietekmētājiem, mēs varam ievērojami palielināt jūsu zīmola sasniedzamību un piesaistīt jaunus klientus"
+    },
+    "Titles": {
+      "T1": "Digitālā Mārketinga risinājumi"
+    }
+  },
+  "Contact": {
+    "Title": "Piesakies konsultācijai",
+    "Subtitle": "Pastāsti par savu ideju",
+    "Name": "Vārds Uzvārds",
+    "Email": "E-pasts",
+    "Message": "Tava Ziņa",
+    "Btn": "Nosūtīt",
+    "BtnLoad": "Sūta Ziņu..."
+  },
+  "Footer": {
+    "Contact": "Sazinies ar Mums"
+  },
+  "Cookies": {
+    "Banner": {
+      "T1": "🍪 Šī vietne izmanto",
+      "T2": "sīkdatnes",
+      "T3": "lai uzlabotu lietošanas pieredzi un optimizētu tās darbību.",
+      "Btn1": "Nepiekrist",
+      "Btn2": "Piekrist"
+    },
+    "Page": {
+      "T1": "Sīkdatnes",
+      "P1": "Šie sīkdatņu noteikumi attiecas uz sīkdatņu apkopošanu KLD SOLUTIONS mājas lapā www.kldsolutions.lv",
+      "T2": "Kas ir sīkdatnes?",
+      "P2": "Sīkdatnes ir teksta datnes, kas satur nelielu daudzumu informācijas, kas laikā, kad Jūs apmeklējat mājaslapu, tiek nosūtītas uz Jūsu pārlūkprogrammu un glabātas Jūsu datorā, mobilajā telefonā vai citā ierīcē. Sīkdatnes informāciju nosūta atpakaļ mājas lapai katru reizi, kad Jūs atkārtoti apmeklējat mājas lapu.",
+      "T3": "Kāda veida sīkdatnes mēs izmantojam?",
+      "P3_1": "Obligātās sīkdatnes ir neieciešamas, lai Jūs spētu pārlūkot mājaslapu, kā arī izmantot tās funkcijas. Šīs sīkdatnes nesaglabā personu identificējošu informāciju un tiek glabātas iekārtā līdz brīdim, kad tiek aizvērta tīmekļa pārlūkprogramma.",
+      "P3_2": "Ar funkcionālajām sīkdatnēm mājaslapa atceras lietotāja izvēlētos uzstādījumus un veiktās izvēles, lai Jūs varētu ērtāk lietot mājaslapu. Šīs sīkdatnes glabājas Jūsu iekārtā pastāvīgi.",
+      "P3_3": "Analītiskās sīkdatnes tiek pielietotas, lai savāktu informāciju par to kā Jūs izmantojat mūsu mājaslapu. Šāda statistika sniedz noderīgu informāciju par to, cik bieži mūsu mājaslapa tiek izmantota, kurās mājaslapas sadaļās tiek pavadīts visilgākais laika posms utt. Tas mums ļauj izveidot pēc iespējas ērtāku mājaslapas struktūru, navigāciju, saturu un saprast, kuras mājaslapas sadaļas nepieciešams uzlabot.",
+      "P3_4": "Analītiskās sīkdatnes identificē tikai Jūsu iekārtu, taču neizpauž identitāti. Atsevišķos gadījumos dažas no analītiskajām sīkdatnēm vietnes īpašnieka vietā saskaņā ar tā norādījumiem un tikai atbilstoši norādītajiem mērķiem pārvalda trešās personas – datu apstrādātāji, piemēram, Google Adwords.",
+      "P3_5": "Mārketinga sīkdatnes izmantojam, lai apkopotu informāciju par Jūsu apmeklētajām tīmekļa vietnēm un piedāvātu tieši Jums interesējošus mūsu pakalpojumus. Parasti šīs sīkdatnes ar mūsu atļauju atbilstoši norādītajiem mērķiem izvieto trešās personas, piemēram, Google AdWords, Facebook. Mārketinga sīkdatnes Jūsu galiekārtā tiek uzglabātas pastāvīgi.",
+      "T4": "Kāda informācija tiek ievākta izmantojot sīkdatnes?",
+      "P4": "Ar mūsu sīkdatņu datu palīdzību ievācam sekošu informāciju:",
+      "LI4_1": "mājaslapu apmeklējošo lietotāju skaits;",
+      "LI4_2": "laiks, ko lietotājs pavada mājaslapā;",
+      "LI4_3": "mājaslapu apmeklējošo lietotāju skaits vienas lietošanas sesija laikā;",
+      "LI4_4": "atkārtoto/pirmreizējo apmeklētāju skaits;",
+      "LI4_5": "kāda pārlūkprogramma tika izmantota, apmeklējot mājas lapu, tās versija un valoda;",
+      "LI4_6": "atrašanās vieta, no kuras mājaslapa ir apmeklēta;",
+      "LI4_7": "interneta pakalpojuma sniedzēja nosaukums;",
+      "LI4_8": "ierīce, kurā lapa tika apmeklēta (dators, planšete vai mobilais telefons);",
+      "LI4_9": " veids, kā mājaslapa tika sasniegta (tieši, ievadot interneta adresi pārlūkprogrammā, ar meklētājprogrammām (piemēram, Google, Bing utt.), caur sociālajiem tīkliem (piemēram, facebook utt.) izmantojot citas saites).",
+      "T5": "Kā notiek sīkdatņu apstiprināšana un atspēkošana?",
+      "P5_1": "Apmeklējot mūsu tīmekļa vietni, Jums tika attēlots logs ar ziņojumu par to, ka tiek izmantotas sīkdatnes. Nospiežot “Piekrītu”, Jūs apstiprināt, ka esiet iepazinies ar informāciju par sīkdatnēm un to izmantošanas mērķiem mūsu lapā. Ikvienas tīmekļa pārlūkprogrammas drošības iestatījumos iespējama sīkdatņu ierobežošana un dzēšana. Tomēr ņem vērā – ja izvēlēsies atspējot noteikti nepieciešamās sīkdatnes, tīmekļa vietne nevarēs darboties pilnvērtīgi.",
+      "P5_2": "Izmaiņas drošības iestatījumos jāveic katrai pārlūkprogrammai atsevišķi un izmantotās iestatījumu metodes var atšķirties. Sīkdatņu nepieņemšana neaizliegs Jums lietot mājaslapu, taču tas var ierobežot mājaslapas izmantošanas iespējas. Jums jāņem vērā, ka nav iespējams atteikties no obligāto un funkcionālo sīkdatņu lietošanas, jo bez tām nav iespējama mājaslapas pilnvērtīga lietošana."
+    }
+  }
+}

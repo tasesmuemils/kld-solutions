@@ -1,0 +1,142 @@
+{
+  "Nav": {
+    "About": "About Us",
+    "Visualizations": "Visualizations",
+    "Video": "Animations",
+    "Digital": "Digital Marketing",
+    "Contact": "Contact Us"
+  },
+  "Home": {
+    "Hero": {
+      "titleOne": "Your dream",
+      "titleTwo": "Our reality",
+      "Subtitle": "Let's visualize your ideas"
+    },
+    "GraphicsSection": {
+      "TitleOne": "Visualization is the future insurance for your idea",
+      "pOne": "Prevent potential inaccuracies, issues, and surprises that may arise during project implementation!",
+      "TitleTwo": "Save your time with efficient interior design",
+      "pTwo": "Before purchasing or installing, make sure the chosen flooring and your favourite coffee table fit well in your home by creating a 3D visualization. You can accurately assess their appearance, colour, and proportions in the space, creating your home's layout."
+    },
+    "Video": {
+      "Title": "Video Presentations"
+    },
+    "About": {
+      "Title": "About Us",
+      "P": "We want our customers to reduce construction costs and save time in the construction process by visualizing their projects. With the help of 3D visualization, we can accurately plan both indoor and outdoor furnishings, taking into account the client's individual wishes and requirements. This ensures not only high quality, but also efficient use of resources in the construction process",
+      "Btn": "Read more"
+    },
+    "Cta": {
+      "Title": "Hit us a message",
+      "Subtitle": "Share your unique idea and we will get back to you",
+      "Btn": "Contact Us"
+    }
+  },
+  "About": {
+    "Heading": {
+      "Title": "About Us",
+      "Subtitle": "Let's visualize your ideas"
+    },
+    "P": {
+      "Title": "Our Mission",
+      "POne": "We want our clients to visualize their projects, reducing construction costs and saving time in the building process. With the help of 3D visualization, we can accurately plan interior and exterior layouts, considering the client's preferences and requirements. This ensures not only high quality, but also efficient resource utilization during construction",
+      "PTwo": "Our approach also includes risk mitigation. We carefully assess potential risks and take measures to prevent them, ensuring stability and sustainability for the project. Through 3D visualization, we can identify potential problems early on and find solutions to mitigate risks, ensuring a smooth and successful project execution",
+      "PThree": "The evolving architecture and real estate development demand a fresh approach, and we are always vigilant. We enjoy exploring the latest technologies and techniques, continually expanding the boundaries of the digital world"
+    },
+    "Stats": {
+      "Title": "Experience",
+      "Years": "Years",
+      "Projects": "Projects"
+    },
+    "Team": {
+      "Title": "Team",
+      "Elvis": "Video and video graphics developer",
+      "Emils": "Web developer"
+    }
+  },
+  "Services": {
+    "Header": {
+      "Title": "We breathe new life into real estate and products",
+      "P": "Iconic buildings possess charm and character. We capture the essence of your construction project in photorealistic images and animations. Our visualizations blend technical precision with authentic uniqueness, giving real estate its distinctive personality"
+    },
+    "Ex": {
+      "Title": "Exterior",
+      "Subtitle": "Photorealistic exterior images that highlight the beauty of your building's architecture"
+    },
+    "Int": {
+      "Title": "Interior",
+      "Subtitle": "Lively interior images that create an inviting and stylish atmosphere"
+    },
+    "Mod": {
+      "Title": "Modeling and visualization",
+      "Subtitle": "Compare the appearance before and after adding textures to showcase the developer's project"
+    }
+  },
+  "Video": {
+    "Header": {
+      "Title": "Impressive video presentations for your property",
+      "P": "Our video presentations transform your real estate project into an engaging story. With excellent animations and realistic depictions, we breathe life into every detail. Let your building stand out with our professionally crafted videos that reflect its unique character and allure"
+    },
+    "Titles": {
+      "T1": "Visualization - Residential building",
+      "T2": "Visualization - Wooden farm building",
+      "T3": "Visualization - Bathroom"
+    }
+  },
+  "Digital": {
+    "Header": {
+      "Title": "Digital Marketing",
+      "P": "We will help enhance your company's visibility and recognition on social media by developing a tailored content strategy that attracts and engages your target audience. Regular, high-quality, and interesting content posting, along with active engagement with followers, will enhance your brand image and increase follower count. Additionally, through targeted advertising campaigns and collaboration with influencers, we can significantly expand your brand's reach and attract new customers"
+    },
+    "Titles": {
+      "T1": "Digital Marketing solutions"
+    }
+  },
+  "Contact": {
+    "Title": "Hit us a message",
+    "Subtitle": "Tell us about your idea",
+    "Name": "Name Lastname",
+    "Email": "Email",
+    "Message": "Your message",
+    "Btn": "Send",
+    "BtnLoad": "Sending Message..."
+  },
+  "Footer": {
+    "Contact": "Contact Us"
+  },
+  "Cookies": {
+    "Banner": {
+      "T1": "🍪 This site uses",
+      "T2": "cookies",
+      "T3": "to improve the user experience and optimize its operation.",
+      "Btn1": "Cancel",
+      "Btn2": "Accept"
+    },
+    "Page": {
+      "T1": "Cookies",
+      "P1": "These cookie policies apply to the collection of cookies on the KLD SOLUTIONS website www.kldsolutions.lv.",
+      "T2": "What are cookies?",
+      "P2": "Cookies are text files that contain a small amount of information that, when you visit the website, are sent to your browser and stored on your computer, mobile phone, or other device. The information in the cookies is sent back to the website each time you revisit the website.",
+      "T3": "What types of cookies do we use?",
+      "P3_1": "Essential cookies are necessary for you to be able to browse the website and use its features. These cookies do not store personally identifiable information and are stored on your device until the web browser is closed.",
+      "P3_2": "Functional cookies allow the website to remember the settings and choices made by the user to make it more convenient for you to use the website. These cookies are stored on your device permanently.",
+      "P3_3": "Analytical cookies are used to collect information about how you use our website. Such statistics provide useful information about how often our website is used, which sections of the website are spent the most time on, etc. This allows us to create the most convenient website structure, navigation, content, and understand which sections of the website need improvement.",
+      "P3_4": "Analytical cookies only identify your device but do not disclose your identity. In certain cases, some of the analytical cookies are managed by third parties – data processors, such as Google Adwords, on behalf of the site owner and only according to the specified purposes.",
+      "P3_5": "We use marketing cookies to collect information about the websites you visit and to offer you our services that may be of interest to you. Usually, these cookies are placed by third parties, such as Google AdWords, Facebook, with our permission and according to the specified purposes. Marketing cookies are stored on your end device permanently.",
+      "T4": "What information is collected using cookies?",
+      "P4": "With the help of our cookie data, we collect the following information:",
+      "LI4_1": "the number of users visiting the website;",
+      "LI4_2": "the time the user spends on the website;",
+      "LI4_3": "the number of users visiting the website during one session;",
+      "LI4_4": "the number of repeat/first-time visitors;",
+      "LI4_5": "the browser used to visit the website, its version, and language;",
+      "LI4_6": "the location from which the website is visited;",
+      "LI4_7": "the name of the internet service provider;",
+      "LI4_8": "the device on which the page was visited (computer, tablet, or mobile phone);",
+      "LI4_9": "the method by which the website was reached (directly by entering the internet address in the browser, via search engines (such as Google, Bing, etc.), through social networks (such as Facebook, etc.), using other links).",
+      "T5": "How to approve and disable cookies?",
+      "P5_1": "When visiting our website, a window with a message about the use of cookies was displayed. By clicking 'Agree', you confirm that you have read the information about cookies and their purposes on our site. In the security settings of each web browser, it is possible to limit and delete cookies. However, keep in mind – if you choose to disable certain necessary cookies, the website will not be able to function fully.",
+      "P5_2": "Changes to security settings must be made for each browser separately, and the methods used for settings may vary. Refusing cookies will not prohibit you from using the website, but it may limit the usability of the website. You should note that it is not possible to opt-out of the use of essential and functional cookies, as without them, the full use of the website is not possible."
+    }
+  }
+}

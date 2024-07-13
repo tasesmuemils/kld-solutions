@@ -3,6 +3,8 @@ import CookieBanner from '@/components/CookieBanner';
 import { Lexend } from 'next/font/google';
 import './globals.css';
 import { Toaster } from 'react-hot-toast';
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages } from 'next-intl/server';
 
 import Navbar from '@/components/navbar/Navbar';
 import Footer from '@/components/footer/Footer';
@@ -31,7 +33,11 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children, params }) {
+  const { local } = params;
+
+  const messages = await getMessages();
+
   return (
     <html lang='lv'>
       <Suspense>
@@ -44,11 +50,13 @@ export default function RootLayout({ children }) {
       <body
         className={` ${lexend.className} class="bg-primary-50 text-primary-950 dark:bg-primary-950 dark:text-primary-200 antialiased transition`}
       >
-        <Navbar />
-        <Toaster position='top-center' toastOptions={{ duration: 4000 }} />
-        {children}
-        <CookieBanner />
-        <Footer />
+        <NextIntlClientProvider messages={messages}>
+          <Navbar currentLocale={local} />
+          <Toaster position='top-center' toastOptions={{ duration: 4000 }} />
+          {children}
+          <CookieBanner />
+          <Footer />
+        </NextIntlClientProvider>
       </body>
     </html>
   );

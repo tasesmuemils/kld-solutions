@@ -18,7 +18,7 @@ import Image from 'next/image';
 import SliderImage1 from '../../../public/engine_img/before_after/608_before.png';
 import SliderImage2 from '../../../public/engine_img/before_after/608_after.png';
 
-export default function Hero() {
+export default function Hero({ titleOne, titleTwo, subtitle }) {
   // Using ref to capture Hero text container
   const container = useRef();
 
@@ -67,13 +67,13 @@ export default function Hero() {
             <div className='flex max-w-xl flex-col items-center lg:items-start'>
               {' '}
               <h1 className='hero-text hero-clip md:invisible pb-0 text-primary-900/90 dark:text-primary-200 lg:pb-3 text-5xl sm:text-6xl lg:text-7xl font-medium tracking-tight leading-tight'>
-                Tavs sapnis
+                {titleOne}
               </h1>
               <h1 className='hero-text hero-clip md:invisible pb-2 text-primary-900/90 dark:text-primary-200 lg:pb-2 text-5xl sm:text-6xl lg:text-7xl  font-medium tracking-tight leading-tight'>
-                Mūsu realitāte
+                {titleTwo}
               </h1>
               <p className='hero-text hero-clip md:invisible pb-6 text-primary-950/70 dark:text-primary-200/70 text-2xl lg:text-2xl  leading-tight text-center lg:text-right w-full'>
-                Vizualizēsim Tavas idejas
+                {subtitle}
               </p>
             </div>
           </div>

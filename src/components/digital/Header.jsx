@@ -4,7 +4,7 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import SplitType from 'split-type';
 
-export default function Header() {
+export default function Header({ title, p }) {
   // Using ref to capture Hero text container
   const container = useRef();
 
@@ -33,18 +33,10 @@ export default function Header() {
             <div className='flex flex-col items-start gap-8 sm:gap-10'>
               <div className='flex max-w-3xl flex-col items-start gap-4 sm:gap-6'>
                 <h1 className='digital-header-text invisible text-4xl font-medium tracking-tight sm:text-5xl lg:text-6xl'>
-                  Satura stratēģija sociālajos medijos
+                  {title}
                 </h1>
                 <p className='digital-header-text invisible text-primary-950/70 dark:text-primary-200/70 text-lg sm:text-xl'>
-                  Mēs palīdzēsim uzlabot uzņēmuma redzamību un atpazīstamību
-                  sociālajos medijos, izstrādājot pielāgotu satura stratēģiju,
-                  kas piesaista un iesaista jūsu mērķauditoriju. Regulāra,
-                  kvalitatīva un interesanta satura publicēšana, kā arī aktīva
-                  iesaistīšanās ar sekotājiem veicinās jūsu zīmola tēlu un
-                  palielinās sekotāju skaitu. Turklāt, izmantojot mērķtiecīgas
-                  reklāmas kampaņas un sadarbību ar ietekmētājiem, mēs varam
-                  ievērojami palielināt jūsu zīmola sasniedzamību un piesaistīt
-                  jaunus klientus.
+                  {p}
                 </p>
               </div>
             </div>

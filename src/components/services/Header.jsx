@@ -4,7 +4,7 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import SplitType from 'split-type';
 
-export default function Header() {
+export default function Header({ title, p }) {
   // Using ref to capture Hero text container
   const container = useRef();
 
@@ -33,13 +33,10 @@ export default function Header() {
             <div className='flex flex-col items-start gap-8 sm:gap-10'>
               <div className='flex max-w-3xl flex-col items-start gap-4 sm:gap-6'>
                 <h1 className='video-header-text invisible text-4xl font-medium tracking-tight sm:text-5xl lg:text-6xl'>
-                  Mēs atdzīvinām nekustamo īpašumu un produktus
+                  {title}
                 </h1>
                 <p className='video-header-text invisible text-primary-950/70 dark:text-primary-200/70 text-lg sm:text-xl'>
-                  Ietekmīgām ēkām piemīt šarms un raksturs. Mēs tveram jūsu
-                  būvprojekta auru fotoreālistiskajos attēlos un animācijās.
-                  Mūsu vizualizācijas apvieno tehnisko pilnību ar autentisku
-                  unikalitāti, kas piešķir nekustamajam īpašumam tā personību
+                  {p}
                 </p>
               </div>
             </div>

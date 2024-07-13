@@ -28,7 +28,15 @@ const imagesVertical = [
   VImage5.src,
 ];
 
-export default function Mission() {
+export default function Mission({
+  title,
+  pOne,
+  pTwo,
+  pThree,
+  statsT,
+  statsY,
+  statsP,
+}) {
   const container = useRef();
 
   useGSAP(
@@ -185,12 +193,12 @@ export default function Mission() {
 
   const stats = [
     {
-      name: 'Pieredze',
-      value: `${new Date().getFullYear() - 2022} gadi`,
+      name: statsT,
+      value: `${new Date().getFullYear() - 2022} ${statsY}`,
     },
     {
-      name: 'Projekti',
-      value: '10',
+      name: statsP,
+      value: '+15',
     },
     // {
     //   name: 'Projects',
@@ -222,33 +230,17 @@ export default function Mission() {
             <div className='flex flex-col gap-10'>
               <div className='space-y-8 sm:space-y-12'>
                 <h2 className='about-mission-text hero-clip invisible text-3xl font-medium tracking-tight sm:text-4xl'>
-                  Mūsu Misija
+                  {title}
                 </h2>
                 <div className='space-y-6'>
                   <p className='about-mission-text hero-clip invisible text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg'>
-                    Mēs vēlamies, lai mūsu klienti vizualizējot savus projektus
-                    samazina būvniecības izmaksas un ietaupa laiku būvniecības
-                    procesā. Ar 3D vizualizācijas palīdzību mēs varam precīzi
-                    plānot gan iekštelpu, gan ārtelpu iekārtojumu, ņemot vērā
-                    klienta individuālās vēlmes un prasības. Tas nodrošina ne
-                    tikai augstu kvalitāti, bet arī efektīvu resursu izmantošanu
-                    būvniecības procesā.
+                    {pOne}
                   </p>
                   <p className='about-mission-text hero-clip invisible text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg'>
-                    Mūsu pieeja iekļauj arī risku novēršanu. Mēs uzmanīgi
-                    izvērtējam potenciālos riskus un veicam pasākumus to
-                    novēršanai, nodrošinot projektam stabilitāti un ilgtspējību.
-                    Ar 3D vizualizācijas palīdzību mēs spējam identificēt
-                    potenciālās problēmas jau agrīnā stadijā un atrast
-                    risinājumus, kas palīdzēs novērst iespējamos riskus,
-                    nodrošinot veiksmīgu un bez problēmām noritējošu projekta
-                    gaitu.
+                    {pTwo}
                   </p>
                   <p className='about-mission-text hero-clip invisible text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg'>
-                    Mainīgā arhitektūra un nekustamo īpašumu attīstība pieprasa
-                    svaigu pieeju, un mēs vienmēr esam modri. Mums patīk izpētīt
-                    jaunākās tehnoloģijas un tehnikas, pastāvīgi paplašinot
-                    digitālās pasaules robežas.
+                    {pThree}
                   </p>
                 </div>
               </div>

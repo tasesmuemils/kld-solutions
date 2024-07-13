@@ -2,17 +2,17 @@ import Image from 'next/image';
 import elvisImage from '../../../public/elvis.jpeg';
 import emilsImage from '../../../public/emils.jpeg';
 
-export default function Team() {
+export default function Team({ title, elvis, emils }) {
   const team = [
     {
       name: 'Elvis Bisenieks',
       image: elvisImage,
-      job: 'Video un video grafikas izstrāde',
+      job: elvis,
     },
     {
       name: 'Emīls Bisenieks',
       image: emilsImage,
-      job: 'Web izstrāde',
+      job: emils,
     },
   ];
 
@@ -24,7 +24,7 @@ export default function Team() {
             className='text-3xl font-medium tracking-tight sm:text-4xl'
             data-aos='fade-up'
           >
-            Komanda
+            {title}
           </h2>
           <ul
             role='list'

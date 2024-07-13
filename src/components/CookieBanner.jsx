@@ -5,8 +5,10 @@ import { getLocalStorage, setLocalStorage } from '@/utils/Helper';
 import { useState, useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import { useTranslations } from 'next-intl';
 
 export default function CookieBanner() {
+  const t = useTranslations('Cookies');
   const [cookieConsent, setCookieConsent] = useState(null);
   const container = useRef();
   useGSAP(() => {
@@ -62,9 +64,12 @@ export default function CookieBanner() {
         <div className='text-cente text-white-200'>
           <Link href='/cookies'>
             <p>
-              🍪 Šī vietne izmanto
-              <span className='font-bold text-sky-400'> sīkdatnes</span> lai
-              uzlabotu lietošanas pieredzi un optimizētu tās darbību.
+              {t('Banner.T1')}
+              <span className='font-bold text-sky-400'>
+                {' '}
+                {t('Banner.T2')}
+              </span>{' '}
+              {t('Banner.T3')}
             </p>
           </Link>
         </div>
@@ -74,13 +79,13 @@ export default function CookieBanner() {
             className='px-5 py-2 text-gray-300 rounded-md border-gray-900'
             onClick={() => setCookieConsent(false)}
           >
-            Nepiekrist
+            {t('Banner.Btn1')}
           </button>
           <button
             className='bg-primary-600 dark:bg-primary-400 hover:bg-primary-700 dark:hover:bg-primary-300 focus-visible:outline-primary-600 dark:focus-visible:outline-primary-400 dark:text-primary-950 inline-flex items-center justify-center rounded-lg border border-transparent px-5 py-2 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2'
             onClick={() => setCookieConsent(true)}
           >
-            Piekrist
+            {t('Banner.Btn2')}
           </button>
         </div>
       </div>
