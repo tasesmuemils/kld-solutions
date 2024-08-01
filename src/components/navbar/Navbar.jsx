@@ -70,23 +70,23 @@ export default function Navbar({ currentLocale }) {
   const links = [
     {
       ref: '01',
-      name: t('About'),
-      href: '/about',
-    },
-    {
-      ref: '02',
       name: t('Visualizations'),
       href: '/services',
     },
     {
-      ref: '03',
+      ref: '02',
       name: t('Video'),
       href: '/video',
     },
     {
-      ref: '04',
+      ref: '03',
       name: t('Digital'),
       href: '/digital',
+    },
+    {
+      ref: '04',
+      name: t('About'),
+      href: '/about',
     },
     {
       ref: '05',
@@ -131,7 +131,7 @@ export default function Navbar({ currentLocale }) {
               >
                 <div className='group-focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200 flex flex-1 items-center justify-between rounded-xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2'>
                   <div className='hero-clip flex items-center gap-6'>
-                    <span className='nav-item-gsap md:invisible group-hover:underline'>
+                    <span className='nav-item-gsap md:invisible relative before:content-[""] before:absolute before:bottom-0 before:left-0 before:right-0 before:h-0.5 before:bg-primary-950 before:dark:bg-primary-200 before:origin-bottom-right before:scale-x-0 before:transition-transform before:duration-500 before:ease hover:before:origin-bottom-left hover:before:scale-x-100'>
                       {link.name}
                     </span>
                   </div>

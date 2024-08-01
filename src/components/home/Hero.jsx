@@ -10,6 +10,7 @@ import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 import SplitType from 'split-type';
+import VideoWrapper from '@/components/muxVideo/Video';
 
 // Images
 import { ImgComparisonSlider } from '@img-comparison-slider/react';
@@ -78,7 +79,8 @@ export default function Hero({ titleOne, titleTwo, subtitle }) {
             </div>
           </div>
           <div className='hero-img-wrapper grid h-full w-full justify-center items-center md:invisible'>
-            <ImgComparisonSlider className='rounded-lg'>
+            <VideoWrapper />
+            {/* <ImgComparisonSlider className='rounded-lg'>
               <Image
                 slot='first'
                 src={SliderImage1}
@@ -101,7 +103,7 @@ export default function Hero({ titleOne, titleTwo, subtitle }) {
                 quality={60}
                 sizes='(min-width: 1380px) 608px, (min-width: 1040px) calc(37.5vw + 98px), (min-width: 680px) 608px, calc(94.44vw - 15px)'
               />
-            </ImgComparisonSlider>
+            </ImgComparisonSlider> */}
           </div>
         </div>
       </div>
