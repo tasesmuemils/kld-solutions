@@ -4,24 +4,20 @@ import BackgroundVideo from 'next-video/background-video';
 
 export default function VideoWrapper() {
   return (
-    <div className='rounded-lg w-full h-full bg-gray-900 overflow-hidden'>
-      {/* <Video
-        src={TEST}
-        style={{ borderRadius: '10px', width: '42rem' }}
-        accentColor='#1e293b'
-        autoPlay
-        muted
-        loop
-        playsInline
-        controls={false}
-      /> */}
-
-      <BackgroundVideo
-        style={{ width: '100%' }}
-        // accentColor='#1e293b'
-        src={TEST}
-        placeholder='blur'
-      />
-    </div>
+    <>
+      {' '}
+      <div className='hidden lg:block rounded-lg w-full h-full bg-gray-900 overflow-hidden'>
+        <BackgroundVideo
+          style={{ width: '100%' }}
+          // accentColor='#1e293b'
+          src={TEST}
+          placeholder='blur'
+        />
+      </div>
+      <div className='block lg:hidden rounded-lg w-full h-full bg-gray-900 overflow-hidden'>
+        {' '}
+        <Video src={TEST} style={{ width: '100%' }} accentColor='#1e293b' />
+      </div>
+    </>
   );
 }
