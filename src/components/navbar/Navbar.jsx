@@ -70,18 +70,18 @@ export default function Navbar({ currentLocale }) {
   const links = [
     {
       ref: '01',
+      name: t('Digital'),
+      href: '/digital',
+    },
+    {
+      ref: '02',
       name: t('Visualizations'),
       href: '/services',
     },
     {
-      ref: '02',
+      ref: '03',
       name: t('Video'),
       href: '/video',
-    },
-    {
-      ref: '03',
-      name: t('Digital'),
-      href: '/digital',
     },
     {
       ref: '04',
