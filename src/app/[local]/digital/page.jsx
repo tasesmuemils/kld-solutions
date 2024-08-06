@@ -2,6 +2,7 @@ import Header from '@/components/digital/Header';
 import EmblaCarousel from '@/components/services/EmblaCarousel';
 import '../../../components/services/css/embla.css';
 import { useTranslations } from 'next-intl';
+import VideoSection from '@/components/digital/VideoSection';
 
 // // Images
 import Digital1 from '../../../../public/engine_img/digital/digital_1.png';
@@ -24,6 +25,7 @@ export default function Digital() {
   return (
     <div>
       <Header title={t('Header.Title')} p={t('Header.P')} />
+      <VideoSection title={t('Titles.T2')} />
       <EmblaCarousel
         title={t('Titles.T1')}
         description=''
