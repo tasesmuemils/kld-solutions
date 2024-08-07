@@ -2,7 +2,7 @@ import Video from 'next-video';
 import TEST from '../../../videos/1280x720_ENG_5mbps.mp4';
 import BackgroundVideo from 'next-video/background-video';
 import ReactPlayer from 'react-player';
-import SliderImage1 from '../../../public/engine_img/thumb/1280x720_00107.png';
+import Thumb from '../../../public/engine_img/thumb/thumb_1.png';
 import MuxPlayer from '@mux/mux-player-react';
 
 export default function VideoWrapper() {
@@ -19,8 +19,8 @@ export default function VideoWrapper() {
         {/* <ReactPlayer url={TEST} width='100%' height='100%' /> */}
         <Video
           src={TEST}
-          poster={SliderImage1.src}
-          blurDataURL={SliderImage1.blurDataURL}
+          poster={Thumb.src}
+          blurDataURL={Thumb.blurDataURL}
           style={{ aspectRatio: 16 / 9 }}
           accentColor='#1e293b'
           preload='metadata'
