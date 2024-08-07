@@ -62,7 +62,7 @@ export default function Hero({ titleOne, titleTwo, subtitle }) {
 
   return (
     <section className='h-screen flex items-center' ref={container}>
-      <div className='mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8'>
+      <div className='flex-1 mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8'>
         <div className='grid grid-cols-1 lg:grid-cols-2 items-center '>
           <div className='flex flex-col pb-8 lg:pb-0 items-center lg:items-start gap-8 sm:gap-10'>
             <div className='flex max-w-xl flex-col items-center lg:items-start'>
@@ -78,7 +78,7 @@ export default function Hero({ titleOne, titleTwo, subtitle }) {
               </p>
             </div>
           </div>
-          <div className='hero-img-wrapper grid h-full w-full justify-center items-center md:invisible'>
+          <div className='hero-img-wrapper md:invisible'>
             <VideoWrapper />
             {/* <ImgComparisonSlider className='rounded-lg'>
               <Image
