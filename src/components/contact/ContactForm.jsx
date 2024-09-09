@@ -8,6 +8,7 @@ import { FaInstagram } from 'react-icons/fa';
 import { FaPhoneAlt } from 'react-icons/fa';
 import { FaEnvelope } from 'react-icons/fa';
 import { FaMapMarkerAlt } from 'react-icons/fa';
+import WhatsAppButton from '@/components/WhatsappButton';
 
 import { useRef } from 'react';
 import gsap from 'gsap';
@@ -138,6 +139,14 @@ export default function ContactForm({
                 <div className='flex h-full flex-row  gap-12'>
                   <FaPhoneAlt className='h-6 w-6 text-primary-600 dark:text-primary-400' />
                   <p className='text-base font-medium'>+371 22439644</p>
+                </div>
+                <div className='flex h-full flex-row'>
+                  {' '}
+                  <WhatsAppButton
+                    classes='h-6 w-6'
+                    linkClasses='flex flex-row items-center gap-12 hover:underline text-primary-600 dark:text-primary-400 hover:text-primary-900 dark:hover:text-primary-300'
+                    name='WhatsApp'
+                  />
                 </div>
                 <div className='flex h-full flex-row  gap-12'>
                   <FaMapMarkerAlt className='h-6 w-6 text-primary-600 dark:text-primary-400' />
