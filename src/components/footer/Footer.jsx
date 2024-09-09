@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { FaYoutube } from 'react-icons/fa';
 import { FaInstagram } from 'react-icons/fa';
 import { useTranslations } from 'next-intl';
+import WhatsAppButton from '@/components/WhatsappButton';
 
 export default function Footer() {
   const t = useTranslations('Footer');
@@ -43,6 +44,11 @@ export default function Footer() {
             >
               <FaInstagram className='text-3xl' />
             </a>
+            <WhatsAppButton
+              // message='Hello KLD Solutions!'
+              classes='text-3xl'
+              linkClasses=''
+            />
           </div>
           <span className='block text-sm text-gray-500 sm:text-center'>
             © {new Date().getFullYear()}
