@@ -1,5 +1,6 @@
 import GoogleAnalytics from '@/components/GoogleAnalytics';
 import CookieBanner from '@/components/CookieBanner';
+import MetaPixel from '@/components/MetaPixel';
 import { Lexend } from 'next/font/google';
 import './globals.css';
 import { Toaster } from 'react-hot-toast';
@@ -40,16 +41,16 @@ export default async function RootLayout({ children, params }) {
 
   return (
     <html lang='lv'>
-      <Suspense>
-        {' '}
-        <GoogleAnalytics
-          GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_MEASUREMENT_ID}
-        />
-      </Suspense>
-
       <body
-        className={` ${lexend.className} class="bg-primary-50 text-primary-950 dark:bg-primary-950 dark:text-primary-200 antialiased transition`}
+        className={` ${lexend.className} bg-primary-50 text-primary-950 dark:bg-primary-950 dark:text-primary-200 antialiased transition`}
       >
+        <Suspense>
+          {' '}
+          <GoogleAnalytics
+            GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_MEASUREMENT_ID}
+          />
+          <MetaPixel fbPixelId={process.env.NEXT_PUBLIC_MEASUREMENT_META_ID} />
+        </Suspense>
         <NextIntlClientProvider messages={messages}>
           <Navbar currentLocale={local} />
           <Toaster position='top-center' toastOptions={{ duration: 4000 }} />
