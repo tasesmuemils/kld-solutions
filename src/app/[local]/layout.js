@@ -1,6 +1,7 @@
 import GoogleAnalytics from '@/components/GoogleAnalytics';
 import CookieBanner from '@/components/CookieBanner';
 import MetaPixel from '@/components/MetaPixel';
+import GoogleTagManager from '@/components/GoogleTagManager';
 import { Lexend } from 'next/font/google';
 import './globals.css';
 import { Toaster } from 'react-hot-toast';
@@ -50,6 +51,9 @@ export default async function RootLayout({ children, params }) {
             GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_MEASUREMENT_ID}
           />
           <MetaPixel fbPixelId={process.env.NEXT_PUBLIC_MEASUREMENT_META_ID} />
+          <GoogleTagManager
+            gtmId={process.env.NEXT_PUBLIC_MEASUREMENT_G_TAG_ID}
+          />
         </Suspense>
         <NextIntlClientProvider messages={messages}>
           <Navbar currentLocale={local} />
