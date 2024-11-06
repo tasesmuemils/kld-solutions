@@ -85,11 +85,16 @@ export default function Navbar({ currentLocale }) {
     },
     {
       ref: '04',
+      name: t('Maket'),
+      href: '/maket',
+    },
+    {
+      ref: '05',
       name: t('About'),
       href: '/about',
     },
     {
-      ref: '05',
+      ref: '06',
       name: t('Contact'),
       href: '/contact',
     },
@@ -122,7 +127,7 @@ export default function Navbar({ currentLocale }) {
 
         {/* Actions */}
         <div className='-mr-2 flex items-center space-x-2 sm:space-x-3'>
-          <nav className='hidden lg:flex flex-row gap-16 divide-primary-900/10 dark:divide-primary-300/10 '>
+          <nav className='hidden lg:flex flex-row lg:gap-6 xl:gap-10 divide-primary-900/10 dark:divide-primary-300/10 '>
             {links.map((link, index) => (
               <Link
                 key={index}
@@ -131,7 +136,7 @@ export default function Navbar({ currentLocale }) {
               >
                 <div className='group-focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200 flex flex-1 items-center justify-between rounded-xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2'>
                   <div className='hero-clip flex items-center gap-6'>
-                    <span className='nav-item-gsap md:invisible relative before:content-[""] before:absolute before:bottom-0 before:left-0 before:right-0 before:h-0.5 before:bg-primary-950 before:dark:bg-primary-200 before:origin-bottom-right before:scale-x-0 before:transition-transform before:duration-500 before:ease hover:before:origin-bottom-left hover:before:scale-x-100'>
+                    <span className=' nav-item-gsap md:invisible relative before:content-[""] before:absolute before:bottom-0 before:left-0 before:right-0 before:h-0.5 before:bg-primary-950 before:dark:bg-primary-200 before:origin-bottom-right before:scale-x-0 before:transition-transform before:duration-500 before:ease hover:before:origin-bottom-left hover:before:scale-x-100'>
                       {link.name}
                     </span>
                   </div>
@@ -237,10 +242,10 @@ export default function Navbar({ currentLocale }) {
                 key={index}
                 onClick={toggleMenu}
                 href={link.href}
-                className='text-primary-950 dark:text-primary-200 group inline-flex py-6 text-3xl font-medium tracking-tight transition focus-visible:outline-none sm:py-8 sm:text-4xl'
+                className='text-primary-950 dark:text-primary-200 group inline-flex py-4 font-medium tracking-tight transition focus-visible:outline-none'
               >
                 <div className='group-focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200 flex flex-1 items-center justify-between rounded-3xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2'>
-                  <div className='flex items-center gap-6'>
+                  <div className='text-2xl flex items-center gap-6'>
                     <span className='text-xs'>{link.ref}</span>
                     <span className='group-hover:underline'>{link.name}</span>
                   </div>

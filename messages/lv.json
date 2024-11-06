@@ -4,6 +4,7 @@
     "Visualizations": "Vizualizācijas",
     "Video": "Animācijas",
     "Digital": "Digitālais Saturs",
+    "Maket": "Maketēšana",
     "Contact": "Sazinies ar Mums"
   },
   "Home": {
@@ -50,7 +51,7 @@
     },
     "Team": {
       "Title": "Komanda",
-      "Elvis": "Video un video grafikas izstrāde",
+      "Elvis": "Projektu vadītājs",
       "Emils": "Web izstrāde"
     }
   },
@@ -91,6 +92,15 @@
     "Titles": {
       "T1": "Grafiskais dizains",
       "T2": "Aero video un produktu animācijas"
+    }
+  },
+  "Maket": {
+    "Header": {
+      "Title": "Maketēšana",
+      "P": "Maketēšana ir kā dizaina pamats – tā veido ietvaru, kas palīdz idejai ne tikai izskatīties labi, bet arī skaidri un efektīvi komunicēt ar skatītāju. Profesionāli izstrādāts makets paceļ projektu no vienkārša izkārtojuma līdz pārdomātam vizuālam stāstam, kurā viss ir savā vietā, un katram elementam ir sava loma kopējā kompozīcijā."
+    },
+    "P": {
+      "P1": "Izstrādāsim Tavam uzņēmumam elegantu dizainu un precīzu tehnisko maketu jebkuram drukas produktam. Piedāvājam ātru un profesionālu drukātās reklāmas grafiskā dizaina izstrādi, ievērojot Tava uzņēmuma zīmola vadlīnijas. Radīsim dizainu un maketu visdažādākajiem drukas materiāliem – no vizītkartēm līdz pat katalogiem, iepakojumam."
     }
   },
   "Contact": {

@@ -4,6 +4,7 @@
     "Visualizations": "Visualizations",
     "Video": "Animations",
     "Digital": "Digital Content",
+    "Maket": "Print Design",
     "Contact": "Contact Us"
   },
   "Home": {
@@ -50,7 +51,7 @@
     },
     "Team": {
       "Title": "Team",
-      "Elvis": "Video and video graphics developer",
+      "Elvis": "Project Manager",
       "Emils": "Web developer"
     }
   },
@@ -91,6 +92,15 @@
     "Titles": {
       "T1": "Grephic design",
       "T2": "Aero videos and product animations"
+    }
+  },
+  "Maket": {
+    "Header": {
+      "Title": "Print Design",
+      "P": "Layout design is the foundation of any design – it creates a framework that helps an idea look good and communicate clearly and effectively with the viewer. A professionally crafted layout elevates a project from a simple arrangement to a thoughtful visual story, where everything is in its place, and each element has its role in the overall composition."
+    },
+    "P": {
+      "P1": "We will create an elegant design and precise technical layout for any print product for your company. We offer fast and professional graphic design services for printed advertising, adhering to your brand guidelines. We will design and layout a wide range of print materials—from business cards to catalogs and packaging."
     }
   },
   "Contact": {
