@@ -6,6 +6,7 @@ import { useState, useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { useTranslations } from 'next-intl';
+import Script from 'next/script';
 
 export default function CookieBanner() {
   const t = useTranslations('Cookies');
@@ -47,7 +48,20 @@ export default function CookieBanner() {
     if (cookieConsent !== null) {
       setLocalStorage('cookie_consent', cookieConsent);
     }
+
+    // Set Zoho PageSense cookie consent
+    if (cookieConsent) {
+      setZohoCookieConsent('true');
+    } else {
+      setZohoCookieConsent('false');
+    }
   }, [cookieConsent]);
+
+  const setZohoCookieConsent = (value) => {
+    if (typeof window.pagesense !== 'undefined') {
+      window.pagesense.consent = value;
+    }
+  };
 
   return (
     <div ref={container}>
@@ -89,6 +103,17 @@ export default function CookieBanner() {
           </button>
         </div>
       </div>
+      {cookieConsent && (
+        <Script
+          id='async-zoho-script'
+          dangerouslySetInnerHTML={{
+            __html: `
+          (function(w,s){var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src="https://cdn-eu.pagesense.io/js/20102450106/86641c69318448d99e3f9e03da66188b.js";var x=document.getElementsByTagName("script")[0];x.parentNode.insertBefore(e,x);})(window,"script");
+        `,
+          }}
+          strategy='afterInteractive'
+        />
+      )}
     </div>
   );
 }
