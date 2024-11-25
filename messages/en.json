@@ -5,6 +5,7 @@
     "Video": "Animations",
     "Digital": "Digital Content",
     "Maket": "Layout Design",
+    "Modeling": "3D Modeling",
     "Contact": "Contact Us"
   },
   "Home": {
@@ -86,12 +87,22 @@
   },
   "Digital": {
     "Header": {
-      "Title": "Digital Marketing",
-      "P": "We will help enhance your company's visibility and recognition on social media by developing a tailored content strategy that attracts and engages your target audience. Regular, high-quality, and interesting content posting, along with active engagement with followers, will enhance your brand image and increase follower count. Additionally, through targeted advertising campaigns and collaboration with influencers, we can significantly expand your brand's reach and attract new customers"
+      "Title": "Digital Content",
+      "P": "We will help enhance your company's visibility and recognition on social media by developing a tailored content strategy that attracts and engages your target audience. Regular, high-quality, and interesting content posting, along with active engagement with followers, will enhance your brand image and increase follower count"
     },
     "Titles": {
       "T1": "Graphic design",
       "T2": "Aero videos and product animations"
+    }
+  },
+  "Modeling": {
+    "Header": {
+      "Title": "3D Modeling",
+      "P": "Whether you have a sketch, a 2D model, a PDF, or any other digital format, we can turn it into a realistic and precise 3D model. The more information you provide about the product—dimensions, materials, and details—the more accurate and efficient the final result will be. Let your idea shine in 3D"
+    },
+    "P": {
+      "P1": "Our team can transform your idea into a high-quality 3D model. Whether you have an image, sketch, 2D model, PDF, or another digital format, we can bring it to life as a vivid and accurate 3D model",
+      "P2": "We can create 3D models for a wide range of products, from furniture and interior design elements to industrial equipment and machinery. Our 3D models are precise, detailed, and realistic, allowing you to visualize your idea in a way that is both visually appealing and functional"
     }
   },
   "Maket": {

@@ -85,16 +85,21 @@ export default function Navbar({ currentLocale }) {
     },
     {
       ref: '04',
+      name: t('Modeling'),
+      href: '/modeling',
+    },
+    {
+      ref: '05',
       name: t('Maket'),
       href: '/maket',
     },
     {
-      ref: '05',
+      ref: '06',
       name: t('About'),
       href: '/about',
     },
     {
-      ref: '06',
+      ref: '07',
       name: t('Contact'),
       href: '/contact',
     },
@@ -127,12 +132,12 @@ export default function Navbar({ currentLocale }) {
 
         {/* Actions */}
         <div className='-mr-2 flex items-center space-x-2 sm:space-x-3'>
-          <nav className='hidden lg:flex flex-row lg:gap-6 xl:gap-10 divide-primary-900/10 dark:divide-primary-300/10 '>
+          <nav className='hidden xl:flex flex-row lg:gap-6 xl:gap-10 divide-primary-900/10 dark:divide-primary-300/10 '>
             {links.map((link, index) => (
               <Link
                 key={index}
                 href={link.href}
-                className='py-6 text-primary-950 dark:text-primary-200 group inline-flex  text-base font-medium tracking-tight transition focus-visible:outline-none '
+                className='py-6 text-primary-950 dark:text-primary-200 group inline-flex  text-[0.9rem] font-medium tracking-tight transition focus-visible:outline-none '
               >
                 <div className='group-focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200 flex flex-1 items-center justify-between rounded-xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2'>
                   <div className='hero-clip flex items-center gap-6'>
@@ -190,7 +195,7 @@ export default function Navbar({ currentLocale }) {
             {/* Toggle menu */}
             <button
               type='button'
-              className='hero-clip inline-flex lg:hidden h-14 w-14 items-center justify-center rounded-full text-primary-950 dark:text-primary-200 hover:bg-primary-500/10 dark:hover:bg-primary-400/10 ring-primary-950  transition focus:outline-none focus-visible:ring-2'
+              className='hero-clip inline-flex xl:hidden h-14 w-14 items-center justify-center rounded-full text-primary-950 dark:text-primary-200 hover:bg-primary-500/10 dark:hover:bg-primary-400/10 ring-primary-950  transition focus:outline-none focus-visible:ring-2'
               onClick={toggleMenu}
               aria-controls='website-menu'
               aria-expanded={open.toString()}

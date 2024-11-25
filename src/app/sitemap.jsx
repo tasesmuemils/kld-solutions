@@ -22,6 +22,9 @@ export default async function sitemap() {
       url: `${process.env.NEXT_PUBLIC_BASE_URL}/maket`,
     },
     {
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/modeling`,
+    },
+    {
       url: `${process.env.NEXT_PUBLIC_BASE_URL}/cookies`,
     },
   ];

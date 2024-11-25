@@ -4,6 +4,7 @@ import Cta from '@/components/home/Cta';
 import GraphicsSection from '@/components/home/GraphicsSection';
 import ModalVideo from '@/components/home/video/ModalVideo';
 import LongGallery from '@/components/home/LongGallery';
+
 import { useTranslations } from 'next-intl';
 
 // Images
