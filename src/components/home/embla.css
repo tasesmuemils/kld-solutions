@@ -1,7 +1,7 @@
 .embla {
   max-width: 48rem;
   margin: auto;
-  --slide-height: 23rem;
+  /* --slide-height: 23rem; */
   --slide-spacing: 1rem;
   --slide-size: 100%;
   border-radius: 20px;
