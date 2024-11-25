@@ -11,6 +11,13 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 import SplitType from 'split-type';
 import VideoWrapper from '@/components/muxVideo/Video';
+import Slider from '@/components/home/Slider';
+import './embla.css';
+
+import Inside1 from '../../../public/engine_img/hero/Pirmais_00132.png';
+import Inside2 from '../../../public/engine_img/hero/Otrais_00132.png';
+import Inside3 from '../../../public/engine_img/hero/Tresais_00132.png';
+import Inside4 from '../../../public/engine_img/hero/Ceturtais_00132.png';
 
 // Images
 import { ImgComparisonSlider } from '@img-comparison-slider/react';
@@ -18,6 +25,12 @@ import { ImgComparisonSlider } from '@img-comparison-slider/react';
 import Image from 'next/image';
 import SliderImage1 from '../../../public/engine_img/before_after/608_before.png';
 import SliderImage2 from '../../../public/engine_img/before_after/608_after.png';
+
+const OPTIONS = { loop: true };
+const SLIDE_COUNT = 4;
+const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
+
+const imagesInside = [Inside1.src, Inside2.src, Inside3.src, Inside4.src];
 
 export default function Hero({ titleOne, titleTwo, subtitle }) {
   // Using ref to capture Hero text container
@@ -78,8 +91,13 @@ export default function Hero({ titleOne, titleTwo, subtitle }) {
               </p>
             </div>
           </div>
-          <div className='hero-img-wrapper md:invisible'>
-            <VideoWrapper />
+          <div className='hero-img-wrapper md:invisible rounded'>
+            <Slider
+              slides={SLIDES}
+              options={OPTIONS}
+              imagesArr={imagesInside}
+            />
+            {/* <VideoWrapper /> */}
             {/* <ImgComparisonSlider className='rounded-lg'>
               <Image
                 slot='first'

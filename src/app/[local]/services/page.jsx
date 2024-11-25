@@ -49,15 +49,6 @@ export default function Services() {
     <div>
       <Header title={t('Header.Title')} p={t('Header.P')} />
       <EmblaCarousel
-        title={t('Ex.Title')}
-        description={t('Ex.Subtitle')}
-        imagesArr={imagesOutside}
-        slides={SLIDES}
-        options={OPTIONS}
-        maxWidth='max-w-4xl'
-        sizes='(min-width: 1040px) 714px, (min-width: 660px) 468px, calc(95.29vw - 18px)'
-      />
-      <EmblaCarousel
         title={t('Int.Title')}
         description={t('Int.Subtitle')}
         imagesArr={imagesInside}
@@ -66,6 +57,16 @@ export default function Services() {
         maxWidth='max-w-4xl'
         sizes='(min-width: 1040px) 714px, (min-width: 660px) 468px, calc(95.29vw - 18px)'
       />
+      <EmblaCarousel
+        title={t('Ex.Title')}
+        description={t('Ex.Subtitle')}
+        imagesArr={imagesOutside}
+        slides={SLIDES}
+        options={OPTIONS}
+        maxWidth='max-w-4xl'
+        sizes='(min-width: 1040px) 714px, (min-width: 660px) 468px, calc(95.29vw - 18px)'
+      />
+
       <BeforeAfter title={t('Mod.Title')} description={t('Mod.Subtitle')} />
     </div>
   );

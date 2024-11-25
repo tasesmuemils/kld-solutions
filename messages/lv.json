@@ -5,6 +5,7 @@
     "Video": "Animācijas",
     "Digital": "Digitālais Saturs",
     "Maket": "Maketēšana",
+    "Modeling": "3D Modelēšana",
     "Contact": "Sazinies ar Mums"
   },
   "Home": {
@@ -87,11 +88,21 @@
   "Digital": {
     "Header": {
       "Title": "Satura stratēģija sociālajos medijos",
-      "P": "Mēs palīdzēsim uzlabot uzņēmuma redzamību un atpazīstamību sociālajos medijos, izstrādājot pielāgotu satura stratēģiju, kas piesaista un iesaista jūsu mērķauditoriju. Regulāra, kvalitatīva un interesanta satura publicēšana, kā arī aktīva iesaistīšanās ar sekotājiem veicinās jūsu zīmola tēlu un palielinās sekotāju skaitu. Turklāt, izmantojot mērķtiecīgas reklāmas kampaņas un sadarbību ar ietekmētājiem, mēs varam ievērojami palielināt jūsu zīmola sasniedzamību un piesaistīt jaunus klientus"
+      "P": "Mēs palīdzēsim uzlabot uzņēmuma redzamību un atpazīstamību sociālajos medijos, izstrādājot pielāgotu satura stratēģiju, kas piesaista un iesaista jūsu mērķauditoriju. Regulāra, kvalitatīva un interesanta satura publicēšana, kā arī aktīva iesaistīšanās ar sekotājiem veicinās jūsu zīmola tēlu un palielinās sekotāju skaitu"
     },
     "Titles": {
       "T1": "Grafiskais dizains",
       "T2": "Aero video un produktu animācijas"
+    }
+  },
+  "Modeling": {
+    "Header": {
+      "Title": "3D Modelēšana",
+      "P": "Mūsu komanda spēj pārvērst jūsu ideju augstas kvalitātes 3D modelī. Neatkarīgi no tā, vai jums ir skice, 2D modelis, PDF vai cita digitāla forma, mēs spējam to pārveidot dzīvā un precīzā 3D modelī. Jo vairāk informācijas par produktu sniegsiet – izmērus, materiālus un detaļas –, jo precīzāks un efektīvāks būs gala rezultāts. Ļaujiet savai idejai iemirdzēties 3D"
+    },
+    "P": {
+      "P1": "Jo vairāk informācijas sniegsiet par savu ideju – tās izmēriem, materiāliem, formām un smalkākajām detaļām , jo precīzāk mēs spēsim radīt unikālu un pielāgotu 3D vizualizāciju, kas būs gan vizuāli pievilcīga, gan funkcionāla",
+      "P2": "Mūsu komanda spēj pārvērst jūsu ideju augstas kvalitātes 3D modelī. Neatkarīgi no tā, vai jums ir attēls, skice, 2D modelis, PDF vai cita digitāla forma, mēs spējam to pārveidot dzīvā un precīzā 3D modelī"
     }
   },
   "Maket": {
