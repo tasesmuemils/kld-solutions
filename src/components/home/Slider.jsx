@@ -29,7 +29,8 @@ const Slider = (props) => {
                   height={720}
                   alt='Embla carousel images'
                   priority={index === 0} // Prioritize the first image
-                  loading={index === 0 ? 'eager' : 'lazy'} // Eager load the first image
+                  // loading={index === 0 ? 'eager' : 'lazy'} // Eager load the first image
+                  loading='eager' // Force all images to load immediately
                   sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1280px'
                 />
               </div>
