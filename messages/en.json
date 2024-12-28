@@ -54,6 +54,9 @@
       "Title": "Team",
       "Elvis": "Project Manager",
       "Emils": "Web developer"
+    },
+    "Testimonials": {
+      "Title": "Testimonials"
     }
   },
   "Services": {

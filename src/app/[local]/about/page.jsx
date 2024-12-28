@@ -3,6 +3,7 @@ import Mission from '@/components/about/Mission';
 import Team from '@/components/about/Team';
 import '../../../components/about/css/embla.css';
 import { useTranslations } from 'next-intl';
+import TestimonialSlider from '@/components/about/Testimonials';
 
 export const metadata = {
   title: 'Par Mums',
@@ -27,6 +28,7 @@ export default function About() {
         elvis={t('Team.Elvis')}
         emils={t('Team.Emils')}
       />
+      <TestimonialSlider title={t('Testimonials.Title')} />
     </div>
   );
 }

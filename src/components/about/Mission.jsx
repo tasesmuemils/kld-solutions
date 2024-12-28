@@ -245,7 +245,7 @@ export default function Mission({
                 </div>
               </div>
 
-              <dl className='grid grid-cols-1 gap-6 sm:grid-cols-2'>
+              {/* <dl className='grid grid-cols-1 gap-6 sm:grid-cols-2'>
                 {stats.map((stat, index) => (
                   <div
                     key={index}
@@ -257,7 +257,7 @@ export default function Mission({
                     </dd>
                   </div>
                 ))}
-              </dl>
+              </dl> */}
             </div>
           </div>
         </div>
