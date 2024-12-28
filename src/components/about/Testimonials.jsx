@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { ChevronDown } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {
   Carousel,
   CarouselContent,
@@ -10,11 +10,11 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 const testimonials = [
   {
     logo: '/Logo_Valmiera_melns.png',
+    logoDark: '/Logo_Valmiera_balts.png',
     width: 200,
     height: 80,
     logoAlt: 'Valmieras novada dome symbol',
@@ -38,6 +38,15 @@ Tika sasniegts ļoti kvalitatīvs un vizuāli pievilcīgs rezultāts plānotajā
 
 export default function TestimonialSlider({ title }) {
   const [expandedIndex, setExpandedIndex] = useState(null);
+  const [theme, setTheme] = useState('light'); // Default theme is 'light'
+
+  // Detect theme from localStorage on component mount
+  useEffect(() => {
+    const storedTheme = localStorage.getItem('theme') || 'light';
+    setTheme(storedTheme);
+  }, [theme]);
+
+  console.log(theme);
 
   return (
     <section className='py-16 sm:py-20'>
@@ -61,7 +70,11 @@ export default function TestimonialSlider({ title }) {
                   <CarouselItem key={index}>
                     <div className='flex flex-col items-center  min-h-[400px] px-0 md:px-8'>
                       <Image
-                        src={testimonial.logo}
+                        src={
+                          theme === 'light'
+                            ? testimonial.logo
+                            : testimonial.logoDark
+                        }
                         alt={testimonial.logoAlt}
                         width={testimonial.width}
                         height={testimonial.height}
