@@ -229,9 +229,9 @@ export default function Mission({
             </div>
             <div className='flex flex-col gap-10'>
               <div className='space-y-8 sm:space-y-12'>
-                <h2 className='about-mission-text hero-clip invisible text-3xl font-medium tracking-tight sm:text-4xl'>
+                {/* <h2 className='about-mission-text hero-clip invisible text-3xl font-medium tracking-tight sm:text-4xl'>
                   {title}
-                </h2>
+                </h2> */}
                 <div className='space-y-6'>
                   <p className='about-mission-text hero-clip invisible text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg'>
                     {pOne}

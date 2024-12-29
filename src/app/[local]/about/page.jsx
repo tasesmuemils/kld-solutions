@@ -28,7 +28,12 @@ export default function About() {
         elvis={t('Team.Elvis')}
         emils={t('Team.Emils')}
       />
-      <TestimonialSlider title={t('Testimonials.Title')} />
+      <TestimonialSlider
+        title={t('Testimonials.Title')}
+        s1={t('Testimonials.short_1')}
+        l1={t('Testimonials.long_1')}
+        c1={t('Testimonials.company_1')}
+      />
     </div>
   );
 }

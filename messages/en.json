@@ -36,7 +36,7 @@
   },
   "About": {
     "Heading": {
-      "Title": "About Us",
+      "Title": "Our Mission",
       "Subtitle": "Let's visualize your ideas"
     },
     "P": {
@@ -56,7 +56,10 @@
       "Emils": "Web developer"
     },
     "Testimonials": {
-      "Title": "Testimonials"
+      "Title": "Testimonials",
+      "short_1": "Collaboration with 'kld solutions' on the development of visual materials for the 2024 Valmiera Municipality Restaurant Week was smooth and efficient at every stage",
+      "long_1": "Collaboration with 'kld solutions' on the development of visual materials for the 2024 Valmiera Municipality Restaurant Week was smooth and efficient at every stage. The project was complex, involving numerous approval phases with both the project coordinator and the participants themselves. Additionally, it was essential to create engaging and attention-grabbing visual designs that adhered to Valmiera Municipality's brand guidelines—a task that was accomplished with outstanding quality. The team at 'kld solutions' actively listened to ideas and presented several options for 3D visualization sketches (representing the Restaurant Week's image), allowing us to collectively decide on the concept to be further developed. Throughout the process, their collaborative and professional attitude was consistently evident. The 'kld solutions' team carefully considered every comment, opinion, and question raised by the client during the development stages. Similarly, when additional clarifications were needed based on client feedback, they addressed them promptly, ensuring no unnecessary delays or deviations occurred. The workflow was greatly facilitated by effective communication, with preliminary timelines provided for each stage or improvement, ensuring transparency and alignment. The project was completed on time, achieving a highly qualitative and visually appealing result. The Valmiera Municipality Tourism Department extends its gratitude to 'kld solutions' for their exceptional collaboration.",
+      "company_1": "Valmiera Municipality Tourism Department"
     }
   },
   "Services": {

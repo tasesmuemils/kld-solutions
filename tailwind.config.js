@@ -3,14 +3,14 @@
 const colors = require('tailwindcss/colors');
 
 module.exports = {
-  darkMode: ['class', 'class'],
+  darkMode: 'class',
   content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
     colors: {
       current: 'currentColor',
       transparent: 'transparent',
       white: '#ffffff',
-      primary: 'colors.slate',
+      primary: colors.slate,
     },
     fontFamily: {
       sans: ['Lexend'],

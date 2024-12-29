@@ -31,7 +31,7 @@ export default function Heading({ title, subTitle }) {
   return (
     <div ref={container}>
       {' '}
-      <section className='pt-28 pb-20 lg:py-32'>
+      <section className='pt-28 pb-20 lg:pt-32 lg:pb-10'>
         <div className='mx-auto max-w-2xl px-4 text-center sm:px-6 lg:max-w-7xl lg:px-8'>
           <div className='flex flex-col gap-4 sm:gap-6'>
             <h1
@@ -40,13 +40,13 @@ export default function Heading({ title, subTitle }) {
             >
               {title}
             </h1>
-            <p
+            {/* <p
               className='about-hero-text hero-clip invisible text-primary-950/70 dark:text-primary-200/70 mx-auto max-w-xl text-lg sm:text-xl'
               data-aos='fade-down'
               data-aos-delay='100'
             >
               {subTitle}
-            </p>
+            </p> */}
           </div>
         </div>
       </section>

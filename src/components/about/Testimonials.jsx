@@ -10,43 +10,25 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
+import { useThemeStore, useInitializeTheme } from '../useThemeStore';
 
-const testimonials = [
-  {
-    logo: '/Logo_Valmiera_melns.png',
-    logoDark: '/Logo_Valmiera_balts.png',
-    width: 200,
-    height: 80,
-    logoAlt: 'Valmieras novada dome symbol',
-    companyName: 'Valmieras novada dome',
-    shortText:
-      'Sadarbība ar "kld solutions" 2024. gada Valmieras novada Restorānu nedēļas vizuālo materiālu izstrādē bija ērta visos tās posmos',
-    fullText: `Sadarbība ar "kld solutions" 2024. gada Valmieras novada Restorānu nedēļas vizuālo materiālu izstrādē bija ērta visos tās posmos. Projekts bija pietiekami sarežģīts ar daudz skaņošanas etapiem, gan ar projekta koordinatoru, gan pašiem projektā iesaistītajiem dalībniekiem. Turklāt, bija jārod saistošs, uzmanību noturīgs risinājums vizuālajiem maketiem, ievērojot Valmieras novada zīmola vadlīnijas, kas arī tika izdarīts ļoti labā kvalitātē. "kld solutions" darbinieki ieklausījās idejās un sniedza vairākus izvēles variantus 3D vizualizāciju skicēm (Restorānu nedēļas imidžam), lai mēs kopīgi novienotos, kura ideja būtu attīstāma tālāk. 
-Visu laiku bija izjūtama uz sadarbību orientēta un profesionāla attieksme.  "kld solutions" darbinieki ļoti ieklausījās katrā komentārā, viedoklī vai jautājumā, kas pasūtītājam radās izstrādes procesā. Tāpat arī otrādi, ja pasūtītājs bija kaut ko norādījis, bet bija nepieciešami papildus paskaidrojumi, tas uzreiz tika precizēts, izslēdzot lieku novirzīšanos no lietas. Darba procesus ļoti atviegloja operatīvā saziņa, kad tika pateikts provizoriskais laiks, kad katra konkrētā darba etaps vai uzlabojumi varētu tikt saņemti izskatīšanai. 
-Tika sasniegts ļoti kvalitatīvs un vizuāli pievilcīgs rezultāts plānotajā laikā. Valmieras novada pašvaldības iestāde "Tūrisma pārvalde" pateicas "kld solutions" par labu sadarbību.`,
-  },
-  // {
-  //   logo: '/elvis.jpeg',
-  //   width: 200,
-  //   height: 80,
-  //   logoAlt: 'Tukuma Metāls logo',
-  //   companyName: 'Tukuma Metāls',
-  //   shortText: 'Viss bija izcili',
-  //   fullText: 'Loti labi stradajam bet mes nemaksaajaam',
-  // },
-];
+export default function TestimonialSlider({ title, s1, l1, c1 }) {
+  const testimonials = [
+    {
+      logo: '/Logo_Valmiera_melns.png',
+      logoDark: '/Logo_Valmiera_balts.png',
+      width: 200,
+      height: 80,
+      logoAlt: 'Valmieras novada dome symbol',
+      companyName: c1,
+      shortText: s1,
+      fullText: l1,
+    },
+  ];
 
-export default function TestimonialSlider({ title }) {
   const [expandedIndex, setExpandedIndex] = useState(null);
-  const [theme, setTheme] = useState('light'); // Default theme is 'light'
-
-  // Detect theme from localStorage on component mount
-  useEffect(() => {
-    const storedTheme = localStorage.getItem('theme') || 'light';
-    setTheme(storedTheme);
-  }, [theme]);
-
-  console.log(theme);
+  useInitializeTheme();
+  const colorTheme = useThemeStore((state) => state.colorTheme);
 
   return (
     <section className='py-16 sm:py-20'>
@@ -71,7 +53,7 @@ export default function TestimonialSlider({ title }) {
                     <div className='flex flex-col items-center  min-h-[400px] px-0 md:px-8'>
                       <Image
                         src={
-                          theme === 'light'
+                          colorTheme === 'light'
                             ? testimonial.logo
                             : testimonial.logoDark
                         }
