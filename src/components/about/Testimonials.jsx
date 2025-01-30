@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { ChevronDown } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import {
   Carousel,
   CarouselContent,
