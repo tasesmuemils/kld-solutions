@@ -44,6 +44,9 @@ export default async function middleware(request) {
       console.log('Defaulting to Latvian locale for Googlebot/Bingbot');
       request.headers.set('x-locale', 'lv');
     }
+
+    // Log the locale set for bot requests
+    console.log('Locale set to:', request.headers.get('x-locale'));
     return NextResponse.next();
   }
 
