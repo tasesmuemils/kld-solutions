@@ -1,7 +1,6 @@
 import createMiddleware from 'next-intl/middleware';
 import { NextResponse } from 'next/server';
 
-// More comprehensive bot detection
 function isBot(userAgent) {
   const botPatterns = [
     'googlebot',
@@ -22,7 +21,6 @@ function isBot(userAgent) {
   );
 }
 
-// Create the intl middleware
 const intlMiddleware = createMiddleware({
   locales: ['lv', 'en'],
   defaultLocale: 'lv',
@@ -31,22 +29,22 @@ const intlMiddleware = createMiddleware({
 
 export default async function middleware(request) {
   const userAgent = request.headers.get('user-agent') || '';
+  const url = new URL(request.url);
+  const pathname = url.pathname;
 
-  // If it's a bot, serve the content without redirects
+  // For bots, serve the content without redirecting to /en
   if (isBot(userAgent)) {
-    // Extract the locale from the URL if present
-    const url = new URL(request.url);
-    const pathname = url.pathname;
-
-    // If the URL starts with /en, serve English content
-    // Otherwise serve Latvian content (default)
-    if (pathname.startsWith('/en')) {
+    if (pathname === '/') {
+      // Set Latvian locale for root path
+      request.headers.set('x-locale', 'lv');
+    } else if (pathname.startsWith('/en')) {
+      // For /en path, serve English locale
       request.headers.set('x-locale', 'en');
     } else {
+      // Default to Latvian for any other paths
       request.headers.set('x-locale', 'lv');
     }
 
-    // Allow the request to continue without redirect
     return NextResponse.next();
   }
 
@@ -55,14 +53,5 @@ export default async function middleware(request) {
 }
 
 export const config = {
-  matcher: [
-    // Match all pathnames except for
-    // - API routes (/api/*)
-    // - Static files (*.*)
-    // - Next.js specific files (_next/*)
-    // - Vercel specific files (_vercel/*)
-    '/((?!api|_next|_vercel|.*\\..*).*)',
-    // Include root path
-    '/',
-  ],
+  matcher: ['/((?!api|_next|_vercel|.*\\..*).*)', '/'],
 };
