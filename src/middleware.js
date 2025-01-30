@@ -30,27 +30,27 @@ const intlMiddleware = createMiddleware({
 export default async function middleware(request) {
   const userAgent = request.headers.get('user-agent') || '';
   const url = new URL(request.url);
-  const pathname = url.pathname;
 
-  // Check if it's a bot and prevent redirects for Googlebot/Bingbot
   if (isBot(userAgent)) {
-    if (pathname === '/') {
-      console.log('Serving Latvian locale for Googlebot/Bingbot');
-      request.headers.set('x-locale', 'lv');
-    } else if (pathname.startsWith('/en')) {
-      console.log('Serving English locale for Googlebot/Bingbot');
-      request.headers.set('x-locale', 'en');
+    console.log('Bot detected:', userAgent);
+    console.log('Request URL:', request.url);
+
+    // Explicitly set the locale for bots
+    let locale = 'lv'; // Default to Latvian
+    if (url.pathname.startsWith('/en')) {
+      locale = 'en';
+      console.log('Serving English content to bot');
     } else {
-      console.log('Defaulting to Latvian locale for Googlebot/Bingbot');
-      request.headers.set('x-locale', 'lv');
+      console.log('Serving Latvian content to bot');
     }
 
-    // Log the locale set for bot requests
-    console.log('Locale set to:', request.headers.get('x-locale'));
-    return NextResponse.next();
+    // Prevent redirects for bots and set the locale in headers
+    const response = NextResponse.next();
+    response.headers.set('x-locale', locale);
+    return response;
   }
 
-  // For regular users, continue with the normal intl middleware
+  console.log('Regular user detected, using intl middleware');
   return intlMiddleware(request);
 }
 
