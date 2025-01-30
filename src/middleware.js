@@ -1,11 +1,28 @@
 import createMiddleware from 'next-intl/middleware';
 import { NextResponse } from 'next/server';
 
-// Helper function to detect bots
+// More comprehensive bot detection
 function isBot(userAgent) {
-  return /bot|crawler|spider|crawling/i.test(userAgent);
+  const botPatterns = [
+    'googlebot',
+    'bingbot',
+    'yandexbot',
+    'duckduckbot',
+    'slurp',
+    'baiduspider',
+    'facebook',
+    'twitter',
+    'bot',
+    'crawler',
+    'spider',
+  ];
+
+  return botPatterns.some((pattern) =>
+    userAgent.toLowerCase().includes(pattern)
+  );
 }
 
+// Create the intl middleware
 const intlMiddleware = createMiddleware({
   locales: ['lv', 'en'],
   defaultLocale: 'lv',
@@ -15,14 +32,25 @@ const intlMiddleware = createMiddleware({
 export default async function middleware(request) {
   const userAgent = request.headers.get('user-agent') || '';
 
-  // Special handling for bots
+  // If it's a bot, serve the content without redirects
   if (isBot(userAgent)) {
-    // Allow bots to access the page directly without redirects
-    // This ensures Google can properly index both language versions
+    // Extract the locale from the URL if present
+    const url = new URL(request.url);
+    const pathname = url.pathname;
+
+    // If the URL starts with /en, serve English content
+    // Otherwise serve Latvian content (default)
+    if (pathname.startsWith('/en')) {
+      request.headers.set('x-locale', 'en');
+    } else {
+      request.headers.set('x-locale', 'lv');
+    }
+
+    // Allow the request to continue without redirect
     return NextResponse.next();
   }
 
-  // For regular users, use the intl middleware
+  // For regular users, use the normal intl middleware
   return intlMiddleware(request);
 }
 
