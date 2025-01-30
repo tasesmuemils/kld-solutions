@@ -38,11 +38,13 @@ export const metadata = {
 
 export default async function RootLayout({ children, params }) {
   const { local } = params;
-  console.log('YES', params);
+  // console.log('YES', params);
 
-  console.log(local);
+  // console.log(local);
 
   const messages = await getMessages({ locale: local || 'lv' });
+
+  // console.log(messages);
 
   return (
     <html lang={local || 'lv'}>
