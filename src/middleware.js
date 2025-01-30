@@ -32,23 +32,22 @@ export default async function middleware(request) {
   const url = new URL(request.url);
   const pathname = url.pathname;
 
-  // For bots, serve the content without redirecting to /en
+  // Check if it's a bot and prevent redirects for Googlebot/Bingbot
   if (isBot(userAgent)) {
     if (pathname === '/') {
-      // Set Latvian locale for root path
+      console.log('Serving Latvian locale for Googlebot/Bingbot');
       request.headers.set('x-locale', 'lv');
     } else if (pathname.startsWith('/en')) {
-      // For /en path, serve English locale
+      console.log('Serving English locale for Googlebot/Bingbot');
       request.headers.set('x-locale', 'en');
     } else {
-      // Default to Latvian for any other paths
+      console.log('Defaulting to Latvian locale for Googlebot/Bingbot');
       request.headers.set('x-locale', 'lv');
     }
-
     return NextResponse.next();
   }
 
-  // For regular users, use the normal intl middleware
+  // For regular users, continue with the normal intl middleware
   return intlMiddleware(request);
 }
 
