@@ -7,6 +7,7 @@ import './globals.css';
 import { Toaster } from 'react-hot-toast';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
+import { getRequestConfig } from 'next-intl/server';
 
 import Navbar from '@/components/navbar/Navbar';
 import Footer from '@/components/footer/Footer';
@@ -37,11 +38,14 @@ export const metadata = {
 
 export default async function RootLayout({ children, params }) {
   const { local } = params;
+  console.log('YES', params);
 
-  const messages = await getMessages();
+  console.log(local);
+
+  const messages = await getMessages({ locale: local || 'lv' });
 
   return (
-    <html lang='lv'>
+    <html lang={local || 'lv'}>
       <body
         className={` ${lexend.className} bg-primary-50 text-primary-950 dark:bg-primary-950 dark:text-primary-200 antialiased transition`}
       >
@@ -55,8 +59,8 @@ export default async function RootLayout({ children, params }) {
             gtmId={process.env.NEXT_PUBLIC_MEASUREMENT_G_TAG_ID}
           />
         </Suspense>
-        <NextIntlClientProvider messages={messages}>
-          <Navbar currentLocale={local} />
+        <NextIntlClientProvider messages={messages} locale={local || 'lv'}>
+          <Navbar currentLocale={local || 'lv'} />
           <Toaster position='top-center' toastOptions={{ duration: 4000 }} />
           {children}
           <CookieBanner />
