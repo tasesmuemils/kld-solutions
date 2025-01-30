@@ -10,9 +10,5 @@ export default createMiddleware({
 });
 
 export const config = {
-  matcher: [
-    '/', // Root path
-    '/(lv|en)', // Direct language paths
-    '/(lv|en)/:path*', // All localized subpaths
-  ],
+  matcher: ['/((?!api|_next|_vercel|.*\\..*).*)'], // Apply the middleware to all paths except for API and static files
 };
