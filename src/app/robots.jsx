@@ -5,7 +5,7 @@ export default function robots() {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/_next/', '/_vercel/'],
+        // disallow: ['/api/', '/_next/', '/_vercel/'],
       },
     ],
     sitemap: `${baseUrl}/sitemap.xml`,
