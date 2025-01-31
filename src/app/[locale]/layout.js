@@ -89,13 +89,13 @@ export default async function RootLayout({ children, params }) {
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
-        <link rel='alternate' hrefLang='lv' href='https://kldsolutions.lv' />
+        {/* <link rel='alternate' hrefLang='lv' href='https://kldsolutions.lv' />
         <link rel='alternate' hrefLang='en' href='https://kldsolutions.lv/en' />
         <link
           rel='alternate'
           hrefLang='x-default'
           href='https://kldsolutions.lv'
-        />
+        /> */}
         {/* Explicitly setting Open Graph and Twitter metadata */}
         <meta property='og:image' content={`${baseUrl}/opengraph-image.png`} />
         <meta name='twitter:image' content={`${baseUrl}/opengraph-image.png`} />
