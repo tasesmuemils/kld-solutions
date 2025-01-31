@@ -7,7 +7,6 @@ import './globals.css';
 import { Toaster } from 'react-hot-toast';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
-import { getRequestConfig } from 'next-intl/server';
 import Navbar from '@/components/navbar/Navbar';
 import Footer from '@/components/footer/Footer';
 import { Suspense } from 'react';
@@ -17,9 +16,14 @@ const lexend = Lexend({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
 });
 
+const environment = process.env.NODE_ENV;
+const baseUrl =
+  environment === 'production'
+    ? 'https://kldsolutions.lv'
+    : 'http://localhost:3001';
+
 export async function generateMetadata({ params }) {
-  const locale = params?.local || 'lv';
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://kldsolutions.lv';
+  const locale = params?.locale || 'lv';
 
   const defaultDescription = {
     lv: 'Tavs Sapnis - Mūsu Realitāte. KLD Solutions piedāvā 3D vizualizācijas un video prezentācijas pakalpojumus, kas palīdz klientiem efektīvi plānot un samazināt būvniecības izmaksas. Piedāvājam arī konsultācijas un digitālā mārketinga risinājumus.',
@@ -31,8 +35,10 @@ export async function generateMetadata({ params }) {
     en: 'kld, kldsolutions, 3D visualizations, 3D visualization, construction planning, interior design, exterior design, digital marketing, video presentations, visualization services, KLD Solutions',
   };
 
+  const imageUrl = new URL('/opengraph-image.png', baseUrl).toString();
+
   return {
-    metadataBase: new URL(baseUrl),
+    metadataBase: new URL(baseUrl), // Ensure it's always set
     title: {
       default: 'KLD Solutions',
       template: '%s - KLD Solutions',
@@ -41,16 +47,31 @@ export async function generateMetadata({ params }) {
     keywords: defaultKeywords[locale],
     twitter: {
       card: 'summary_large_image',
+      title: 'KLD Solutions',
+      description: defaultDescription[locale],
+      images: [
+        {
+          url: `${baseUrl}/opengraph-image.png`, // Full URL required
+        },
+      ],
     },
     openGraph: {
-      images: '/opengraph-image.png',
+      title: 'KLD Solutions',
+      description: defaultDescription[locale],
+      siteName: 'KLD Solutions',
+      type: 'website',
+      images: [
+        {
+          url: `${baseUrl}/opengraph-image.png`, // Full URL required
+        },
+      ],
       locale: locale,
-      alternateLocales: ['lv', 'en'],
+      alternateLocale: ['lv', 'en'],
     },
     alternates: {
       canonical: baseUrl,
       languages: {
-        lv: `${baseUrl}`,
+        lv: `${baseUrl}/lv`,
         en: `${baseUrl}/en`,
       },
     },
@@ -62,8 +83,8 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function RootLayout({ children, params }) {
-  const locale = params?.local || 'lv';
-  const messages = await getMessages({ locale });
+  const locale = params?.locale || 'lv';
+  const messages = await getMessages();
 
   return (
     <html lang={locale} suppressHydrationWarning>
@@ -75,6 +96,9 @@ export default async function RootLayout({ children, params }) {
           hrefLang='x-default'
           href='https://kldsolutions.lv'
         />
+        {/* Explicitly setting Open Graph and Twitter metadata */}
+        <meta property='og:image' content={`${baseUrl}/opengraph-image.png`} />
+        <meta name='twitter:image' content={`${baseUrl}/opengraph-image.png`} />
       </head>
       <body
         className={`${lexend.className} bg-primary-50 text-primary-950 dark:bg-primary-950 dark:text-primary-200 antialiased transition`}
@@ -88,7 +112,7 @@ export default async function RootLayout({ children, params }) {
             gtmId={process.env.NEXT_PUBLIC_MEASUREMENT_G_TAG_ID}
           />
         </Suspense>
-        <NextIntlClientProvider messages={messages} locale={locale}>
+        <NextIntlClientProvider messages={messages}>
           <Navbar currentLocale={locale} />
           <Toaster position='top-center' toastOptions={{ duration: 4000 }} />
           {children}
