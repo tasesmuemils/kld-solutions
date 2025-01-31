@@ -29,7 +29,7 @@ export const useAutoplay = (emblaApi) => {
 
   useEffect(() => {
     const autoplay = emblaApi?.plugins()?.autoplay;
-    console.log(autoplay);
+    // console.log(autoplay);
     if (!autoplay) return;
 
     setAutoplayIsPlaying(autoplay.isPlaying());

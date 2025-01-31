@@ -10,7 +10,7 @@ import { useThemeStore } from '../useThemeStore';
 import { useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 
 export default function Navbar({ currentLocale }) {
   const t = useTranslations('Nav');
@@ -24,25 +24,28 @@ export default function Navbar({ currentLocale }) {
   };
 
   const router = useRouter();
+  const pathname = usePathname();
   const toggleLocale = () => {
     const newLocale = currentLocale === 'lv' ? 'en' : 'lv';
-    const currentPath = window.location.pathname;
-    console.log(newLocale, currentPath);
+    // const currentPath = window.location.pathname;
+    // console.log(newLocale, pathname);
+    const path = pathname.split('/').slice(2).join('/');
+    router.push(`/${newLocale}/${path}`);
 
     // Remove the current locale from the path if it exists
-    const pathWithoutLocale = currentPath.replace('en', 'lv');
+    // const pathWithoutLocale = currentPath.replace('en', 'lv');
 
     // Construct the new path based on the new locale
-    const newPath =
-      newLocale === 'lv'
-        ? pathWithoutLocale
-        : `/${newLocale}${pathWithoutLocale}`;
+    // const newPath =
+    //   newLocale === 'lv'
+    //     ? pathWithoutLocale
+    //     : `/${newLocale}${pathWithoutLocale}`;
 
-    console.log(newLocale, currentPath, pathWithoutLocale);
+    // console.log(newLocale, currentPath, pathWithoutLocale);
 
-    console.log(`/${newLocale}${pathWithoutLocale}`);
+    // console.log(`/${newLocale}${pathWithoutLocale}`);
 
-    router.push(newPath);
+    // router.push(newPath);
     // router.push(`/${newLocale}`);
   };
 
@@ -128,7 +131,7 @@ export default function Navbar({ currentLocale }) {
         {/* Brand logo */}
         <div className='flex'>
           <Link
-            href='/'
+            href={`/${currentLocale}/`}
             className='py-4 lg:py-6 hero-clip focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200 rounded-md focus-visible:outline focus-visible:outline-2'
           >
             <p className='nav-item-gsap md:invisible text-xl lg:text-2xl'>
@@ -143,7 +146,7 @@ export default function Navbar({ currentLocale }) {
             {links.map((link, index) => (
               <Link
                 key={index}
-                href={link.href}
+                href={`/${currentLocale}/${link.href}`}
                 className='py-6 text-primary-950 dark:text-primary-200 group inline-flex  text-[0.9rem] font-medium tracking-tight transition focus-visible:outline-none '
               >
                 <div className='group-focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200 flex flex-1 items-center justify-between rounded-xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2'>

@@ -10,7 +10,7 @@ import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 import SplitType from 'split-type';
-import VideoWrapper from '@/components/muxVideo/Video';
+// import VideoWrapper from '@/components/muxVideo/Video';
 import Slider from '@/components/home/Slider';
 import './embla.css';
 
