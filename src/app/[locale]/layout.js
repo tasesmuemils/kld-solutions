@@ -117,7 +117,7 @@ export default async function RootLayout({ children, params }) {
           <Toaster position='top-center' toastOptions={{ duration: 4000 }} />
           {children}
           <CookieBanner />
-          <Footer />
+          <Footer locale={locale} />
         </NextIntlClientProvider>
       </body>
     </html>
