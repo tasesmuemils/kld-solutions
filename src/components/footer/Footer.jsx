@@ -5,11 +5,10 @@ import { FaYoutube } from 'react-icons/fa';
 import { FaInstagram } from 'react-icons/fa';
 import { useTranslations } from 'next-intl';
 import WhatsAppButton from '@/components/WhatsappButton';
-import { usePathname } from 'next/navigation';
 
-export default function Footer() {
+export default function Footer({ locale }) {
   const t = useTranslations('Footer');
-  const pathname = usePathname();
+
   return (
     <footer className='m-4' data-aos='fade-up'>
       <div className='w-full max-w-screen-xl mx-auto p-4 md:py-8'>
@@ -25,7 +24,7 @@ export default function Footer() {
           <ul className='flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0'>
             <li>
               <Link
-                href={`${pathname}/contact`}
+                href={`/${locale}/contact`}
                 className='hover:underline me-4 md:me-6'
               >
                 {t('Contact')}
