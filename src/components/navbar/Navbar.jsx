@@ -146,7 +146,7 @@ export default function Navbar({ currentLocale }) {
             {links.map((link, index) => (
               <Link
                 key={index}
-                href={`/${currentLocale}/${link.href}`}
+                href={`/${currentLocale}${link.href}`}
                 className='py-6 text-primary-950 dark:text-primary-200 group inline-flex  text-[0.9rem] font-medium tracking-tight transition focus-visible:outline-none '
               >
                 <div className='group-focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200 flex flex-1 items-center justify-between rounded-xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2'>
@@ -256,7 +256,7 @@ export default function Navbar({ currentLocale }) {
               <Link
                 key={index}
                 onClick={toggleMenu}
-                href={link.href}
+                href={`/${currentLocale}${link.href}`}
                 className='text-primary-950 dark:text-primary-200 group inline-flex py-4 font-medium tracking-tight transition focus-visible:outline-none'
               >
                 <div className='group-focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200 flex flex-1 items-center justify-between rounded-3xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2'>
