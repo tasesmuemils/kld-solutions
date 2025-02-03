@@ -8,9 +8,11 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SplitType from 'split-type';
 gsap.registerPlugin(ScrollTrigger);
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function Cta({ title, subtitle, btn }) {
   const container = useRef();
+  const pathname = usePathname();
 
   useGSAP(
     () => {
@@ -179,7 +181,7 @@ export default function Cta({ title, subtitle, btn }) {
               </p>
             </div>
             <Link
-              href='/contact'
+              href={`${pathname}/contact`}
               className='cta-btn invisible opacity-0 bg-primary-600 dark:bg-primary-400 hover:bg-primary-700 dark:hover:bg-primary-300 focus-visible:outline-primary-600 dark:focus-visible:outline-primary-400 dark:text-primary-950 inline-flex items-center justify-center rounded-lg border border-transparent px-5 py-3 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2'
             >
               {btn}
