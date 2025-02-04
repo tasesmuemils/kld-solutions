@@ -20,7 +20,7 @@ const environment = process.env.NODE_ENV;
 const baseUrl =
   environment === 'production'
     ? 'https://kldsolutions.lv'
-    : 'http://localhost:3001';
+    : 'http://localhost:3000';
 
 export async function generateMetadata({ params }) {
   const locale = params?.locale || 'lv';
