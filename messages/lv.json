@@ -10,9 +10,9 @@
   },
   "Home": {
     "Hero": {
-      "titleOne": "Tavs sapnis",
-      "titleTwo": "Mūsu realitāte",
-      "Subtitle": "Vizualizēsim Tavas idejas"
+      "titleOne": "Vizualizēsim",
+      "titleTwo": "Tavas Idejas",
+      "Subtitle": "Tavs sapnis Mūsu realitāte"
     },
     "GraphicsSection": {
       "TitleOne": "Drukas | Digitālais | 3D dizains",
@@ -25,7 +25,7 @@
     },
     "About": {
       "Title": "Par Mums",
-      "P": "Mēs vēlamies, lai mūsu klienti vizualizējot savus projektus samazina būvniecības izmaksas un ietaupa laiku būvniecības procesā. Ar 3D vizualizācijas palīdzību mēs varam precīzi plānot gan iekštelpu, gan ārtelpu iekārtojumu, ņemot vērā klienta individuālās vēlmes un prasības. Tas nodrošina ne tikai augstu kvalitāti, bet arī efektīvu resursu izmantošanu būvniecības procesā",
+      "P": "Mūsu filozofija un darbs balstās uz abpusēju sapratni. Mēs pievēršamies katram projektam ar individuālu pieeju, ņemot vērā Jūsu uzņēmuma vizuālo identitāti un mērķauditoriju. Mēs uzmanīgi izpētam katru projektu, lai nodrošinātu, ka izveidotais materiāls ne tikai atbilst Jūsu vizuālajai identitātei, bet arī efektīvi komunicē ar Jūsu mērķauditoriju.",
       "Btn": "Lasi vairāk šeit"
     },
     "Cta": {

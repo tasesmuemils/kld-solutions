@@ -10,9 +10,9 @@
   },
   "Home": {
     "Hero": {
-      "titleOne": "Your dream",
-      "titleTwo": "Our reality",
-      "Subtitle": "Visualizing your ideas"
+      "titleOne": "Visualizing",
+      "titleTwo": "Your Ideas",
+      "Subtitle": "Your dream Our reality "
     },
     "GraphicsSection": {
       "TitleOne": "Layout | Digital | 3D Design",
@@ -25,7 +25,7 @@
     },
     "About": {
       "Title": "About Us",
-      "P": "We want our customers to reduce construction costs and save time in the construction process by visualizing their projects. With the help of 3D visualization, we can accurately plan both indoor and outdoor furnishings, taking into account the client's individual wishes and requirements. This ensures not only high quality, but also efficient use of resources in the construction process",
+      "P": "Our philosophy and work are based on mutual understanding. We approach each project with an individual approach, considering your company's visual identity and target audience. We carefully analyze each project to ensure that the created material not only matches your visual identity but also communicates effectively with your target audience.",
       "Btn": "Read more"
     },
     "Cta": {
