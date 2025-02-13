@@ -257,8 +257,8 @@ export default function ModalVideo({ thumb, title, videoId }) {
                   leaveFrom='opacity-100 scale-100'
                   leaveTo='opacity-0 scale-95'
                 >
-                  <div className='w-full flex items-center'>
-                    <DialogPanel className='w-full h-full rounded-3xl shadow-2xl aspect-video bg-primary-900/80 overflow-hidden'>
+                  <div className='w-[90vw] flex items-center'>
+                    <DialogPanel className='w-full h-full rounded-3xl lg:m-32 shadow-2xl aspect-video bg-primary-900/80 overflow-hidden'>
                       <LazyYoutube videoId={videoId} width='100%' />
                     </DialogPanel>
                   </div>

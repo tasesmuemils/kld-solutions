@@ -22,20 +22,19 @@ const LazyYoutube = ({ videoId, width }) => {
   }, []);
 
   return (
-    <div ref={videoRef} className='w-full h-full'>
+    <div ref={videoRef} className='relative w-full aspect-video '>
       {load ? (
         <iframe
-          //   width='100%'
-          //   height='100%'
-          className='w-auto aspect-video  h-[180px] sm:h-[450px] md:h-[400px] lg:h-[450px] xl:h-[600px]'
+          className='absolute top-0 left-0 w-full h-full'
           src={`https://www.youtube.com/embed/${videoId}`}
           title='YouTube video player'
-          //   frameBorder="0"
           allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
           allowFullScreen
         ></iframe>
       ) : (
-        <div>Loading...</div>
+        <div className='w-full h-full flex items-center justify-center'>
+          Loading...
+        </div>
       )}
     </div>
   );
