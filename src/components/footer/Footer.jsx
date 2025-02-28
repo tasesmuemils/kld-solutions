@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { FaYoutube } from 'react-icons/fa';
 import { FaInstagram } from 'react-icons/fa';
+import { FaTiktok } from 'react-icons/fa';
 import { useTranslations } from 'next-intl';
 import WhatsAppButton from '@/components/WhatsappButton';
 
@@ -42,6 +43,14 @@ export default function Footer({ locale }) {
               href='https://www.youtube.com/@kld_solutions'
             >
               <FaYoutube className='text-3xl' />
+            </a>
+            <a
+              aria-label='KLD Solutions TikTok Page'
+              target='_blank'
+              href='https://www.tiktok.com/@uzzinilietas'
+              className='pt-[2px]'
+            >
+              <FaTiktok className='text-2xl' />
             </a>
             <a
               aria-label='KLD Solutions Instagram Page'

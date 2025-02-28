@@ -5,6 +5,7 @@ import emailjs from '@emailjs/browser';
 
 import { FaYoutube } from 'react-icons/fa';
 import { FaInstagram } from 'react-icons/fa';
+import { FaTiktok } from 'react-icons/fa';
 import { FaPhoneAlt } from 'react-icons/fa';
 import { FaEnvelope } from 'react-icons/fa';
 import { FaMapMarkerAlt } from 'react-icons/fa';
@@ -178,6 +179,17 @@ export default function ContactForm({
                   >
                     <FaInstagram className='h-6 w-6 ' />
                     <p className='text-base font-medium'>Instagram</p>
+                  </a>
+                </div>
+                <div className='flex h-full flex-row'>
+                  <a
+                    target='_blank'
+                    aria-label='KLD Solutions TikTok Page'
+                    href='https://www.tiktok.com/@uzzinilietas'
+                    className='flex flex-row items-center gap-12 hover:underline text-primary-600 dark:text-primary-400 hover:text-primary-900 dark:hover:text-primary-300'
+                  >
+                    <FaTiktok className='h-6 w-6 ' />
+                    <p className='text-base font-medium'>TikTok</p>
                   </a>
                 </div>
               </div>
