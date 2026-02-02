@@ -70,7 +70,7 @@ export default function Navbar({ currentLocale }) {
       //Splits HERO text into chars
       // const text = new SplitType(".hero-text", { types: "lines" });
     },
-    { scope: containerNav }
+    { scope: containerNav },
   );
 
   const toggleMenu = () => {
@@ -78,11 +78,11 @@ export default function Navbar({ currentLocale }) {
   };
 
   const links = [
-    {
-      ref: '01',
-      name: t('Digital'),
-      href: '/digital',
-    },
+    // {
+    //   ref: '01',
+    //   name: t('Digital'),
+    //   href: '/digital',
+    // },
     {
       ref: '02',
       name: t('Visualizations'),
