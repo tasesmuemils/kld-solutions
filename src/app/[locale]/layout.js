@@ -1,4 +1,5 @@
 import GoogleAnalytics from '@/components/GoogleAnalytics';
+import GoogleAds from '@/components/GoogleAds';
 import CookieBanner from '@/components/CookieBanner';
 import MetaPixel from '@/components/MetaPixel';
 import GoogleTagManager from '@/components/GoogleTagManager';
@@ -107,6 +108,7 @@ export default async function RootLayout({ children, params }) {
           <GoogleAnalytics
             GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_MEASUREMENT_ID}
           />
+          <GoogleAds ADS_ID={process.env.NEXT_PUBLIC_GOOGLE_ADS_ID} />
           <MetaPixel fbPixelId={process.env.NEXT_PUBLIC_MEASUREMENT_META_ID} />
           <GoogleTagManager
             gtmId={process.env.NEXT_PUBLIC_MEASUREMENT_G_TAG_ID}
