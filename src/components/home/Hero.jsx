@@ -14,10 +14,12 @@ import SplitType from 'split-type';
 import Slider from '@/components/home/Slider';
 import './embla.css';
 
-import Inside1 from '../../../public/engine_img/hero/Pirmais_00132.png';
+import Inside1 from '../../../public/engine_img/hero/modern-apartment-complex.webp';
+// import Inside1 from '../../../public/engine_img/hero/Pirmais_00132.png';
 import Inside2 from '../../../public/engine_img/hero/Otrais_00132.png';
-import Inside3 from '../../../public/engine_img/hero/Tresais_00132.png';
-import Inside4 from '../../../public/engine_img/hero/Ceturtais_00132.png';
+import Inside3 from '../../../public/engine_img/hero/modern-wooden-house-3d-visualization.webp';
+// import Inside3 from '../../../public/engine_img/hero/Tresais_00132.png';
+// import Inside4 from '../../../public/engine_img/hero/Ceturtais_00132.png';
 
 // Images
 import { ImgComparisonSlider } from '@img-comparison-slider/react';
@@ -27,10 +29,10 @@ import SliderImage1 from '../../../public/engine_img/before_after/608_before.png
 import SliderImage2 from '../../../public/engine_img/before_after/608_after.png';
 
 const OPTIONS = { loop: true };
-const SLIDE_COUNT = 4;
+const SLIDE_COUNT = 3;
 const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
-const imagesInside = [Inside1.src, Inside2.src, Inside3.src, Inside4.src];
+const imagesInside = [Inside1.src, Inside3.src, Inside2.src];
 
 export default function Hero({ titleOne, titleTwo, subtitle }) {
   // Using ref to capture Hero text container
@@ -70,7 +72,7 @@ export default function Hero({ titleOne, titleTwo, subtitle }) {
         });
       });
     },
-    { scope: container }
+    { scope: container },
   );
 
   return (
