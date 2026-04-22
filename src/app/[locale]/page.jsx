@@ -1,4 +1,5 @@
 import Hero from '@/components/home/Hero';
+import Section2 from '@/components/home/Section2';
 import About from '@/components/home/About';
 import Cta from '@/components/home/Cta';
 import GraphicsSection from '@/components/home/GraphicsSection';
@@ -19,13 +20,16 @@ export default function Home() {
         titleTwo={t('Hero.titleTwo')}
         subtitle={t('Hero.Subtitle')}
       />
-      <GraphicsSection
+      <Section2
+        titles={[t('Section2.T1'), t('Section2.T2'), t('Section2.T3')]}
+      />
+      {/* <GraphicsSection
         titleOne={t('GraphicsSection.TitleOne')}
         titleTwo={t('GraphicsSection.TitleTwo')}
         pOne={t('GraphicsSection.pOne')}
         pTwo={t('GraphicsSection.pTwo')}
       />
-      <LongGallery />
+      <LongGallery /> */}
       <ModalVideo
         title={t('Video.Title')}
         videoId='sF5KncuB-rU'

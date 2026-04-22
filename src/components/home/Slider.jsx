@@ -1,19 +1,21 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 import Image from 'next/image';
 import Fade from 'embla-carousel-fade';
 
-const Slider = (props) => {
-  const { slides, options, imagesArr } = props;
-  const progressNode = useRef(null);
+const Slider = ({ slides, options, imagesArr, onSlideChange }) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(
-    {
-      ...options,
-      loop: true, // recommended with fade
-    },
+    { ...options, loop: true },
     [Autoplay({ playOnInit: true, delay: 1800 }), Fade()]
   );
+
+  useEffect(() => {
+    if (!emblaApi || !onSlideChange) return;
+    const handleSelect = () => onSlideChange(emblaApi.selectedScrollSnap());
+    emblaApi.on('select', handleSelect);
+    return () => emblaApi.off('select', handleSelect);
+  }, [emblaApi, onSlideChange]);
 
   return (
     <div className='embla'>
