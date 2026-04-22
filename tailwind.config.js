@@ -13,7 +13,8 @@ module.exports = {
       primary: colors.slate,
     },
     fontFamily: {
-      sans: ['Lexend'],
+      sans: ['Quicksand'],
+      quicksand: ['Quicksand', 'sans-serif'],
     },
     fontSize: {
       xs: ['0.75rem', '1rem'],

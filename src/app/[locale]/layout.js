@@ -3,7 +3,7 @@ import GoogleAds from '@/components/GoogleAds';
 import CookieBanner from '@/components/CookieBanner';
 import MetaPixel from '@/components/MetaPixel';
 import GoogleTagManager from '@/components/GoogleTagManager';
-import { Lexend } from 'next/font/google';
+import { Quicksand } from 'next/font/google';
 import './globals.css';
 import { Toaster } from 'react-hot-toast';
 import { NextIntlClientProvider } from 'next-intl';
@@ -12,9 +12,9 @@ import Navbar from '@/components/navbar/Navbar';
 import Footer from '@/components/footer/Footer';
 import { Suspense } from 'react';
 
-const lexend = Lexend({
+const quicksand = Quicksand({
   subsets: ['latin'],
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  weight: ['300', '400', '500', '600', '700'],
 });
 
 const environment = process.env.NODE_ENV;
@@ -102,7 +102,7 @@ export default async function RootLayout({ children, params }) {
         <meta name='twitter:image' content={`${baseUrl}/opengraph-image.png`} />
       </head>
       <body
-        className={`${lexend.className} bg-primary-50 text-primary-950 dark:bg-primary-950 dark:text-primary-200 antialiased transition`}
+        className={`${quicksand.className} bg-primary-50 text-primary-950 dark:bg-primary-950 dark:text-primary-200 antialiased transition`}
       >
         <Suspense>
           <GoogleAnalytics
