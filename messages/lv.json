@@ -10,8 +10,8 @@
   },
   "Home": {
     "Hero": {
-      "titleOne": "Vizualizēsim",
-      "titleTwo": "Tavas Idejas",
+      "titleOne": "Vizualizē",
+      "titleTwo": "Savas Idejas",
       "Subtitle": "Tavs sapnis Mūsu realitāte"
     },
     "GraphicsSection": {
@@ -21,8 +21,8 @@
       "pTwo": "Novērs iespējamās neprecizitātes, problēmas un pārsteigumus, kas var rasties projekta realizācijas laikā!"
     },
     "Section2": {
-      "T1": "Nekustamie īpašumi",
-      "T2": "Industriālie objekti",
+      "T1": "3D",
+      "T2": "Vizualizācijas",
       "T3": "Teritoriju labiekārtošana"
     },
     "Video": {
