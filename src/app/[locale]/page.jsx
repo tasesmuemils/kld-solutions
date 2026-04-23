@@ -21,7 +21,9 @@ export default function Home() {
         subtitle={t('Hero.Subtitle')}
       />
       <Section2
-        titles={[t('Section2.T1'), t('Section2.T2'), t('Section2.T3')]}
+        titleOne={t('Section2.T1')}
+        titleTwo={t('Section2.T2')}
+        // titles={[t('Section2.T1'), t('Section2.T2'), t('Section2.T3')]}
       />
       {/* <GraphicsSection
         titleOne={t('GraphicsSection.TitleOne')}

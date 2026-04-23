@@ -88,9 +88,9 @@ export default function Hero({ titleOne, titleTwo, subtitle }) {
               <h1 className='hero-text hero-clip md:invisible  pb-2 text-primary-900/90 dark:text-primary-200 lg:pb-2 text-5xl sm:text-6xl lg:text-7xl font-semibold tracking-tight leading-tight'>
                 {titleTwo}
               </h1>
-              <p className='hero-text hero-clip md:invisible pb-6 text-primary-950/70 dark:text-primary-200/70 text-2xl lg:text-2xl  leading-tight text-center lg:text-right w-full'>
+              {/* <p className='hero-text hero-clip md:invisible pb-6 text-primary-950/70 dark:text-primary-200/70 text-2xl lg:text-2xl  leading-tight text-center lg:text-right w-full'>
                 {subtitle}
-              </p>
+              </p> */}
             </div>
           </div>
           <div className='hero-img-wrapper md:invisible rounded'>
