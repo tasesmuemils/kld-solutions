@@ -9,15 +9,15 @@ import SplitType from 'split-type';
 import Slider from '@/components/home/Slider';
 import './embla.css';
 
-import Inside1 from '../../../public/engine_img/section_2/Apartment-building-3d-model.webp';
-import Inside2 from '../../../public/engine_img/section_2/modern-timber-house-3d-model-on-floor-plan.webp';
-import Inside3 from '../../../public/engine_img/section_2/modern-timber-house-3d-model-floor-plan.webp';
+import Inside3 from '../../../public/engine_img/section_2/Apartment-building-3d-model.webp';
+import Inside2 from '../../../public/engine_img/section_2/modern-concrete-house-3d-model-first-floor-plan-.webp';
+import Inside1 from '../../../public/engine_img/section_2/modern-timber-house-3d-model-on-floor-plan.webp';
 
 const OPTIONS = { loop: true };
 const SLIDE_COUNT = 3;
 const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
-const imagesInside = [Inside1.src, Inside3.src, Inside2.src];
+const imagesInside = [Inside1.src, Inside2.src, Inside3.src];
 
 export default function Section2({ titleOne, titleTwo }) {
   // Using ref to capture Hero text container
@@ -122,7 +122,7 @@ export default function Section2({ titleOne, titleTwo }) {
 
   return (
     <section
-      className='mt-0 mb-24 md:mt-12 md:mb-16 lg:mt-16 lg:mb-24 flex items-center'
+      className='mt-0 mb-24 md:mt-12 md:mb-16 lg:mt-0 lg:mb-24 flex items-center'
       ref={container}
     >
       <div className='flex-1 mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8'>

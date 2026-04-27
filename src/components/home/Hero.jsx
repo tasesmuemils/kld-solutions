@@ -76,7 +76,7 @@ export default function Hero({ titleOne, titleTwo, subtitle }) {
   );
 
   return (
-    <section className='h-screen flex items-center' ref={container}>
+    <section className='h-screen max-h-[900px] flex items-center' ref={container}>
       <div className='flex-1 mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8'>
         <div className='grid grid-cols-1 lg:grid-cols-2 items-center '>
           <div className='flex flex-col pb-8 lg:pb-0 items-center lg:items-start gap-8 sm:gap-10'>
