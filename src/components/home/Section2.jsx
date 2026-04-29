@@ -10,7 +10,7 @@ import Slider from '@/components/home/Slider';
 import './embla.css';
 
 import Inside3 from '../../../public/engine_img/section_2/Apartment-building-3d-model.webp';
-import Inside2 from '../../../public/engine_img/section_2/modern-concrete-house-3d-model-first-floor-plan-.webp';
+import Inside2 from '../../../public/engine_img/section_2/metal-modern-house-3d.webp';
 import Inside1 from '../../../public/engine_img/section_2/modern-timber-house-3d-model-on-floor-plan.webp';
 
 const OPTIONS = { loop: true };
